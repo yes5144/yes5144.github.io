@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>zabbix + grafana | 运维工程师进阶之路</title>
+    <meta name="generator" content="VuePress 1.5.1">
+    <link rel="icon" href="/bookDog.png">
+    <meta name="description" content="SRE">
+    <link rel="preload" href="/assets/css/0.styles.4391c3e0.css" as="style"><link rel="preload" href="/assets/js/app.44e953ca.js" as="script"><link rel="preload" href="/assets/js/2.ca34a8c3.js" as="script"><link rel="preload" href="/assets/js/60.7573cff3.js" as="script"><link rel="prefetch" href="/assets/js/10.26ab6c8b.js"><link rel="prefetch" href="/assets/js/11.66cf7fbe.js"><link rel="prefetch" href="/assets/js/12.053ab66a.js"><link rel="prefetch" href="/assets/js/13.7b69c762.js"><link rel="prefetch" href="/assets/js/14.b7d3725e.js"><link rel="prefetch" href="/assets/js/15.94dc50f9.js"><link rel="prefetch" href="/assets/js/16.7d068506.js"><link rel="prefetch" href="/assets/js/17.72fba0c1.js"><link rel="prefetch" href="/assets/js/18.0b63671e.js"><link rel="prefetch" href="/assets/js/19.fc87afd7.js"><link rel="prefetch" href="/assets/js/20.5e8598a5.js"><link rel="prefetch" href="/assets/js/21.29611eb5.js"><link rel="prefetch" href="/assets/js/22.c4fb6228.js"><link rel="prefetch" href="/assets/js/23.7815e38d.js"><link rel="prefetch" href="/assets/js/24.48bc7051.js"><link rel="prefetch" href="/assets/js/25.ca28f6c6.js"><link rel="prefetch" href="/assets/js/26.98c9036d.js"><link rel="prefetch" href="/assets/js/27.f7966843.js"><link rel="prefetch" href="/assets/js/28.4d1d3d14.js"><link rel="prefetch" href="/assets/js/29.bddf0f39.js"><link rel="prefetch" href="/assets/js/3.85186c36.js"><link rel="prefetch" href="/assets/js/30.f4d58864.js"><link rel="prefetch" href="/assets/js/31.4927c5cc.js"><link rel="prefetch" href="/assets/js/32.c4d98288.js"><link rel="prefetch" href="/assets/js/33.b7cd4cd5.js"><link rel="prefetch" href="/assets/js/34.e6f4b03f.js"><link rel="prefetch" href="/assets/js/35.c018a354.js"><link rel="prefetch" href="/assets/js/36.5b95d2bf.js"><link rel="prefetch" href="/assets/js/37.7bfe07d4.js"><link rel="prefetch" href="/assets/js/38.08c93d93.js"><link rel="prefetch" href="/assets/js/39.4114fd8e.js"><link rel="prefetch" href="/assets/js/4.2222cb25.js"><link rel="prefetch" href="/assets/js/40.880abd0a.js"><link rel="prefetch" href="/assets/js/41.7a84d064.js"><link rel="prefetch" href="/assets/js/42.c3ca3a2a.js"><link rel="prefetch" href="/assets/js/43.b79bec7b.js"><link rel="prefetch" href="/assets/js/44.9f528f2e.js"><link rel="prefetch" href="/assets/js/45.0f9b892c.js"><link rel="prefetch" href="/assets/js/46.007d8c15.js"><link rel="prefetch" href="/assets/js/47.b9d5f5bc.js"><link rel="prefetch" href="/assets/js/48.be1f0cf4.js"><link rel="prefetch" href="/assets/js/49.9284be50.js"><link rel="prefetch" href="/assets/js/5.64c7e03a.js"><link rel="prefetch" href="/assets/js/50.599d0e37.js"><link rel="prefetch" href="/assets/js/51.aa9fd431.js"><link rel="prefetch" href="/assets/js/52.2f9bc07d.js"><link rel="prefetch" href="/assets/js/53.0c9ef961.js"><link rel="prefetch" href="/assets/js/54.97aac4ec.js"><link rel="prefetch" href="/assets/js/55.76f07301.js"><link rel="prefetch" href="/assets/js/56.4d2c0998.js"><link rel="prefetch" href="/assets/js/57.b470773a.js"><link rel="prefetch" href="/assets/js/58.aaf739b3.js"><link rel="prefetch" href="/assets/js/59.69e3d1c3.js"><link rel="prefetch" href="/assets/js/6.9b93828e.js"><link rel="prefetch" href="/assets/js/61.42a80774.js"><link rel="prefetch" href="/assets/js/62.6808be18.js"><link rel="prefetch" href="/assets/js/63.90f6608a.js"><link rel="prefetch" href="/assets/js/64.e5344119.js"><link rel="prefetch" href="/assets/js/65.b5634369.js"><link rel="prefetch" href="/assets/js/66.21a43d2e.js"><link rel="prefetch" href="/assets/js/67.b72d9aa6.js"><link rel="prefetch" href="/assets/js/68.af2ab069.js"><link rel="prefetch" href="/assets/js/69.4adc43e6.js"><link rel="prefetch" href="/assets/js/7.6de19e8e.js"><link rel="prefetch" href="/assets/js/70.7b35fee5.js"><link rel="prefetch" href="/assets/js/71.532a8351.js"><link rel="prefetch" href="/assets/js/72.46ca51b8.js"><link rel="prefetch" href="/assets/js/73.970101e7.js"><link rel="prefetch" href="/assets/js/74.1c4ec244.js"><link rel="prefetch" href="/assets/js/75.9a27bec1.js"><link rel="prefetch" href="/assets/js/76.d0fa2941.js"><link rel="prefetch" href="/assets/js/77.3fce2b20.js"><link rel="prefetch" href="/assets/js/78.c098f054.js"><link rel="prefetch" href="/assets/js/79.1841299d.js"><link rel="prefetch" href="/assets/js/8.682fa49e.js"><link rel="prefetch" href="/assets/js/80.55af12a4.js"><link rel="prefetch" href="/assets/js/81.901ddf76.js"><link rel="prefetch" href="/assets/js/82.8b9d069b.js"><link rel="prefetch" href="/assets/js/83.9bac6c98.js"><link rel="prefetch" href="/assets/js/84.f50a45a7.js"><link rel="prefetch" href="/assets/js/9.0d17f277.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4391c3e0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/bookDog.png" alt="运维工程师进阶之路" class="logo"> <span class="site-name can-hide">运维工程师进阶之路</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/sre/linux/cli.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="https://github.com/yes5144" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/sre/linux/cli.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="https://github.com/yes5144" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Linux开源基石</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Nginx高性能web服务</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>MySQL最好用的关系型数据库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>gitlab企业代码仓库管理</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Jenkins持续集成部署</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Redis多功能nosql数据库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Saltstack批量管理工具</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Zabbix开源监控系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Prometheus下一代监控系统</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/sre/prometheus/install.html" class="sidebar-link">Prometheus安装</a></li><li><a href="/sre/prometheus/grafana_zabbix.html" aria-current="page" class="active sidebar-link">grafana展示zabbix</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/sre/prometheus/grafana_zabbix.html#zabbix-grafana" class="sidebar-link">zabbix + grafana</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ELK日志分析平台</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Python优雅的编程语言</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Docker轻量虚拟化技术</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>k8s容器编排利器</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>golang</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>小技巧</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="zabbix-grafana"><a href="#zabbix-grafana" class="header-anchor">#</a> zabbix + grafana</h2> <h3 id="每天看着zabbix展示界面是不是有点腻歪了，要不要换个高大上提升一下逼格？？？"><a href="#每天看着zabbix展示界面是不是有点腻歪了，要不要换个高大上提升一下逼格？？？" class="header-anchor">#</a> 每天看着zabbix展示界面是不是有点腻歪了，要不要换个高大上提升一下逼格？？？</h3> <p>参考链接：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>## 分布式监控系统Zabbix--使用Grafana进行图形展示
+https://www.cnblogs.com/kevingrace/p/7108060.html
+## 10分钟打造炫酷的监控大屏
+http://www.ywjt.org/index.php/archives/1802
+## 徒手教你制作运维监控大屏
+https://www.cnblogs.com/zhangs1986/p/11180694.html
+## 官方地址：http://docs.grafana-zabbix.org
+## 项目Demo：http://play.grafana.org/
+## 项目github：https://github.com/grafana/grafana
+
+100 - (avg(irate(node_cpu_seconds_total{instance=~&quot;$node&quot;,mode=&quot;idle&quot;}[5m])) * 100)
+
+## 
+CREATE USER 'exporter'@'localhost' IDENTIFIED BY 'abc123' WITH MAX_USER_CONNECTIONS 3;
+GRANT PROCESS, REPLICATION CLIENT, SELECT ON *.* TO 'exporter'@'localhost';
+
+cd /usr/local/mysqld_exporter
+cat &lt;&lt; EOF &gt; .my.cnf
+[client]
+user=exporter
+password=abc123
+EOF
+
+https://www.cnblogs.com/zengkefu/p/5658252.html
+
+https://www.percona.com/software/database-tools/percona-monitoring-and-management
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><h3 id="当你耐心看完如上链接，相信已经差不多ok了，下面只是我的坑友情提示一下："><a href="#当你耐心看完如上链接，相信已经差不多ok了，下面只是我的坑友情提示一下：" class="header-anchor">#</a> 当你耐心看完如上链接，相信已经差不多OK了，下面只是我的坑友情提示一下：</h3> <h4 id="_1，由于本人采用的是tar包解压的方式启动，所以plugins在安装目录的data-plugins-，你可以修改配置文件重新指向-var-lib-grafana-plugins"><a href="#_1，由于本人采用的是tar包解压的方式启动，所以plugins在安装目录的data-plugins-，你可以修改配置文件重新指向-var-lib-grafana-plugins" class="header-anchor">#</a> 1，由于本人采用的是tar包解压的方式启动，所以plugins在安装目录的data/plugins/，你可以修改配置文件重新指向/var/lib/grafana/plugins/</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>## 获取可用插件列表
+grafana-cli plugins list-remote
+ 
+## 安装zabbix插件
+grafana-cli plugins install alexanderzobnin-zabbix-app
+ 
+## 安装插件完成之后重启garfana服务
+service grafana-server restart
+
+## 安装其他图形插件
+# 饼图展示
+grafana-cli plugins install grafana-piechart-panel
+#钟表形展示
+grafana-cli plugins install grafana-clock-panel
+grafana-cli plugins install briangann-gauge-panel
+#字符型展示
+grafana-cli plugins install natel-discrete-panel
+#服务器状态
+grafana-cli plugins install vonage-status-panel
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><h4 id="_2，在grafana官网找一个zabbix插件，稍稍修改应用"><a href="#_2，在grafana官网找一个zabbix插件，稍稍修改应用" class="header-anchor">#</a> 2，在grafana官网找一个zabbix插件，稍稍修改应用</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>https://grafana.com/grafana/dashboards/6098
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h4 id="有兴趣开发一个grafana插件"><a href="#有兴趣开发一个grafana插件" class="header-anchor">#</a> 有兴趣开发一个grafana插件</h4> <p>https://juejin.im/post/5addbcbd5188256715474452</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">lastUpdate:</span> <span class="time">7/2/2020, 9:00:01 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/sre/prometheus/install.html" class="prev">
+        Prometheus安装
+      </a></span> <span class="next"><a href="/sre/elk/docker_kafka.html">
+        elk-docker安装
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.44e953ca.js" defer></script><script src="/assets/js/2.ca34a8c3.js" defer></script><script src="/assets/js/60.7573cff3.js" defer></script>
+  </body>
+</html>

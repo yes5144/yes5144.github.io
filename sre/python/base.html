@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>基本数据类型 | 运维工程师进阶之路</title>
+    <meta name="generator" content="VuePress 1.5.1">
+    <link rel="icon" href="/bookDog.png">
+    <meta name="description" content="SRE">
+    <link rel="preload" href="/assets/css/0.styles.4391c3e0.css" as="style"><link rel="preload" href="/assets/js/app.44e953ca.js" as="script"><link rel="preload" href="/assets/js/2.ca34a8c3.js" as="script"><link rel="preload" href="/assets/js/63.90f6608a.js" as="script"><link rel="prefetch" href="/assets/js/10.26ab6c8b.js"><link rel="prefetch" href="/assets/js/11.66cf7fbe.js"><link rel="prefetch" href="/assets/js/12.053ab66a.js"><link rel="prefetch" href="/assets/js/13.7b69c762.js"><link rel="prefetch" href="/assets/js/14.b7d3725e.js"><link rel="prefetch" href="/assets/js/15.94dc50f9.js"><link rel="prefetch" href="/assets/js/16.7d068506.js"><link rel="prefetch" href="/assets/js/17.72fba0c1.js"><link rel="prefetch" href="/assets/js/18.0b63671e.js"><link rel="prefetch" href="/assets/js/19.fc87afd7.js"><link rel="prefetch" href="/assets/js/20.5e8598a5.js"><link rel="prefetch" href="/assets/js/21.29611eb5.js"><link rel="prefetch" href="/assets/js/22.c4fb6228.js"><link rel="prefetch" href="/assets/js/23.7815e38d.js"><link rel="prefetch" href="/assets/js/24.48bc7051.js"><link rel="prefetch" href="/assets/js/25.ca28f6c6.js"><link rel="prefetch" href="/assets/js/26.98c9036d.js"><link rel="prefetch" href="/assets/js/27.f7966843.js"><link rel="prefetch" href="/assets/js/28.4d1d3d14.js"><link rel="prefetch" href="/assets/js/29.bddf0f39.js"><link rel="prefetch" href="/assets/js/3.85186c36.js"><link rel="prefetch" href="/assets/js/30.f4d58864.js"><link rel="prefetch" href="/assets/js/31.4927c5cc.js"><link rel="prefetch" href="/assets/js/32.c4d98288.js"><link rel="prefetch" href="/assets/js/33.b7cd4cd5.js"><link rel="prefetch" href="/assets/js/34.e6f4b03f.js"><link rel="prefetch" href="/assets/js/35.c018a354.js"><link rel="prefetch" href="/assets/js/36.5b95d2bf.js"><link rel="prefetch" href="/assets/js/37.7bfe07d4.js"><link rel="prefetch" href="/assets/js/38.08c93d93.js"><link rel="prefetch" href="/assets/js/39.4114fd8e.js"><link rel="prefetch" href="/assets/js/4.2222cb25.js"><link rel="prefetch" href="/assets/js/40.880abd0a.js"><link rel="prefetch" href="/assets/js/41.7a84d064.js"><link rel="prefetch" href="/assets/js/42.c3ca3a2a.js"><link rel="prefetch" href="/assets/js/43.b79bec7b.js"><link rel="prefetch" href="/assets/js/44.9f528f2e.js"><link rel="prefetch" href="/assets/js/45.0f9b892c.js"><link rel="prefetch" href="/assets/js/46.007d8c15.js"><link rel="prefetch" href="/assets/js/47.b9d5f5bc.js"><link rel="prefetch" href="/assets/js/48.be1f0cf4.js"><link rel="prefetch" href="/assets/js/49.9284be50.js"><link rel="prefetch" href="/assets/js/5.64c7e03a.js"><link rel="prefetch" href="/assets/js/50.599d0e37.js"><link rel="prefetch" href="/assets/js/51.aa9fd431.js"><link rel="prefetch" href="/assets/js/52.2f9bc07d.js"><link rel="prefetch" href="/assets/js/53.0c9ef961.js"><link rel="prefetch" href="/assets/js/54.97aac4ec.js"><link rel="prefetch" href="/assets/js/55.76f07301.js"><link rel="prefetch" href="/assets/js/56.4d2c0998.js"><link rel="prefetch" href="/assets/js/57.b470773a.js"><link rel="prefetch" href="/assets/js/58.aaf739b3.js"><link rel="prefetch" href="/assets/js/59.69e3d1c3.js"><link rel="prefetch" href="/assets/js/6.9b93828e.js"><link rel="prefetch" href="/assets/js/60.7573cff3.js"><link rel="prefetch" href="/assets/js/61.42a80774.js"><link rel="prefetch" href="/assets/js/62.6808be18.js"><link rel="prefetch" href="/assets/js/64.e5344119.js"><link rel="prefetch" href="/assets/js/65.b5634369.js"><link rel="prefetch" href="/assets/js/66.21a43d2e.js"><link rel="prefetch" href="/assets/js/67.b72d9aa6.js"><link rel="prefetch" href="/assets/js/68.af2ab069.js"><link rel="prefetch" href="/assets/js/69.4adc43e6.js"><link rel="prefetch" href="/assets/js/7.6de19e8e.js"><link rel="prefetch" href="/assets/js/70.7b35fee5.js"><link rel="prefetch" href="/assets/js/71.532a8351.js"><link rel="prefetch" href="/assets/js/72.46ca51b8.js"><link rel="prefetch" href="/assets/js/73.970101e7.js"><link rel="prefetch" href="/assets/js/74.1c4ec244.js"><link rel="prefetch" href="/assets/js/75.9a27bec1.js"><link rel="prefetch" href="/assets/js/76.d0fa2941.js"><link rel="prefetch" href="/assets/js/77.3fce2b20.js"><link rel="prefetch" href="/assets/js/78.c098f054.js"><link rel="prefetch" href="/assets/js/79.1841299d.js"><link rel="prefetch" href="/assets/js/8.682fa49e.js"><link rel="prefetch" href="/assets/js/80.55af12a4.js"><link rel="prefetch" href="/assets/js/81.901ddf76.js"><link rel="prefetch" href="/assets/js/82.8b9d069b.js"><link rel="prefetch" href="/assets/js/83.9bac6c98.js"><link rel="prefetch" href="/assets/js/84.f50a45a7.js"><link rel="prefetch" href="/assets/js/9.0d17f277.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4391c3e0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/bookDog.png" alt="运维工程师进阶之路" class="logo"> <span class="site-name can-hide">运维工程师进阶之路</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/sre/linux/cli.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="https://github.com/yes5144" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/sre/linux/cli.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="https://github.com/yes5144" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Linux开源基石</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Nginx高性能web服务</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>MySQL最好用的关系型数据库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>gitlab企业代码仓库管理</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Jenkins持续集成部署</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Redis多功能nosql数据库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Saltstack批量管理工具</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Zabbix开源监控系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Prometheus下一代监控系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ELK日志分析平台</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Python优雅的编程语言</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/sre/python/base.html" aria-current="page" class="active sidebar-link">数据类型和操作</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/sre/python/base.html#基本数据类型" class="sidebar-link">基本数据类型</a></li></ul></li><li><a href="/sre/python/django.html" class="sidebar-link">django入门</a></li><li><a href="/sre/python/django_uwsgi_nginx.html" class="sidebar-link">django项目部署</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Docker轻量虚拟化技术</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>k8s容器编排利器</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>golang</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>小技巧</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="基本数据类型"><a href="#基本数据类型" class="header-anchor">#</a> 基本数据类型</h2> <h3 id="pip-install-加速"><a href="#pip-install-加速" class="header-anchor">#</a> pip install 加速</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>pip3 install ipython -i http://pypi.douban.com/simple  --trusted-host pypi.douban.com
+
+pip3 install mysqlclient=1.3.14 -i http://pypi.douban.com/simple  --trusted-host pypi.douban.com
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="list-列表"><a href="#list-列表" class="header-anchor">#</a> list 列表</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>list1 = [1,3,4,5]
+list1.append('k')
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="tuple-元组"><a href="#tuple-元组" class="header-anchor">#</a> tuple 元组</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>t1 = (2,)
+t2 = (3,4)
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="dict-字典"><a href="#dict-字典" class="header-anchor">#</a> dict 字典</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code># 列表转集合(去重)
+list1 = [6, 7, 7, 8, 8, 9]
+set(list1)
+# {6, 7, 8, 9}
+ 
+#两个列表转字典
+list1 = ['key1','key2','key3']
+list2 = ['1','2','3']
+dict(zip(list1,list2))
+# {'key1': '1', 'key2': '2', 'key3': '3'}
+ 
+#嵌套列表转字典
+list3 = [['key1','value1'],['key2','value2'],['key3','value3']]
+dict(list3)
+# {'key1': 'value1', 'key2': 'value2', 'key3': 'value3'}
+ 
+# 列表、元组转字符串
+list2 = ['a', 'a', 'b']
+''.join(list2)
+# 'aab'
+ 
+tup1 = ('a', 'a', 'b')
+''.join(tup1)
+# 'aab'
+
+## 字典排序
+print sorted(sumNewServer.items(), key=lambda d:d[1],reverse=True)
+print sorted(sumNewServer.items())
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br></div></div><h3 id="命令行传参"><a href="#命令行传参" class="header-anchor">#</a> 命令行传参</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>def main():
+    ops_choices = {
+        &quot;5&quot;:[&quot;status&quot;,[&quot;review-server&quot;]],
+    }
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument(&quot;zone&quot;)
+    parser.add_argument(&quot;-k&quot;, &quot;--key&quot;, help=&quot;project app ops&quot;, default=&quot;4&quot;)
+    args = parser.parse_args()
+    zone = args.zone
+    key = args.key
+    if args.zone:
+        project_zone_ops(zone, key)
+    else:
+        print color.inRed(&quot;Ps: python 09_restart_gs_xxx.py  nz_wx -k 4 &quot;)
+
+if __name__ == '__main__':
+    main()
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><h4 id="python"><a href="#python" class="header-anchor">#</a> Python</h4> <h4 id="控制语句"><a href="#控制语句" class="header-anchor">#</a> 控制语句</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>## if选择结构
+if 条件1:
+    代码1
+elif 条件2:
+    代码2
+else:
+    代码n
+		
+## while循环
+while 条件:
+    代码
+
+## for循环
+for 循环变量 in 可迭代对象:
+    代码块
+
+### break, continue, pass
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><h4 id="字符串"><a href="#字符串" class="header-anchor">#</a> 字符串</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>## 字符串输入
+number = int(input('input your favorite number')) # input中参数是输出提示
+print(f'Your favorite number is {number}')    # 字符串前的f表示这是一个格式串，变量不存在则报错。
+
+## 字符串运算
+alice = 'my name is '
+bob = 'Li Hua'
+
+alice +bob
+bob * 3
+'Li' in bob
+alice[0:5]
+
+### 字符串操作符： + * in  not in  []
+
+### 字符串内建方法
+count(), find(), isalpha(), isdigit(), join(), lstrip(), replace(), rstrip(), split(), startswith(), strip(), zfill()
+
+print('-'.join(['3'.'2','5','5']))
+index=33
+print('image'+ str(index).zfill(4))
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><h4 id=""><a href="#" class="header-anchor">#</a></h4> <h4 id="变量和数据类型"><a href="#变量和数据类型" class="header-anchor">#</a> 变量和数据类型</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>## Tuple（元组）
+(3,3,2,1)
+## Set（集合）
+{3,2,1}
+## List（列表）
+[3,3,2.1]
+## Dict（字典）
+key:value
+## 字符串
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h4 id="函数"><a href="#函数" class="header-anchor">#</a> 函数</h4> <ul><li>不带默认值参数：def func(a):</li> <li>带默认值参数：def func(a, b=1):</li> <li>任意位置参数：def func(a, b=1, *c):</li> <li>任意键值参数：def func(a, b=1, *c, **d):</li></ul> <p>这也是他们的出场顺序安排</p> <h4 id="类和对象"><a href="#类和对象" class="header-anchor">#</a> 类和对象</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>对象是类的一个实例。
+类在python中由3部分组成--类名、属性和方法。
+类的属性分两种，分别是类属性和实例属性
+
+class Vehicle:
+	 class_property =0   # 没有self，并且写在方法外，这是类属性
+	 
+	 def __init__(self):
+        temporary_var = -1    # 写在方法里，但是没有self，这是一个局部变量
+        self.instance_property = 1  # 有self，这里创建了一个实例属性
+        Vehicle.class_property +1   # 操作类属性需要写类名
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h3 id="python-生成器"><a href="#python-生成器" class="header-anchor">#</a> python 生成器</h3> <blockquote><p>创建生成器的一种方法是利用yield关键字，他的作用和return类似，解释器在函数中遇到yield后会立即返回响应的值。但是yield跟return的最大的不同是，在下次调用这个函数的时候不会从头开始执行，而是会从上次yield返回后的下一句开始执行，并且这时候函数的上下文，简单来说就是各变量的值，也是和上次yield返回的时候是一致的。
+形象的说，普通使用return的函数每次执行就像是一条线段，从一个端点到另一个端点，但是使用了yield的函数每次执行更像是一个圆，从一个起点开始在固定位置返回后继续绕圈执行。同时关键的一点事，任何使用yield的函数返回值就会成为一个生成器对象。</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>def  my_range(end):
+    i = 0
+    while i &lt; end:
+        yield i   ## 这里返回 i
+        i += 1
+
+## print 函数返回对象的类型：
+g = my_range(10)
+print(type(g))
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h4 id="生成器推导式"><a href="#生成器推导式" class="header-anchor">#</a> 生成器推导式</h4> <blockquote><p>你知道列表推导式吗？其实生成器推导式与列表推导式很相近，只是把中括号变成小括号：</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>gen = (x * x for x in range(5) if x % 2 ==0)
+print (type(gen))
+for i in gen:
+  print(i)
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">lastUpdate:</span> <span class="time">7/2/2020, 9:00:01 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/sre/elk/install.html" class="prev">
+        elk-api
+      </a></span> <span class="next"><a href="/sre/python/django.html">
+        django入门
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.44e953ca.js" defer></script><script src="/assets/js/2.ca34a8c3.js" defer></script><script src="/assets/js/63.90f6608a.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>install | 运维工程师进阶之路</title>
+    <meta name="generator" content="VuePress 1.5.1">
+    <link rel="icon" href="/bookDog.png">
+    <meta name="description" content="SRE">
+    <link rel="preload" href="/assets/css/0.styles.4391c3e0.css" as="style"><link rel="preload" href="/assets/js/app.44e953ca.js" as="script"><link rel="preload" href="/assets/js/2.ca34a8c3.js" as="script"><link rel="preload" href="/assets/js/72.46ca51b8.js" as="script"><link rel="prefetch" href="/assets/js/10.26ab6c8b.js"><link rel="prefetch" href="/assets/js/11.66cf7fbe.js"><link rel="prefetch" href="/assets/js/12.053ab66a.js"><link rel="prefetch" href="/assets/js/13.7b69c762.js"><link rel="prefetch" href="/assets/js/14.b7d3725e.js"><link rel="prefetch" href="/assets/js/15.94dc50f9.js"><link rel="prefetch" href="/assets/js/16.7d068506.js"><link rel="prefetch" href="/assets/js/17.72fba0c1.js"><link rel="prefetch" href="/assets/js/18.0b63671e.js"><link rel="prefetch" href="/assets/js/19.fc87afd7.js"><link rel="prefetch" href="/assets/js/20.5e8598a5.js"><link rel="prefetch" href="/assets/js/21.29611eb5.js"><link rel="prefetch" href="/assets/js/22.c4fb6228.js"><link rel="prefetch" href="/assets/js/23.7815e38d.js"><link rel="prefetch" href="/assets/js/24.48bc7051.js"><link rel="prefetch" href="/assets/js/25.ca28f6c6.js"><link rel="prefetch" href="/assets/js/26.98c9036d.js"><link rel="prefetch" href="/assets/js/27.f7966843.js"><link rel="prefetch" href="/assets/js/28.4d1d3d14.js"><link rel="prefetch" href="/assets/js/29.bddf0f39.js"><link rel="prefetch" href="/assets/js/3.85186c36.js"><link rel="prefetch" href="/assets/js/30.f4d58864.js"><link rel="prefetch" href="/assets/js/31.4927c5cc.js"><link rel="prefetch" href="/assets/js/32.c4d98288.js"><link rel="prefetch" href="/assets/js/33.b7cd4cd5.js"><link rel="prefetch" href="/assets/js/34.e6f4b03f.js"><link rel="prefetch" href="/assets/js/35.c018a354.js"><link rel="prefetch" href="/assets/js/36.5b95d2bf.js"><link rel="prefetch" href="/assets/js/37.7bfe07d4.js"><link rel="prefetch" href="/assets/js/38.08c93d93.js"><link rel="prefetch" href="/assets/js/39.4114fd8e.js"><link rel="prefetch" href="/assets/js/4.2222cb25.js"><link rel="prefetch" href="/assets/js/40.880abd0a.js"><link rel="prefetch" href="/assets/js/41.7a84d064.js"><link rel="prefetch" href="/assets/js/42.c3ca3a2a.js"><link rel="prefetch" href="/assets/js/43.b79bec7b.js"><link rel="prefetch" href="/assets/js/44.9f528f2e.js"><link rel="prefetch" href="/assets/js/45.0f9b892c.js"><link rel="prefetch" href="/assets/js/46.007d8c15.js"><link rel="prefetch" href="/assets/js/47.b9d5f5bc.js"><link rel="prefetch" href="/assets/js/48.be1f0cf4.js"><link rel="prefetch" href="/assets/js/49.9284be50.js"><link rel="prefetch" href="/assets/js/5.64c7e03a.js"><link rel="prefetch" href="/assets/js/50.599d0e37.js"><link rel="prefetch" href="/assets/js/51.aa9fd431.js"><link rel="prefetch" href="/assets/js/52.2f9bc07d.js"><link rel="prefetch" href="/assets/js/53.0c9ef961.js"><link rel="prefetch" href="/assets/js/54.97aac4ec.js"><link rel="prefetch" href="/assets/js/55.76f07301.js"><link rel="prefetch" href="/assets/js/56.4d2c0998.js"><link rel="prefetch" href="/assets/js/57.b470773a.js"><link rel="prefetch" href="/assets/js/58.aaf739b3.js"><link rel="prefetch" href="/assets/js/59.69e3d1c3.js"><link rel="prefetch" href="/assets/js/6.9b93828e.js"><link rel="prefetch" href="/assets/js/60.7573cff3.js"><link rel="prefetch" href="/assets/js/61.42a80774.js"><link rel="prefetch" href="/assets/js/62.6808be18.js"><link rel="prefetch" href="/assets/js/63.90f6608a.js"><link rel="prefetch" href="/assets/js/64.e5344119.js"><link rel="prefetch" href="/assets/js/65.b5634369.js"><link rel="prefetch" href="/assets/js/66.21a43d2e.js"><link rel="prefetch" href="/assets/js/67.b72d9aa6.js"><link rel="prefetch" href="/assets/js/68.af2ab069.js"><link rel="prefetch" href="/assets/js/69.4adc43e6.js"><link rel="prefetch" href="/assets/js/7.6de19e8e.js"><link rel="prefetch" href="/assets/js/70.7b35fee5.js"><link rel="prefetch" href="/assets/js/71.532a8351.js"><link rel="prefetch" href="/assets/js/73.970101e7.js"><link rel="prefetch" href="/assets/js/74.1c4ec244.js"><link rel="prefetch" href="/assets/js/75.9a27bec1.js"><link rel="prefetch" href="/assets/js/76.d0fa2941.js"><link rel="prefetch" href="/assets/js/77.3fce2b20.js"><link rel="prefetch" href="/assets/js/78.c098f054.js"><link rel="prefetch" href="/assets/js/79.1841299d.js"><link rel="prefetch" href="/assets/js/8.682fa49e.js"><link rel="prefetch" href="/assets/js/80.55af12a4.js"><link rel="prefetch" href="/assets/js/81.901ddf76.js"><link rel="prefetch" href="/assets/js/82.8b9d069b.js"><link rel="prefetch" href="/assets/js/83.9bac6c98.js"><link rel="prefetch" href="/assets/js/84.f50a45a7.js"><link rel="prefetch" href="/assets/js/9.0d17f277.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4391c3e0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/bookDog.png" alt="运维工程师进阶之路" class="logo"> <span class="site-name can-hide">运维工程师进阶之路</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/sre/linux/cli.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="https://github.com/yes5144" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/sre/linux/cli.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="https://github.com/yes5144" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Linux开源基石</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Nginx高性能web服务</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>MySQL最好用的关系型数据库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>gitlab企业代码仓库管理</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Jenkins持续集成部署</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Redis多功能nosql数据库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Saltstack批量管理工具</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/sre/saltstack/install.html" aria-current="page" class="active sidebar-link">Saltstack安装</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/sre/saltstack/install.html#install" class="sidebar-link">install</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Zabbix开源监控系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Prometheus下一代监控系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ELK日志分析平台</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Python优雅的编程语言</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Docker轻量虚拟化技术</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>k8s容器编排利器</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>golang</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>小技巧</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="install"><a href="#install" class="header-anchor">#</a> install</h2> <blockquote><p>saltstack采用c/s架构，角色分为master/slave，建议采用yum部署</p></blockquote> <h3 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h3> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token comment">## 指定阿里云epel.repo, salt.repo 华为云 Centos-Base.repo</span>
+yum <span class="token function">install</span> https://mirrors.aliyun.com/saltstack/yum/redhat/salt-repo-latest-2.el6.noarch.rpm
+
+<span class="token function">sed</span> -i <span class="token string">&quot;s/repo.saltstack.com/mirrors.aliyun.com\/saltstack/g&quot;</span> /etc/yum.repos.d/salt-latest.repo
+<span class="token function">sed</span> -i <span class="token string">&quot;s/latest/2016.11/g&quot;</span> /etc/yum.repos.d/salt-latest.repo
+
+yum makecache
+yum <span class="token function">install</span> salt-master salt-minion salt-api
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h3 id="salt-api安装配置"><a href="#salt-api安装配置" class="header-anchor">#</a> salt-api安装配置</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>https://www.cnblogs.com/gavin11/p/11599859.html
+## salt-api 安装
+https://www.cnblogs.com/xiewenming/p/7716660.html
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h4 id="配置minion"><a href="#配置minion" class="header-anchor">#</a> 配置minion</h4> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token function">vim</span>  /etc/salt/minion
+master: master-id
+id: hostname<span class="token operator">&lt;</span>weiyi<span class="token operator">&gt;</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h4 id="管理-salt-key"><a href="#管理-salt-key" class="header-anchor">#</a> 管理 salt key</h4> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code>salt-key  -L
+salt-key  -A
+salt-key  -D
+salt-key  -a <span class="token operator">&lt;</span>ID<span class="token operator">&gt;</span>
+salt-key  -d <span class="token operator">&lt;</span>ID<span class="token operator">&gt;</span>
+salt-key  -l acc<span class="token operator">|</span><span class="token function">grep</span> -c -v <span class="token string">'Accepted Keys:'</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="salt命令入门"><a href="#salt命令入门" class="header-anchor">#</a> salt命令入门</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>
+https://docs.saltstack.com/en/latest/ref/runners/all/salt.runners.jobs.html
+http://dearweb.xin/2017/10/24/salt-file-backup/
+<span class="token comment">#################################</span>
+salt -d  <span class="token comment">##查看帮助文档</span>
+salt -d<span class="token operator">|</span><span class="token function">grep</span> <span class="token function">service</span>  <span class="token comment">##查看service相关模块命令</span>
+salt <span class="token string">'*'</span> sys.doc  <span class="token comment">##查看帮助文档</span>
+salt-key  -L            <span class="token comment">#查询所有接收到的证书</span>
+salt-key  -a <span class="token operator">&lt;</span>证书名<span class="token operator">&gt;</span>   <span class="token comment">#接收单个证书</span>
+salt-key  -A            <span class="token comment">#接受所有证书</span>
+salt-key  -d <span class="token operator">&lt;</span>证书名<span class="token operator">&gt;</span>   <span class="token comment">#删除单个证书</span>
+salt-key  -D            <span class="token comment">#删除所有证书</span>
+
+<span class="token comment">## service</span>
+salt <span class="token string">'*'</span> service.get_all  <span class="token comment">##获取主机所有服务</span>
+salt <span class="token string">'*'</span> service.reload sshd  <span class="token comment">##重载sshd服务</span>
+salt <span class="token string">'node1.com'</span> service.status mysql  <span class="token comment">##查看mysql服务状态</span>
+salt <span class="token string">'node1.com'</span> service.start mysql  <span class="token comment">##启动mysql服务</span>
+salt <span class="token string">'node1.com'</span> cmd.run <span class="token string">'service mysql status'</span>  <span class="token comment">##与上面一样查看服务</span>
+salt <span class="token string">'*'</span> sys.list_modules  <span class="token comment">##模块列表</span>
+salt-cp <span class="token string">'*'</span>  /etc/hosts   /etc/hosts  <span class="token comment">##把master上的hosts文件分发到所有主机</span>
+salt <span class="token string">'*'</span> cp.get_file salt://ceshi/b /tmp/test  <span class="token comment">##把salt-master端相应的文件，分发文件到minion端</span>
+salt <span class="token string">'*'</span> cp.get_dir salt://zabbix /tmp  <span class="token comment">##把salt-master端相应的目录，分发文件到minion端</span>
+salt <span class="token string">'*'</span> file.copy /tmp/zabbix.sls /tmp/sls  <span class="token comment">##把salt-master端对应文件拷贝到minion端相应目录下</span>
+
+<span class="token comment">## pkg</span>
+salt <span class="token string">'*'</span> pkg.list_pkgs   <span class="token comment">##显示软件包版本列表</span>
+salt <span class="token string">'*'</span> pkg.version python  <span class="token comment">##显示软件包版本信息</span>
+salt <span class="token string">'*'</span> pkg.install httpd  <span class="token comment">##安装软件包</span>
+
+<span class="token string">'cmd.script:'</span>
+        salt <span class="token string">'*'</span> cmd.script salt://scripts/runme.sh
+        salt <span class="token string">'*'</span> cmd.script salt://scripts/runme.sh <span class="token string">'arg1 arg2 &quot;arg 3&quot;'</span>
+        salt <span class="token string">'*'</span> cmd.script salt://scripts/windows_task.ps1 <span class="token assign-left variable">args</span><span class="token operator">=</span><span class="token string">' -Input c:<span class="token entity" title="\t">\t</span>mp\infile.txt'</span> <span class="token assign-left variable">shell</span><span class="token operator">=</span><span class="token string">'powershell'</span>
+        salt <span class="token string">'*'</span> cmd.script salt://scripts/runme.sh <span class="token assign-left variable">stdin</span><span class="token operator">=</span><span class="token string">'one<span class="token entity" title="\n">\n</span>two<span class="token entity" title="\n">\n</span>three<span class="token entity" title="\n">\n</span>four<span class="token entity" title="\n">\n</span>five<span class="token entity" title="\n">\n</span>'</span>
+<span class="token string">'cmd.shell:'</span>
+        This passes the cmd argument directly to the shell
+        salt <span class="token string">'*'</span> cmd.shell <span class="token string">&quot;ls -l | awk '/foo/{print \<span class="token variable">$2</span>}'&quot;</span>
+        salt <span class="token string">'*'</span> cmd.shell <span class="token assign-left variable">template</span><span class="token operator">=</span>jinja <span class="token string">&quot;ls -l /tmp/<span class="token variable"><span class="token variable">`</span>grains<span class="token variable">`</span></span>.<span class="token variable"><span class="token variable">`</span><span class="token function">id</span><span class="token variable">`</span></span> | awk '/foo/{print \<span class="token variable">$2</span>}'&quot;</span>
+        salt <span class="token string">'*'</span> cmd.shell <span class="token string">&quot;Get-ChildItem C:\ &quot;</span> <span class="token assign-left variable">shell</span><span class="token operator">=</span><span class="token string">'powershell'</span>
+        salt <span class="token string">'*'</span> cmd.shell <span class="token string">&quot;grep f&quot;</span> <span class="token assign-left variable">stdin</span><span class="token operator">=</span><span class="token string">'one<span class="token entity" title="\n">\n</span>two<span class="token entity" title="\n">\n</span>three<span class="token entity" title="\n">\n</span>four<span class="token entity" title="\n">\n</span>five<span class="token entity" title="\n">\n</span>'</span>
+        salt <span class="token string">'*'</span> cmd.shell <span class="token assign-left variable">cmd</span><span class="token operator">=</span><span class="token string">'sed -e s/=/:/g'</span>
+<span class="token string">'cmd.shells:'</span>
+        salt <span class="token string">'*'</span> cmd.shells
+<span class="token string">'cmd.tty:'</span>
+        salt <span class="token string">'*'</span> cmd.tty tty0 <span class="token string">'This is a test'</span>
+        salt <span class="token string">'*'</span> cmd.tty pts3 <span class="token string">'This is a test'</span>
+<span class="token string">'cmd.which:'</span>
+        salt <span class="token string">'*'</span> cmd.which <span class="token function">cat</span>
+
+<span class="token comment">## grains</span>
+salt <span class="token string">'*'</span> grains.ls   <span class="token comment">##查看grains分类</span>
+salt <span class="token string">'*'</span> grains.items   <span class="token comment">##查看grains所有信息</span>
+salt <span class="token string">'*'</span> grains.item osrelease  <span class="token comment">##查看grains某个信息</span>
+
+<span class="token comment">## manage</span>
+salt-run manage.up   <span class="token comment">##查看存活的minion</span>
+salt-run manage.down  <span class="token comment">##查看死掉的minion</span>
+salt-run manage.down <span class="token assign-left variable">removekeys</span><span class="token operator">=</span>True   <span class="token comment">##查看down掉的minion，并将其删除</span>
+salt-run manage.status   <span class="token comment">##查看minion的相关状态</span>
+salt-run manage.versions   <span class="token comment">##查看slat的所有master和minion的版本信息</span>
+
+<span class="token comment">## jobs</span>
+salt-run jobs.active
+salt <span class="token punctuation">\</span>* saltutil.running  <span class="token comment">##查看运行的jobs ID</span>
+salt <span class="token punctuation">\</span>* saltutil.kill_job <span class="token number">20151209034239907625</span>  <span class="token comment">##kill掉进程ID</span>
+
+<span class="token comment">### saltutil模块中的job管理方法</span>
+saltutil.running <span class="token comment">#查看minion当前正在运行的jobs</span>
+saltutil.find_job<span class="token operator">&lt;</span>jid<span class="token operator">&gt;</span> <span class="token comment">#查看指定jid的job(minion正在运行的jobs)</span>
+saltutil.signal_job<span class="token operator">&lt;</span>jid<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>single<span class="token operator">&gt;</span> <span class="token comment">#给指定的jid进程发送信号</span>
+saltutil.term_job <span class="token operator">&lt;</span>jid<span class="token operator">&gt;</span> <span class="token comment">#终止指定的jid进程(信号为15)</span>
+saltutil.kill_job <span class="token operator">&lt;</span>jid<span class="token operator">&gt;</span> <span class="token comment">#终止指定的jid进程(信号为9)</span>
+
+<span class="token comment">### salt runner中的job管理方法</span>
+salt-run jobs.active <span class="token comment">#查看所有minion当前正在运行的jobs(在所有minions上运?saltutil.running)</span>
+salt-run jobs.lookup_jid<span class="token operator">&lt;</span>jid<span class="token operator">&gt;</span> <span class="token comment">#从master jobs cache中查询指定jid的运行结果</span>
+salt-run jobs.list_jobs <span class="token comment">#列出当前master jobs cache中的所有job</span>
+
+salt-run jobs.active
+salt-run jobs.list_jobs
+salt-run jobs.list_job <span class="token number">20151208172130003474</span>
+salt-run jobs.lookup_jid <span class="token number">20190426130418644064</span>
+
+https://docs.saltstack.com/en/latest/ref/states/backup_mode.html<span class="token comment">#file-state-backups</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br></div></div><h4 id="组织主机节点"><a href="#组织主机节点" class="header-anchor">#</a> 组织主机节点</h4> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token function">vim</span>  /etc/salt/master
+nodegroups:
+  web: <span class="token string">'L@192.168.204.12,192.168.204.13'</span>
+  db: <span class="token string">'L@192.168.204.32,192.168.204.33'</span>
+<span class="token comment">## 无需重启salt-master，保存即可生效</span>
+salt -N web test.ping
+salt -N db test.ping
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h4 id="模块的调用"><a href="#模块的调用" class="header-anchor">#</a> 模块的调用</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>## ping模块
+salt node1 test.ping
+## cmd模块
+salt node2 cmd.run 'id'
+salt node2 cmd.run 'curl -L http://scripts.example.com/scripts/example.sh |bash'
+### 想携带参数？
+salt node2 cmd.scripts salt://scripts/example.sh &quot;arg1 arg2 'arg   3'&quot;
+salt node2 cmd.scripts http://scripts.example.com/scripts/example.sh &quot;arguments&quot;
+
+## pkg模块
+salt node2 pkg.install 'vsftpd,lftp'
+salt node2 pkg.remove 'vsftpd,lftp'
+
+## file.replace
+salt node1 file.replace /ets/ssh/sshd_config pattern='#Port 22' repl='Port 22'
+
+## manage
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><h4 id="sls-salt-state"><a href="#sls-salt-state" class="header-anchor">#</a> SLS(salt state)</h4> <h4 id="grain"><a href="#grain" class="header-anchor">#</a> Grain</h4> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code>salt node1 grains.ls <span class="token operator">|</span><span class="token function">wc</span> -l
+salt node1 grains.item server_type
+salt node1 grains.item ip4_interfaces:eth0
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h4 id="pillar"><a href="#pillar" class="header-anchor">#</a> Pillar</h4> <blockquote><p>Pillar和Grain的区别是什么？
+Grain是在Master上面创建的，但它的取值来自于Minion，而且Grain的代码是通过调用模块saltutil.sync_grains将其同步到Minion上面执行的。在执行结果没有返回之前，Grain的值时未知的，需要根据Minion的实际环境确认。
+和Grain不同的是，Pillar是在Master上定义和存储的，是为了编写sls文件时便于引用而创建的，它的变量和赋值在执行之前就已经确定好了，和Minion的状态没有关系。</p></blockquote> <h3 id="salt-run-结果详情查看"><a href="#salt-run-结果详情查看" class="header-anchor">#</a> salt-run 结果详情查看</h3> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code>salt-run jobs.list_jobs   <span class="token operator">|</span><span class="token function">grep</span> -B20  <span class="token string">'10.1.3'</span>
+salt-run jobs.list_jobs   <span class="token operator">|</span><span class="token function">grep</span> -B20  <span class="token string">'Python-2.7.3/bin/supervisorctl stop dj_gm_ser'</span>
+salt-run jobs.lookup_jid  <span class="token number">20191107102202302460</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="salt-api参数变更"><a href="#salt-api参数变更" class="header-anchor">#</a> salt-api参数变更</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>https://docs.saltstack.com/en/latest/ref/clients/index.html
+
+tgt_type --
+
+    The type of tgt. Allowed values:
+    glob - Bash glob completion - Default
+    pcre - Perl style regular expression
+    list - Python list of hosts
+    grain - Match based on a grain comparison
+    grain_pcre - Grain comparison with a regex
+    pillar - Pillar data comparison
+    pillar_pcre - Pillar data comparison with a regex
+    nodegroup - Match on nodegroup
+    range - Use a Range server for matching
+    compound - Pass a compound match string
+    ipcidr - Match based on Subnet (CIDR notation) or IPv4 address.
+Changed in version 2017.7.0: Renamed from expr_form to tgt_type
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">lastUpdate:</span> <span class="time">8/23/2020, 6:08:09 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/sre/redis/base.html" class="prev">
+        Redis数据类型
+      </a></span> <span class="next"><a href="/sre/zabbix/install.html">
+        zabbix安装
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.44e953ca.js" defer></script><script src="/assets/js/2.ca34a8c3.js" defer></script><script src="/assets/js/72.46ca51b8.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>mysql | 运维工程师进阶之路</title>
+    <meta name="generator" content="VuePress 1.5.1">
+    <link rel="icon" href="/bookDog.png">
+    <meta name="description" content="SRE">
+    <link rel="preload" href="/assets/css/0.styles.4391c3e0.css" as="style"><link rel="preload" href="/assets/js/app.44e953ca.js" as="script"><link rel="preload" href="/assets/js/2.ca34a8c3.js" as="script"><link rel="preload" href="/assets/js/50.599d0e37.js" as="script"><link rel="prefetch" href="/assets/js/10.26ab6c8b.js"><link rel="prefetch" href="/assets/js/11.66cf7fbe.js"><link rel="prefetch" href="/assets/js/12.053ab66a.js"><link rel="prefetch" href="/assets/js/13.7b69c762.js"><link rel="prefetch" href="/assets/js/14.b7d3725e.js"><link rel="prefetch" href="/assets/js/15.94dc50f9.js"><link rel="prefetch" href="/assets/js/16.7d068506.js"><link rel="prefetch" href="/assets/js/17.72fba0c1.js"><link rel="prefetch" href="/assets/js/18.0b63671e.js"><link rel="prefetch" href="/assets/js/19.fc87afd7.js"><link rel="prefetch" href="/assets/js/20.5e8598a5.js"><link rel="prefetch" href="/assets/js/21.29611eb5.js"><link rel="prefetch" href="/assets/js/22.c4fb6228.js"><link rel="prefetch" href="/assets/js/23.7815e38d.js"><link rel="prefetch" href="/assets/js/24.48bc7051.js"><link rel="prefetch" href="/assets/js/25.ca28f6c6.js"><link rel="prefetch" href="/assets/js/26.98c9036d.js"><link rel="prefetch" href="/assets/js/27.f7966843.js"><link rel="prefetch" href="/assets/js/28.4d1d3d14.js"><link rel="prefetch" href="/assets/js/29.bddf0f39.js"><link rel="prefetch" href="/assets/js/3.85186c36.js"><link rel="prefetch" href="/assets/js/30.f4d58864.js"><link rel="prefetch" href="/assets/js/31.4927c5cc.js"><link rel="prefetch" href="/assets/js/32.c4d98288.js"><link rel="prefetch" href="/assets/js/33.b7cd4cd5.js"><link rel="prefetch" href="/assets/js/34.e6f4b03f.js"><link rel="prefetch" href="/assets/js/35.c018a354.js"><link rel="prefetch" href="/assets/js/36.5b95d2bf.js"><link rel="prefetch" href="/assets/js/37.7bfe07d4.js"><link rel="prefetch" href="/assets/js/38.08c93d93.js"><link rel="prefetch" href="/assets/js/39.4114fd8e.js"><link rel="prefetch" href="/assets/js/4.2222cb25.js"><link rel="prefetch" href="/assets/js/40.880abd0a.js"><link rel="prefetch" href="/assets/js/41.7a84d064.js"><link rel="prefetch" href="/assets/js/42.c3ca3a2a.js"><link rel="prefetch" href="/assets/js/43.b79bec7b.js"><link rel="prefetch" href="/assets/js/44.9f528f2e.js"><link rel="prefetch" href="/assets/js/45.0f9b892c.js"><link rel="prefetch" href="/assets/js/46.007d8c15.js"><link rel="prefetch" href="/assets/js/47.b9d5f5bc.js"><link rel="prefetch" href="/assets/js/48.be1f0cf4.js"><link rel="prefetch" href="/assets/js/49.9284be50.js"><link rel="prefetch" href="/assets/js/5.64c7e03a.js"><link rel="prefetch" href="/assets/js/51.aa9fd431.js"><link rel="prefetch" href="/assets/js/52.2f9bc07d.js"><link rel="prefetch" href="/assets/js/53.0c9ef961.js"><link rel="prefetch" href="/assets/js/54.97aac4ec.js"><link rel="prefetch" href="/assets/js/55.76f07301.js"><link rel="prefetch" href="/assets/js/56.4d2c0998.js"><link rel="prefetch" href="/assets/js/57.b470773a.js"><link rel="prefetch" href="/assets/js/58.aaf739b3.js"><link rel="prefetch" href="/assets/js/59.69e3d1c3.js"><link rel="prefetch" href="/assets/js/6.9b93828e.js"><link rel="prefetch" href="/assets/js/60.7573cff3.js"><link rel="prefetch" href="/assets/js/61.42a80774.js"><link rel="prefetch" href="/assets/js/62.6808be18.js"><link rel="prefetch" href="/assets/js/63.90f6608a.js"><link rel="prefetch" href="/assets/js/64.e5344119.js"><link rel="prefetch" href="/assets/js/65.b5634369.js"><link rel="prefetch" href="/assets/js/66.21a43d2e.js"><link rel="prefetch" href="/assets/js/67.b72d9aa6.js"><link rel="prefetch" href="/assets/js/68.af2ab069.js"><link rel="prefetch" href="/assets/js/69.4adc43e6.js"><link rel="prefetch" href="/assets/js/7.6de19e8e.js"><link rel="prefetch" href="/assets/js/70.7b35fee5.js"><link rel="prefetch" href="/assets/js/71.532a8351.js"><link rel="prefetch" href="/assets/js/72.46ca51b8.js"><link rel="prefetch" href="/assets/js/73.970101e7.js"><link rel="prefetch" href="/assets/js/74.1c4ec244.js"><link rel="prefetch" href="/assets/js/75.9a27bec1.js"><link rel="prefetch" href="/assets/js/76.d0fa2941.js"><link rel="prefetch" href="/assets/js/77.3fce2b20.js"><link rel="prefetch" href="/assets/js/78.c098f054.js"><link rel="prefetch" href="/assets/js/79.1841299d.js"><link rel="prefetch" href="/assets/js/8.682fa49e.js"><link rel="prefetch" href="/assets/js/80.55af12a4.js"><link rel="prefetch" href="/assets/js/81.901ddf76.js"><link rel="prefetch" href="/assets/js/82.8b9d069b.js"><link rel="prefetch" href="/assets/js/83.9bac6c98.js"><link rel="prefetch" href="/assets/js/84.f50a45a7.js"><link rel="prefetch" href="/assets/js/9.0d17f277.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4391c3e0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/bookDog.png" alt="运维工程师进阶之路" class="logo"> <span class="site-name can-hide">运维工程师进阶之路</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/sre/linux/cli.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="https://github.com/yes5144" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/sre/linux/cli.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="https://github.com/yes5144" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Linux开源基石</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Nginx高性能web服务</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>MySQL最好用的关系型数据库</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/sre/mysql/install.html" aria-current="page" class="active sidebar-link">MySQL安装</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/sre/mysql/install.html#mysql" class="sidebar-link">mysql</a></li><li class="sidebar-sub-header"><a href="/sre/mysql/install.html#mysql基于binlog增量恢复" class="sidebar-link">mysql基于binlog增量恢复</a></li></ul></li><li><a href="/sre/mysql/params.html" class="sidebar-link">配置说明1</a></li><li><a href="/sre/mysql/params2.html" class="sidebar-link">配置说明2</a></li><li><a href="/sre/mysql/gtid主从复制.html" class="sidebar-link">基于GTID主从</a></li><li><a href="/sre/mysql/docker主从复制.html" class="sidebar-link">docker版主从</a></li><li><a href="/sre/mysql/percona-toolkit.html" class="sidebar-link">percona-toolkit</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>gitlab企业代码仓库管理</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Jenkins持续集成部署</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Redis多功能nosql数据库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Saltstack批量管理工具</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Zabbix开源监控系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Prometheus下一代监控系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ELK日志分析平台</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Python优雅的编程语言</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Docker轻量虚拟化技术</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>k8s容器编排利器</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>golang</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>小技巧</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="mysql"><a href="#mysql" class="header-anchor">#</a> mysql</h2> <h3 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>## 安装
+yum install mysql-server
+
+## 创建数据库
+create database testdb;
+show databases;
+
+## 创建表
+create table table_name (
+id int(11) auto_increment,
+name varchar(128) default 'Unkown',
+age int(3) default '18',
+primary key (id)
+); 
+
+## 1.添加PRIMARY KEY（主键索引） 
+mysql&gt;ALTER TABLE `table_name` ADD PRIMARY KEY ( `column` ) 
+## 2.添加UNIQUE(唯一索引) 
+mysql&gt;ALTER TABLE `table_name` ADD UNIQUE ( `column` ) 
+## 3.添加INDEX(普通索引) 
+mysql&gt;ALTER TABLE `table_name` ADD INDEX index_name ( `column` ) 
+## 4.添加FULLTEXT(全文索引) 
+mysql&gt;ALTER TABLE `table_name` ADD FULLTEXT ( `column` ) 
+## 5.添加多列索引 
+mysql&gt;ALTER TABLE `table_name` ADD INDEX index_name ( `column1`, `column2`, `column3` )
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><h3 id="数据备份和恢复"><a href="#数据备份和恢复" class="header-anchor">#</a> 数据备份和恢复</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>https://www.cnblogs.com/qq78292959/p/3637135.html
+https://www.cnblogs.com/chenmh/p/5300370.html
+
+5.生成新的binlog文件,-F
+
+有时候会希望导出数据之后生成一个新的binlog文件,只需要加上-F参数即可
+
+mysqldump -uroot -proot --databases db1 -F &gt;/tmp/db1.sql
+
+
+14.压缩备份 
+
+## 压缩备份
+mysqldump -uroot -p -P3306 -q -Q --set-gtid-purged=OFF --default-character-set=utf8 --hex-blob --skip-lock-tables --databases abc 2&gt;/abc.err |gzip &gt;/abc.sql.gz
+## 还原
+gunzip -c abc.sql.gz |mysql -uroot -p -vvv -P3306 --default-character-set=utf8 abc 1&gt; abc.log 2&gt;abc.err
+备注： 线上环境导出和导入数据可以参考“14.压缩备份”的导出和导入参数。
+
+其它常用选项：
+
+复制代码
+--no-create-db，  ---取消创建数据库sql(默认存在)
+--no-create-info，---取消创建表sql(默认存在)
+--no-data         ---不导出数据(默认导出)
+--add-drop-database ---增加删除数据库sql（默认不存在）
+--skip-add-drop-table  ---取消每个数据表创建之前添加drop数据表语句(默认每个表之前存在drop语句)
+--skip-add-locks       ---取消在每个表导出之前增加LOCK TABLES（默认存在锁）
+--skip-comments  
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><h2 id="mysql基于binlog增量恢复"><a href="#mysql基于binlog增量恢复" class="header-anchor">#</a> mysql基于binlog增量恢复</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>## 基于传统binlog
+mysqlbinlog 
+
+## 基于GTID二进制
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="kill-线程"><a href="#kill-线程" class="header-anchor">#</a> kill 线程</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>## 查看正在执行的SQL线程
+select *  from information_schema.PROCESSLIST where INFO LIKE 'select%ONLINE%';
+
+## 拼接手动kill 的线程
+select CONCAT(&quot;KILL &quot;,ID,';')  from information_schema.PROCESSLIST where INFO LIKE 'select%t_log_iteminfo%';
+
+## 拼接删除 数据库
+SELECT CONCAT('drop DATABASE  ', TABLE_SCHEMA,';') from `TABLES` where TABLE_SCHEMA like 'nz%'  GROUP BY TABLE_SCHEMA;
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h3 id="mysql-设置字符集"><a href="#mysql-设置字符集" class="header-anchor">#</a> mysql 设置字符集</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>## centos/mysql-57-centos7
+### 启动一个mysql57 容器
+docker run -d  --name mysql57_bookshop -e MYSQL_ROOT_PASSWORD=channel -p 3306:3306 centos/mysql-57-centos7
+
+docker inspect mysql57_bookshop
+docker inspect mysql57_bookshop |grep merge
+
+find / -name my.cnf
+
+### 直接修改对应文件下 merged/etc/opt/rh/rh-mysql57/my.cnf，添加如下，并重启mysql容器
+[client]
+default-character-set=utf8
+
+[mysql]
+default-character-set=utf8
+
+[mysqld]
+init_connect='SET collation_connection = utf8_unicode_ci'
+init_connect='SET NAMES utf8'
+character-set-server=utf8
+collation-server=utf8_unicode_ci
+skip-character-set-client-handshake
+
+### 原文链接：https://blog.csdn.net/dy_miao/article/details/91461581
+
+## mysql:8.0
+docker run --name mysql005 -p 3306:3306 -e MYSQL_ROOT_PASSWORD=888888 -idt mysql:8 --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+疑问：mysql:8.0默认就是utf8mb4 再加上参数的意义是什么？
+————————————————
+### 原文链接：https://blog.csdn.net/boling_cavalry/article/details/79342494
+
+## docker 访问容器
+docker exec -it 83f1aa51b96f env LANG=C.UTF-8 /bin/bash 
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br></div></div><h3 id="group-concat-的用法"><a href="#group-concat-的用法" class="header-anchor">#</a> GROUP_CONCAT 的用法</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>https://blog.csdn.net/moakun/article/details/82085968
+
+SELECT 
+    employeeNumber,
+    firstName,
+    lastName,
+    GROUP_CONCAT(DISTINCT customername
+        ORDER BY customerName)
+FROM
+    employees
+        INNER JOIN
+    customers ON customers.salesRepEmployeeNumber = employeeNumber
+GROUP BY employeeNumber
+ORDER BY firstName , lastname;
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><h3 id="清空某个表"><a href="#清空某个表" class="header-anchor">#</a> 清空某个表</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>SET FOREIGN_KEY_CHECKS = 0;
+TRUNCATE `events`;
+TRUNCATE `problem`;
+
+set FOREIGN_key_checks =1;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">lastUpdate:</span> <span class="time">8/23/2020, 6:08:09 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/sre/nginx/benchmark.html" class="prev">
+        Nginx压力测试
+      </a></span> <span class="next"><a href="/sre/mysql/params.html">
+        配置说明1
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.44e953ca.js" defer></script><script src="/assets/js/2.ca34a8c3.js" defer></script><script src="/assets/js/50.599d0e37.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>配置文件详解 | 运维工程师进阶之路</title>
+    <meta name="generator" content="VuePress 1.5.1">
+    <link rel="icon" href="/bookDog.png">
+    <meta name="description" content="SRE">
+    <link rel="preload" href="/assets/css/0.styles.4391c3e0.css" as="style"><link rel="preload" href="/assets/js/app.44e953ca.js" as="script"><link rel="preload" href="/assets/js/2.ca34a8c3.js" as="script"><link rel="preload" href="/assets/js/57.b470773a.js" as="script"><link rel="prefetch" href="/assets/js/10.26ab6c8b.js"><link rel="prefetch" href="/assets/js/11.66cf7fbe.js"><link rel="prefetch" href="/assets/js/12.053ab66a.js"><link rel="prefetch" href="/assets/js/13.7b69c762.js"><link rel="prefetch" href="/assets/js/14.b7d3725e.js"><link rel="prefetch" href="/assets/js/15.94dc50f9.js"><link rel="prefetch" href="/assets/js/16.7d068506.js"><link rel="prefetch" href="/assets/js/17.72fba0c1.js"><link rel="prefetch" href="/assets/js/18.0b63671e.js"><link rel="prefetch" href="/assets/js/19.fc87afd7.js"><link rel="prefetch" href="/assets/js/20.5e8598a5.js"><link rel="prefetch" href="/assets/js/21.29611eb5.js"><link rel="prefetch" href="/assets/js/22.c4fb6228.js"><link rel="prefetch" href="/assets/js/23.7815e38d.js"><link rel="prefetch" href="/assets/js/24.48bc7051.js"><link rel="prefetch" href="/assets/js/25.ca28f6c6.js"><link rel="prefetch" href="/assets/js/26.98c9036d.js"><link rel="prefetch" href="/assets/js/27.f7966843.js"><link rel="prefetch" href="/assets/js/28.4d1d3d14.js"><link rel="prefetch" href="/assets/js/29.bddf0f39.js"><link rel="prefetch" href="/assets/js/3.85186c36.js"><link rel="prefetch" href="/assets/js/30.f4d58864.js"><link rel="prefetch" href="/assets/js/31.4927c5cc.js"><link rel="prefetch" href="/assets/js/32.c4d98288.js"><link rel="prefetch" href="/assets/js/33.b7cd4cd5.js"><link rel="prefetch" href="/assets/js/34.e6f4b03f.js"><link rel="prefetch" href="/assets/js/35.c018a354.js"><link rel="prefetch" href="/assets/js/36.5b95d2bf.js"><link rel="prefetch" href="/assets/js/37.7bfe07d4.js"><link rel="prefetch" href="/assets/js/38.08c93d93.js"><link rel="prefetch" href="/assets/js/39.4114fd8e.js"><link rel="prefetch" href="/assets/js/4.2222cb25.js"><link rel="prefetch" href="/assets/js/40.880abd0a.js"><link rel="prefetch" href="/assets/js/41.7a84d064.js"><link rel="prefetch" href="/assets/js/42.c3ca3a2a.js"><link rel="prefetch" href="/assets/js/43.b79bec7b.js"><link rel="prefetch" href="/assets/js/44.9f528f2e.js"><link rel="prefetch" href="/assets/js/45.0f9b892c.js"><link rel="prefetch" href="/assets/js/46.007d8c15.js"><link rel="prefetch" href="/assets/js/47.b9d5f5bc.js"><link rel="prefetch" href="/assets/js/48.be1f0cf4.js"><link rel="prefetch" href="/assets/js/49.9284be50.js"><link rel="prefetch" href="/assets/js/5.64c7e03a.js"><link rel="prefetch" href="/assets/js/50.599d0e37.js"><link rel="prefetch" href="/assets/js/51.aa9fd431.js"><link rel="prefetch" href="/assets/js/52.2f9bc07d.js"><link rel="prefetch" href="/assets/js/53.0c9ef961.js"><link rel="prefetch" href="/assets/js/54.97aac4ec.js"><link rel="prefetch" href="/assets/js/55.76f07301.js"><link rel="prefetch" href="/assets/js/56.4d2c0998.js"><link rel="prefetch" href="/assets/js/58.aaf739b3.js"><link rel="prefetch" href="/assets/js/59.69e3d1c3.js"><link rel="prefetch" href="/assets/js/6.9b93828e.js"><link rel="prefetch" href="/assets/js/60.7573cff3.js"><link rel="prefetch" href="/assets/js/61.42a80774.js"><link rel="prefetch" href="/assets/js/62.6808be18.js"><link rel="prefetch" href="/assets/js/63.90f6608a.js"><link rel="prefetch" href="/assets/js/64.e5344119.js"><link rel="prefetch" href="/assets/js/65.b5634369.js"><link rel="prefetch" href="/assets/js/66.21a43d2e.js"><link rel="prefetch" href="/assets/js/67.b72d9aa6.js"><link rel="prefetch" href="/assets/js/68.af2ab069.js"><link rel="prefetch" href="/assets/js/69.4adc43e6.js"><link rel="prefetch" href="/assets/js/7.6de19e8e.js"><link rel="prefetch" href="/assets/js/70.7b35fee5.js"><link rel="prefetch" href="/assets/js/71.532a8351.js"><link rel="prefetch" href="/assets/js/72.46ca51b8.js"><link rel="prefetch" href="/assets/js/73.970101e7.js"><link rel="prefetch" href="/assets/js/74.1c4ec244.js"><link rel="prefetch" href="/assets/js/75.9a27bec1.js"><link rel="prefetch" href="/assets/js/76.d0fa2941.js"><link rel="prefetch" href="/assets/js/77.3fce2b20.js"><link rel="prefetch" href="/assets/js/78.c098f054.js"><link rel="prefetch" href="/assets/js/79.1841299d.js"><link rel="prefetch" href="/assets/js/8.682fa49e.js"><link rel="prefetch" href="/assets/js/80.55af12a4.js"><link rel="prefetch" href="/assets/js/81.901ddf76.js"><link rel="prefetch" href="/assets/js/82.8b9d069b.js"><link rel="prefetch" href="/assets/js/83.9bac6c98.js"><link rel="prefetch" href="/assets/js/84.f50a45a7.js"><link rel="prefetch" href="/assets/js/9.0d17f277.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4391c3e0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/bookDog.png" alt="运维工程师进阶之路" class="logo"> <span class="site-name can-hide">运维工程师进阶之路</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/sre/linux/cli.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="https://github.com/yes5144" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/sre/linux/cli.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="https://github.com/yes5144" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Linux开源基石</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Nginx高性能web服务</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/sre/nginx/install.html" class="sidebar-link">Nginx安装</a></li><li><a href="/sre/nginx/conf.html" aria-current="page" class="active sidebar-link">Nginx配置说明</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/sre/nginx/conf.html#配置文件详解" class="sidebar-link">配置文件详解</a></li></ul></li><li><a href="/sre/nginx/benchmark.html" class="sidebar-link">Nginx压力测试</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>MySQL最好用的关系型数据库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>gitlab企业代码仓库管理</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Jenkins持续集成部署</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Redis多功能nosql数据库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Saltstack批量管理工具</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Zabbix开源监控系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Prometheus下一代监控系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ELK日志分析平台</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Python优雅的编程语言</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Docker轻量虚拟化技术</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>k8s容器编排利器</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>golang</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>小技巧</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="配置文件详解"><a href="#配置文件详解" class="header-anchor">#</a> 配置文件详解</h2> <p>https://www.cnblogs.com/hunttown/p/5759959.html</p> <div class="language-ini line-numbers-mode"><pre class="language-ini"><code><span class="token comment">######Nginx配置文件nginx.conf中文详解#####</span>
+
+<span class="token comment">#定义Nginx运行的用户和用户组</span>
+user www www;
+
+<span class="token comment">#nginx进程数，建议设置为等于CPU总核心数。</span>
+worker_processes 8;
+ 
+<span class="token comment">#全局错误日志定义类型，[ debug | info | notice | warn | error | crit ]</span>
+error_log /usr/local/nginx/logs/error.log info;
+
+<span class="token comment">#进程pid文件</span>
+pid /usr/local/nginx/logs/nginx.pid;
+
+<span class="token comment">#指定进程可以打开的最大描述符：数目</span>
+<span class="token comment">#工作模式与连接数上限</span>
+<span class="token comment">#这个指令是指当一个nginx进程打开的最多文件描述符数目，理论值应该是最多打开文件数（ulimit -n）与nginx进程数相除，但是nginx分配请求并不是那么均匀，所以最好与ulimit -n 的值保持一致。</span>
+<span class="token comment">#现在在linux 2.6内核下开启文件打开数为65535，worker_rlimit_nofile就相应应该填写65535。</span>
+<span class="token comment">#这是因为nginx调度时分配请求到进程并不是那么的均衡，所以假如填写10240，总并发量达到3-4万时就有进程可能超过10240了，这时会返回502错误。</span>
+worker_rlimit_nofile 65535;
+
+
+events
+{
+<span class="token comment">    #参考事件模型，use [ kqueue | rtsig | epoll | /dev/poll | select | poll ]; epoll模型</span>
+<span class="token comment">    #是Linux 2.6以上版本内核中的高性能网络I/O模型，linux建议epoll，如果跑在FreeBSD上面，就用kqueue模型。</span>
+<span class="token comment">    #补充说明：</span>
+<span class="token comment">    #与apache相类，nginx针对不同的操作系统，有不同的事件模型</span>
+<span class="token comment">    #A）标准事件模型</span>
+<span class="token comment">    #Select、poll属于标准事件模型，如果当前系统不存在更有效的方法，nginx会选择select或poll</span>
+<span class="token comment">    #B）高效事件模型</span>
+<span class="token comment">    #Kqueue：使用于FreeBSD 4.1+, OpenBSD 2.9+, NetBSD 2.0 和 MacOS X.使用双处理器的MacOS X系统使用kqueue可能会造成内核崩溃。</span>
+<span class="token comment">    #Epoll：使用于Linux内核2.6版本及以后的系统。</span>
+<span class="token comment">    #/dev/poll：使用于Solaris 7 11/99+，HP/UX 11.22+ (eventport)，IRIX 6.5.15+ 和 Tru64 UNIX 5.1A+。</span>
+<span class="token comment">    #Eventport：使用于Solaris 10。 为了防止出现内核崩溃的问题， 有必要安装安全补丁。</span>
+    use epoll;
+
+<span class="token comment">    #单个进程最大连接数（最大连接数=连接数*进程数）</span>
+<span class="token comment">    #根据硬件调整，和前面工作进程配合起来用，尽量大，但是别把cpu跑到100%就行。每个进程允许的最多连接数，理论上每台nginx服务器的最大连接数为。</span>
+    worker_connections 65535;
+
+<span class="token comment">    #keepalive超时时间。</span>
+    keepalive_timeout 60;
+
+<span class="token comment">    #客户端请求头部的缓冲区大小。这个可以根据你的系统分页大小来设置，一般一个请求头的大小不会超过1k，不过由于一般系统分页都要大于1k，所以这里设置为分页大小。</span>
+<span class="token comment">    #分页大小可以用命令getconf PAGESIZE 取得。</span>
+<span class="token comment">    #[root@web001 ~]# getconf PAGESIZE</span>
+<span class="token comment">    #4096</span>
+<span class="token comment">    #但也有client_header_buffer_size超过4k的情况，但是client_header_buffer_size该值必须设置为“系统分页大小”的整倍数。</span>
+    client_header_buffer_size 4k;
+
+<span class="token comment">    #这个将为打开文件指定缓存，默认是没有启用的，max指定缓存数量，建议和打开文件数一致，inactive是指经过多长时间文件没被请求后删除缓存。</span>
+    open_file_cache max<span class="token attr-value"><span class="token punctuation">=</span>65535 inactive=60s;</span>
+
+<span class="token comment">    #这个是指多长时间检查一次缓存的有效信息。</span>
+<span class="token comment">    #语法:open_file_cache_valid time 默认值:open_file_cache_valid 60 使用字段:http, server, location 这个指令指定了何时需要检查open_file_cache中缓存项目的有效信息.</span>
+    open_file_cache_valid 80s;
+
+<span class="token comment">    #open_file_cache指令中的inactive参数时间内文件的最少使用次数，如果超过这个数字，文件描述符一直是在缓存中打开的，如上例，如果有一个文件在inactive时间内一次没被使用，它将被移除。</span>
+<span class="token comment">    #语法:open_file_cache_min_uses number 默认值:open_file_cache_min_uses 1 使用字段:http, server, location  这个指令指定了在open_file_cache指令无效的参数中一定的时间范围内可以使用的最小文件数,如果使用更大的值,文件描述符在cache中总是打开状态.</span>
+    open_file_cache_min_uses 1;
+    
+<span class="token comment">    #语法:open_file_cache_errors on | off 默认值:open_file_cache_errors off 使用字段:http, server, location 这个指令指定是否在搜索一个文件是记录cache错误.</span>
+    open_file_cache_errors on;
+}
+ 
+ 
+ 
+<span class="token comment">#设定http服务器，利用它的反向代理功能提供负载均衡支持</span>
+http
+{
+<span class="token comment">    #文件扩展名与文件类型映射表</span>
+    include mime.types;
+
+<span class="token comment">    #默认文件类型</span>
+    default_type application/octet-stream;
+
+<span class="token comment">    #默认编码</span>
+<span class="token comment">    #charset utf-8;</span>
+
+<span class="token comment">    #服务器名字的hash表大小</span>
+<span class="token comment">    #保存服务器名字的hash表是由指令server_names_hash_max_size 和server_names_hash_bucket_size所控制的。参数hash bucket size总是等于hash表的大小，并且是一路处理器缓存大小的倍数。在减少了在内存中的存取次数后，使在处理器中加速查找hash表键值成为可能。如果hash bucket size等于一路处理器缓存的大小，那么在查找键的时候，最坏的情况下在内存中查找的次数为2。第一次是确定存储单元的地址，第二次是在存储单元中查找键 值。因此，如果Nginx给出需要增大hash max size 或 hash bucket size的提示，那么首要的是增大前一个参数的大小.</span>
+    server_names_hash_bucket_size 128;
+
+<span class="token comment">    #客户端请求头部的缓冲区大小。这个可以根据你的系统分页大小来设置，一般一个请求的头部大小不会超过1k，不过由于一般系统分页都要大于1k，所以这里设置为分页大小。分页大小可以用命令getconf PAGESIZE取得。</span>
+    client_header_buffer_size 32k;
+
+<span class="token comment">    #客户请求头缓冲大小。nginx默认会用client_header_buffer_size这个buffer来读取header值，如果header过大，它会使用large_client_header_buffers来读取。</span>
+    large_client_header_buffers 4 64k;
+
+<span class="token comment">    #设定通过nginx上传文件的大小</span>
+    client_max_body_size 8m;
+
+<span class="token comment">    #开启高效文件传输模式，sendfile指令指定nginx是否调用sendfile函数来输出文件，对于普通应用设为 on，如果用来进行下载等应用磁盘IO重负载应用，可设置为off，以平衡磁盘与网络I/O处理速度，降低系统的负载。注意：如果图片显示不正常把这个改成off。</span>
+<span class="token comment">    #sendfile指令指定 nginx 是否调用sendfile 函数（zero copy 方式）来输出文件，对于普通应用，必须设为on。如果用来进行下载等应用磁盘IO重负载应用，可设置为off，以平衡磁盘与网络IO处理速度，降低系统uptime。</span>
+    sendfile on;
+
+<span class="token comment">    #开启目录列表访问，合适下载服务器，默认关闭。</span>
+    autoindex on;
+
+<span class="token comment">    #此选项允许或禁止使用socke的TCP_CORK的选项，此选项仅在使用sendfile的时候使用</span>
+    tcp_nopush on;
+     
+    tcp_nodelay on;
+
+<span class="token comment">    #长连接超时时间，单位是秒</span>
+    keepalive_timeout 120;
+
+<span class="token comment">    #FastCGI相关参数是为了改善网站的性能：减少资源占用，提高访问速度。下面参数看字面意思都能理解。</span>
+    fastcgi_connect_timeout 300;
+    fastcgi_send_timeout 300;
+    fastcgi_read_timeout 300;
+    fastcgi_buffer_size 64k;
+    fastcgi_buffers 4 64k;
+    fastcgi_busy_buffers_size 128k;
+    fastcgi_temp_file_write_size 128k;
+
+<span class="token comment">    #gzip模块设置</span>
+    gzip on; #开启gzip压缩输出
+    gzip_min_length 1k;    #最小压缩文件大小
+    gzip_buffers 4 16k;    #压缩缓冲区
+    gzip_http_version 1.0;    #压缩版本（默认1.1，前端如果是squid2.5请使用1.0）
+    gzip_comp_level 2;    #压缩等级
+    gzip_types text/plain application/x-javascript text/css application/xml;    #压缩类型，默认就已经包含textml，所以下面就不用再写了，写上去也不会有问题，但是会有一个warn。
+    gzip_vary on;
+
+<span class="token comment">    #开启限制IP连接数的时候需要使用</span>
+<span class="token comment">    #limit_zone crawler $binary_remote_addr 10m;</span>
+
+
+
+<span class="token comment">    #负载均衡配置</span>
+    upstream piao.jd.com {
+     
+<span class="token comment">        #upstream的负载均衡，weight是权重，可以根据机器配置定义权重。weigth参数表示权值，权值越高被分配到的几率越大。</span>
+        server 192.168.80.121:80 weight<span class="token attr-value"><span class="token punctuation">=</span>3;</span>
+        server 192.168.80.122:80 weight<span class="token attr-value"><span class="token punctuation">=</span>2;</span>
+        server 192.168.80.123:80 weight<span class="token attr-value"><span class="token punctuation">=</span>3;</span>
+
+<span class="token comment">        #nginx的upstream目前支持4种方式的分配</span>
+<span class="token comment">        #1、轮询（默认）</span>
+<span class="token comment">        #每个请求按时间顺序逐一分配到不同的后端服务器，如果后端服务器down掉，能自动剔除。</span>
+<span class="token comment">        #2、weight</span>
+<span class="token comment">        #指定轮询几率，weight和访问比率成正比，用于后端服务器性能不均的情况。</span>
+<span class="token comment">        #例如：</span>
+<span class="token comment">        #upstream bakend {</span>
+<span class="token comment">        #    server 192.168.0.14 weight=10;</span>
+<span class="token comment">        #    server 192.168.0.15 weight=10;</span>
+<span class="token comment">        #}</span>
+<span class="token comment">        #2、ip_hash</span>
+<span class="token comment">        #每个请求按访问ip的hash结果分配，这样每个访客固定访问一个后端服务器，可以解决session的问题。</span>
+<span class="token comment">        #例如：</span>
+<span class="token comment">        #upstream bakend {</span>
+<span class="token comment">        #    ip_hash;</span>
+<span class="token comment">        #    server 192.168.0.14:88;</span>
+<span class="token comment">        #    server 192.168.0.15:80;</span>
+<span class="token comment">        #}</span>
+<span class="token comment">        #3、fair（第三方）</span>
+<span class="token comment">        #按后端服务器的响应时间来分配请求，响应时间短的优先分配。</span>
+<span class="token comment">        #upstream backend {</span>
+<span class="token comment">        #    server server1;</span>
+<span class="token comment">        #    server server2;</span>
+<span class="token comment">        #    fair;</span>
+<span class="token comment">        #}</span>
+<span class="token comment">        #4、url_hash（第三方）</span>
+<span class="token comment">        #按访问url的hash结果来分配请求，使每个url定向到同一个后端服务器，后端服务器为缓存时比较有效。</span>
+<span class="token comment">        #例：在upstream中加入hash语句，server语句中不能写入weight等其他的参数，hash_method是使用的hash算法</span>
+<span class="token comment">        #upstream backend {</span>
+<span class="token comment">        #    server squid1:3128;</span>
+<span class="token comment">        #    server squid2:3128;</span>
+<span class="token comment">        #    hash $request_uri;</span>
+<span class="token comment">        #    hash_method crc32;</span>
+<span class="token comment">        #}</span>
+
+<span class="token comment">        #tips:</span>
+<span class="token comment">        #upstream bakend{#定义负载均衡设备的Ip及设备状态}{</span>
+<span class="token comment">        #    ip_hash;</span>
+<span class="token comment">        #    server 127.0.0.1:9090 down;</span>
+<span class="token comment">        #    server 127.0.0.1:8080 weight=2;</span>
+<span class="token comment">        #    server 127.0.0.1:6060;</span>
+<span class="token comment">        #    server 127.0.0.1:7070 backup;</span>
+<span class="token comment">        #}</span>
+<span class="token comment">        #在需要使用负载均衡的server中增加 proxy_pass http://bakend/;</span>
+
+<span class="token comment">        #每个设备的状态设置为:</span>
+<span class="token comment">        #1.down表示单前的server暂时不参与负载</span>
+<span class="token comment">        #2.weight为weight越大，负载的权重就越大。</span>
+<span class="token comment">        #3.max_fails：允许请求失败的次数默认为1.当超过最大次数时，返回proxy_next_upstream模块定义的错误</span>
+<span class="token comment">        #4.fail_timeout:max_fails次失败后，暂停的时间。</span>
+<span class="token comment">        #5.backup： 其它所有的非backup机器down或者忙的时候，请求backup机器。所以这台机器压力会最轻。</span>
+
+<span class="token comment">        #nginx支持同时设置多组的负载均衡，用来给不用的server来使用。</span>
+<span class="token comment">        #client_body_in_file_only设置为On 可以讲client post过来的数据记录到文件中用来做debug</span>
+<span class="token comment">        #client_body_temp_path设置记录文件的目录 可以设置最多3层目录</span>
+<span class="token comment">        #location对URL进行匹配.可以进行重定向或者进行新的代理 负载均衡</span>
+    }
+     
+     
+     
+<span class="token comment">    #虚拟主机的配置</span>
+    server
+    {
+<span class="token comment">        #监听端口</span>
+        listen 80;
+
+<span class="token comment">        #域名可以有多个，用空格隔开</span>
+        server_name www.jd.com jd.com;
+        index index.html index.htm index.php;
+        root /data/www/jd;
+
+<span class="token comment">        #对******进行负载均衡</span>
+        location ~ .*.(php|php5)?$
+        {
+            fastcgi_pass 127.0.0.1:9000;
+            fastcgi_index index.php;
+            include fastcgi.conf;
+        }
+         
+<span class="token comment">        #图片缓存时间设置</span>
+        location ~ .*.(gif|jpg|jpeg|png|bmp|swf)$
+        {
+            expires 10d;
+        }
+         
+<span class="token comment">        #JS和CSS缓存时间设置</span>
+        location ~ .*.(js|css)?$
+        {
+            expires 1h;
+        }
+         
+<span class="token comment">        #日志格式设定</span>
+<span class="token comment">        #$remote_addr与$http_x_forwarded_for用以记录客户端的ip地址；</span>
+<span class="token comment">        #$remote_user：用来记录客户端用户名称；</span>
+<span class="token comment">        #$time_local： 用来记录访问时间与时区；</span>
+<span class="token comment">        #$request： 用来记录请求的url与http协议；</span>
+<span class="token comment">        #$status： 用来记录请求状态；成功是200，</span>
+<span class="token comment">        #$body_bytes_sent ：记录发送给客户端文件主体内容大小；</span>
+<span class="token comment">        #$http_referer：用来记录从那个页面链接访问过来的；</span>
+<span class="token comment">        #$http_user_agent：记录客户浏览器的相关信息；</span>
+<span class="token comment">        #通常web服务器放在反向代理的后面，这样就不能获取到客户的IP地址了，通过$remote_add拿到的IP地址是反向代理服务器的iP地址。反向代理服务器在转发请求的http头信息中，可以增加x_forwarded_for信息，用以记录原有客户端的IP地址和原来客户端的请求的服务器地址。</span>
+        log_format access '$remote_addr - $remote_user [$time_local] &quot;$request&quot; '
+        '$status $body_bytes_sent &quot;$http_referer&quot; '
+        '&quot;$http_user_agent&quot; $http_x_forwarded_for';
+         
+<span class="token comment">        #定义本虚拟主机的访问日志</span>
+        access_log  /usr/local/nginx/logs/host.access.log  main;
+        access_log  /usr/local/nginx/logs/host.access.404.log  log404;
+         
+<span class="token comment">        #对 &quot;/&quot; 启用反向代理</span>
+        location / {
+            proxy_pass http://127.0.0.1:88;
+            proxy_redirect off;
+            proxy_set_header X-Real-IP $remote_addr;
+             
+<span class="token comment">            #后端的Web服务器可以通过X-Forwarded-For获取用户真实IP</span>
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+             
+<span class="token comment">            #以下是一些反向代理的配置，可选。</span>
+            proxy_set_header Host $host;
+
+<span class="token comment">            #允许客户端请求的最大单文件字节数</span>
+            client_max_body_size 10m;
+
+<span class="token comment">            #缓冲区代理缓冲用户端请求的最大字节数，</span>
+<span class="token comment">            #如果把它设置为比较大的数值，例如256k，那么，无论使用firefox还是IE浏览器，来提交任意小于256k的图片，都很正常。如果注释该指令，使用默认的client_body_buffer_size设置，也就是操作系统页面大小的两倍，8k或者16k，问题就出现了。</span>
+<span class="token comment">            #无论使用firefox4.0还是IE8.0，提交一个比较大，200k左右的图片，都返回500 Internal Server Error错误</span>
+            client_body_buffer_size 128k;
+
+<span class="token comment">            #表示使nginx阻止HTTP应答代码为400或者更高的应答。</span>
+            proxy_intercept_errors on;
+
+<span class="token comment">            #后端服务器连接的超时时间_发起握手等候响应超时时间</span>
+<span class="token comment">            #nginx跟后端服务器连接超时时间(代理连接超时)</span>
+            proxy_connect_timeout 90;
+
+<span class="token comment">            #后端服务器数据回传时间(代理发送超时)</span>
+<span class="token comment">            #后端服务器数据回传时间_就是在规定时间之内后端服务器必须传完所有的数据</span>
+            proxy_send_timeout 90;
+
+<span class="token comment">            #连接成功后，后端服务器响应时间(代理接收超时)</span>
+<span class="token comment">            #连接成功后_等候后端服务器响应时间_其实已经进入后端的排队之中等候处理（也可以说是后端服务器处理请求的时间）</span>
+            proxy_read_timeout 90;
+
+<span class="token comment">            #设置代理服务器（nginx）保存用户头信息的缓冲区大小</span>
+<span class="token comment">            #设置从被代理服务器读取的第一部分应答的缓冲区大小，通常情况下这部分应答中包含一个小的应答头，默认情况下这个值的大小为指令proxy_buffers中指定的一个缓冲区的大小，不过可以将其设置为更小</span>
+            proxy_buffer_size 4k;
+
+<span class="token comment">            #proxy_buffers缓冲区，网页平均在32k以下的设置</span>
+<span class="token comment">            #设置用于读取应答（来自被代理服务器）的缓冲区数目和大小，默认情况也为分页大小，根据操作系统的不同可能是4k或者8k</span>
+            proxy_buffers 4 32k;
+
+<span class="token comment">            #高负荷下缓冲大小（proxy_buffers*2）</span>
+            proxy_busy_buffers_size 64k;
+
+<span class="token comment">            #设置在写入proxy_temp_path时数据的大小，预防一个工作进程在传递文件时阻塞太长</span>
+<span class="token comment">            #设定缓存文件夹大小，大于这个值，将从upstream服务器传</span>
+            proxy_temp_file_write_size 64k;
+        }
+         
+         
+<span class="token comment">        #设定查看Nginx状态的地址</span>
+        location /NginxStatus {
+            stub_status on;
+            access_log on;
+            auth_basic &quot;NginxStatus&quot;;
+            auth_basic_user_file confpasswd;
+<span class="token comment">            #htpasswd文件的内容可以用apache提供的htpasswd工具来产生。</span>
+        }
+         
+<span class="token comment">        #本地动静分离反向代理配置</span>
+<span class="token comment">        #所有jsp的页面均交由tomcat或resin处理</span>
+        location ~ .(jsp|jspx|do)?$ {
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_pass http://127.0.0.1:8080;
+        }
+         
+<span class="token comment">        #所有静态文件由nginx直接读取不经过tomcat或resin</span>
+        location ~ .*.(htm|html|gif|jpg|jpeg|png|bmp|swf|ioc|rar|zip|txt|flv|mid|doc|ppt|
+        pdf|xls|mp3|wma)$
+        {
+            expires 15d; 
+        }
+         
+        location ~ .*.(js|css)?$
+        {
+            expires 1h;
+        }
+    }
+}
+<span class="token comment">######Nginx配置文件nginx.conf中文详解#####</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br><span class="line-number">216</span><br><span class="line-number">217</span><br><span class="line-number">218</span><br><span class="line-number">219</span><br><span class="line-number">220</span><br><span class="line-number">221</span><br><span class="line-number">222</span><br><span class="line-number">223</span><br><span class="line-number">224</span><br><span class="line-number">225</span><br><span class="line-number">226</span><br><span class="line-number">227</span><br><span class="line-number">228</span><br><span class="line-number">229</span><br><span class="line-number">230</span><br><span class="line-number">231</span><br><span class="line-number">232</span><br><span class="line-number">233</span><br><span class="line-number">234</span><br><span class="line-number">235</span><br><span class="line-number">236</span><br><span class="line-number">237</span><br><span class="line-number">238</span><br><span class="line-number">239</span><br><span class="line-number">240</span><br><span class="line-number">241</span><br><span class="line-number">242</span><br><span class="line-number">243</span><br><span class="line-number">244</span><br><span class="line-number">245</span><br><span class="line-number">246</span><br><span class="line-number">247</span><br><span class="line-number">248</span><br><span class="line-number">249</span><br><span class="line-number">250</span><br><span class="line-number">251</span><br><span class="line-number">252</span><br><span class="line-number">253</span><br><span class="line-number">254</span><br><span class="line-number">255</span><br><span class="line-number">256</span><br><span class="line-number">257</span><br><span class="line-number">258</span><br><span class="line-number">259</span><br><span class="line-number">260</span><br><span class="line-number">261</span><br><span class="line-number">262</span><br><span class="line-number">263</span><br><span class="line-number">264</span><br><span class="line-number">265</span><br><span class="line-number">266</span><br><span class="line-number">267</span><br><span class="line-number">268</span><br><span class="line-number">269</span><br><span class="line-number">270</span><br><span class="line-number">271</span><br><span class="line-number">272</span><br><span class="line-number">273</span><br><span class="line-number">274</span><br><span class="line-number">275</span><br><span class="line-number">276</span><br><span class="line-number">277</span><br><span class="line-number">278</span><br><span class="line-number">279</span><br><span class="line-number">280</span><br><span class="line-number">281</span><br><span class="line-number">282</span><br><span class="line-number">283</span><br><span class="line-number">284</span><br><span class="line-number">285</span><br><span class="line-number">286</span><br><span class="line-number">287</span><br><span class="line-number">288</span><br><span class="line-number">289</span><br><span class="line-number">290</span><br><span class="line-number">291</span><br><span class="line-number">292</span><br><span class="line-number">293</span><br><span class="line-number">294</span><br><span class="line-number">295</span><br><span class="line-number">296</span><br><span class="line-number">297</span><br><span class="line-number">298</span><br><span class="line-number">299</span><br><span class="line-number">300</span><br><span class="line-number">301</span><br><span class="line-number">302</span><br><span class="line-number">303</span><br><span class="line-number">304</span><br><span class="line-number">305</span><br><span class="line-number">306</span><br><span class="line-number">307</span><br><span class="line-number">308</span><br><span class="line-number">309</span><br><span class="line-number">310</span><br><span class="line-number">311</span><br><span class="line-number">312</span><br><span class="line-number">313</span><br><span class="line-number">314</span><br><span class="line-number">315</span><br><span class="line-number">316</span><br><span class="line-number">317</span><br><span class="line-number">318</span><br><span class="line-number">319</span><br><span class="line-number">320</span><br><span class="line-number">321</span><br><span class="line-number">322</span><br><span class="line-number">323</span><br><span class="line-number">324</span><br><span class="line-number">325</span><br><span class="line-number">326</span><br><span class="line-number">327</span><br><span class="line-number">328</span><br><span class="line-number">329</span><br><span class="line-number">330</span><br><span class="line-number">331</span><br><span class="line-number">332</span><br></div></div><p>https://www.runoob.com/w3cnote/nginx-setup-intro.html
+https://www.runoob.com/w3cnote/nginx-proxy-balancing.html</p> <p>https://www.cnblogs.com/waynechou/p/nginx_intro.html</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">lastUpdate:</span> <span class="time">7/2/2020, 9:00:01 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/sre/nginx/install.html" class="prev">
+        Nginx安装
+      </a></span> <span class="next"><a href="/sre/nginx/benchmark.html">
+        Nginx压力测试
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.44e953ca.js" defer></script><script src="/assets/js/2.ca34a8c3.js" defer></script><script src="/assets/js/57.b470773a.js" defer></script>
+  </body>
+</html>

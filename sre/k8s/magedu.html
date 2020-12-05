@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>k8s | 运维工程师进阶之路</title>
+    <meta name="generator" content="VuePress 1.5.1">
+    <link rel="icon" href="/bookDog.png">
+    <meta name="description" content="SRE">
+    <link rel="preload" href="/assets/css/0.styles.4391c3e0.css" as="style"><link rel="preload" href="/assets/js/app.44e953ca.js" as="script"><link rel="preload" href="/assets/js/2.ca34a8c3.js" as="script"><link rel="preload" href="/assets/js/35.c018a354.js" as="script"><link rel="prefetch" href="/assets/js/10.26ab6c8b.js"><link rel="prefetch" href="/assets/js/11.66cf7fbe.js"><link rel="prefetch" href="/assets/js/12.053ab66a.js"><link rel="prefetch" href="/assets/js/13.7b69c762.js"><link rel="prefetch" href="/assets/js/14.b7d3725e.js"><link rel="prefetch" href="/assets/js/15.94dc50f9.js"><link rel="prefetch" href="/assets/js/16.7d068506.js"><link rel="prefetch" href="/assets/js/17.72fba0c1.js"><link rel="prefetch" href="/assets/js/18.0b63671e.js"><link rel="prefetch" href="/assets/js/19.fc87afd7.js"><link rel="prefetch" href="/assets/js/20.5e8598a5.js"><link rel="prefetch" href="/assets/js/21.29611eb5.js"><link rel="prefetch" href="/assets/js/22.c4fb6228.js"><link rel="prefetch" href="/assets/js/23.7815e38d.js"><link rel="prefetch" href="/assets/js/24.48bc7051.js"><link rel="prefetch" href="/assets/js/25.ca28f6c6.js"><link rel="prefetch" href="/assets/js/26.98c9036d.js"><link rel="prefetch" href="/assets/js/27.f7966843.js"><link rel="prefetch" href="/assets/js/28.4d1d3d14.js"><link rel="prefetch" href="/assets/js/29.bddf0f39.js"><link rel="prefetch" href="/assets/js/3.85186c36.js"><link rel="prefetch" href="/assets/js/30.f4d58864.js"><link rel="prefetch" href="/assets/js/31.4927c5cc.js"><link rel="prefetch" href="/assets/js/32.c4d98288.js"><link rel="prefetch" href="/assets/js/33.b7cd4cd5.js"><link rel="prefetch" href="/assets/js/34.e6f4b03f.js"><link rel="prefetch" href="/assets/js/36.5b95d2bf.js"><link rel="prefetch" href="/assets/js/37.7bfe07d4.js"><link rel="prefetch" href="/assets/js/38.08c93d93.js"><link rel="prefetch" href="/assets/js/39.4114fd8e.js"><link rel="prefetch" href="/assets/js/4.2222cb25.js"><link rel="prefetch" href="/assets/js/40.880abd0a.js"><link rel="prefetch" href="/assets/js/41.7a84d064.js"><link rel="prefetch" href="/assets/js/42.c3ca3a2a.js"><link rel="prefetch" href="/assets/js/43.b79bec7b.js"><link rel="prefetch" href="/assets/js/44.9f528f2e.js"><link rel="prefetch" href="/assets/js/45.0f9b892c.js"><link rel="prefetch" href="/assets/js/46.007d8c15.js"><link rel="prefetch" href="/assets/js/47.b9d5f5bc.js"><link rel="prefetch" href="/assets/js/48.be1f0cf4.js"><link rel="prefetch" href="/assets/js/49.9284be50.js"><link rel="prefetch" href="/assets/js/5.64c7e03a.js"><link rel="prefetch" href="/assets/js/50.599d0e37.js"><link rel="prefetch" href="/assets/js/51.aa9fd431.js"><link rel="prefetch" href="/assets/js/52.2f9bc07d.js"><link rel="prefetch" href="/assets/js/53.0c9ef961.js"><link rel="prefetch" href="/assets/js/54.97aac4ec.js"><link rel="prefetch" href="/assets/js/55.76f07301.js"><link rel="prefetch" href="/assets/js/56.4d2c0998.js"><link rel="prefetch" href="/assets/js/57.b470773a.js"><link rel="prefetch" href="/assets/js/58.aaf739b3.js"><link rel="prefetch" href="/assets/js/59.69e3d1c3.js"><link rel="prefetch" href="/assets/js/6.9b93828e.js"><link rel="prefetch" href="/assets/js/60.7573cff3.js"><link rel="prefetch" href="/assets/js/61.42a80774.js"><link rel="prefetch" href="/assets/js/62.6808be18.js"><link rel="prefetch" href="/assets/js/63.90f6608a.js"><link rel="prefetch" href="/assets/js/64.e5344119.js"><link rel="prefetch" href="/assets/js/65.b5634369.js"><link rel="prefetch" href="/assets/js/66.21a43d2e.js"><link rel="prefetch" href="/assets/js/67.b72d9aa6.js"><link rel="prefetch" href="/assets/js/68.af2ab069.js"><link rel="prefetch" href="/assets/js/69.4adc43e6.js"><link rel="prefetch" href="/assets/js/7.6de19e8e.js"><link rel="prefetch" href="/assets/js/70.7b35fee5.js"><link rel="prefetch" href="/assets/js/71.532a8351.js"><link rel="prefetch" href="/assets/js/72.46ca51b8.js"><link rel="prefetch" href="/assets/js/73.970101e7.js"><link rel="prefetch" href="/assets/js/74.1c4ec244.js"><link rel="prefetch" href="/assets/js/75.9a27bec1.js"><link rel="prefetch" href="/assets/js/76.d0fa2941.js"><link rel="prefetch" href="/assets/js/77.3fce2b20.js"><link rel="prefetch" href="/assets/js/78.c098f054.js"><link rel="prefetch" href="/assets/js/79.1841299d.js"><link rel="prefetch" href="/assets/js/8.682fa49e.js"><link rel="prefetch" href="/assets/js/80.55af12a4.js"><link rel="prefetch" href="/assets/js/81.901ddf76.js"><link rel="prefetch" href="/assets/js/82.8b9d069b.js"><link rel="prefetch" href="/assets/js/83.9bac6c98.js"><link rel="prefetch" href="/assets/js/84.f50a45a7.js"><link rel="prefetch" href="/assets/js/9.0d17f277.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4391c3e0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/bookDog.png" alt="运维工程师进阶之路" class="logo"> <span class="site-name can-hide">运维工程师进阶之路</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/sre/linux/cli.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="https://github.com/yes5144" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/sre/linux/cli.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="https://github.com/yes5144" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Linux开源基石</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/sre/linux/base_cli.html" class="sidebar-link">基础命令</a></li><li><a href="/sre/linux/system_security.html" class="sidebar-link">系统安全</a></li><li><a href="/sre/linux/iptables.html" class="sidebar-link">iptables防火墙</a></li><li><a href="/sre/linux/regex.html" class="sidebar-link">正则表达式</a></li><li><a href="/sre/linux/tcpdump.html" class="sidebar-link">tcpdump抓包</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Nginx高性能web服务</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>MySQL最好用的关系型数据库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>gitlab企业代码仓库管理</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Jenkins持续集成部署</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Redis多功能nosql数据库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Saltstack批量管理工具</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Zabbix开源监控系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Prometheus下一代监控系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ELK日志分析平台</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Python优雅的编程语言</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Docker轻量虚拟化技术</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>k8s容器编排利器</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>golang</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>小技巧</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="k8s"><a href="#k8s" class="header-anchor">#</a> k8s</h2> <h2 id="_04-kubernetes应用快速入门"><a href="#_04-kubernetes应用快速入门" class="header-anchor">#</a> 04-kubernetes应用快速入门</h2> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code>
+kubectl --help
+
+kubectl get pods
+kubectl get pods -o wide
+kubectl get deployment
+kubectl get nodes
+kubectl delete  pods 
+
+<span class="token comment">## kubectl expose --help</span>
+
+
+
+<span class="token comment">## kubectl run</span>
+kubectl run client --image<span class="token operator">=</span>busybox --replicas<span class="token operator">=</span><span class="token number">1</span> -it --restart<span class="token operator">=</span>never
+
+
+kubectl get svc 
+kubectl describe svc nginx
+
+kube
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><h2 id="标签和标签选择器"><a href="#标签和标签选择器" class="header-anchor">#</a> 标签和标签选择器</h2> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code>kubectl get pods --show-labels
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="myapp-为例"><a href="#myapp-为例" class="header-anchor">#</a> myapp 为例</h2> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token comment">## 部署myapp</span>
+kubectl run myapp  --image<span class="token operator">=</span>ikubernetes/myapp:v1 --replicas<span class="token operator">=</span><span class="token number">2</span>
+
+kubectl get deployment 
+kubectl get deployment  -w
+
+kubectl get pods -o wide
+
+<span class="token comment">## 查看详情</span>
+kubectl describe  pods pods-name
+
+
+<span class="token comment">## 暴露</span>
+kubectl expose deployment myapp --name<span class="token operator">=</span>myapp --port<span class="token operator">=</span><span class="token number">80</span>
+
+<span class="token comment">## 动态扩容和缩容</span>
+kubectl scale --replicas<span class="token operator">=</span><span class="token number">5</span> deployment myapp
+
+kubectl scale --replicas<span class="token operator">=</span><span class="token number">3</span> deploymnet myapp
+
+<span class="token comment">## 滚动升级（灰度发布）</span>
+kubectl <span class="token builtin class-name">set</span> image deployment myapp <span class="token assign-left variable">myapp</span><span class="token operator">=</span>ikubernetes/myapp:v2
+
+<span class="token comment">## 查看更新详情</span>
+kubectl rollout status deployment myapp
+
+<span class="token comment">## 回滚</span>
+kubectl rollout undo deployment myapp
+
+iptables -vnL -t nat
+
+<span class="token comment">## 修改service使外网（集群外部）可以访问</span>
+kubectl edit svc myapp
+
+kubectl get svc
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br></div></div><h2 id="_05-k8s资源清单定义入门"><a href="#_05-k8s资源清单定义入门" class="header-anchor">#</a> 05-k8s资源清单定义入门</h2> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code>RESTful
+  GET, PUT, DELETE, POST,<span class="token punctuation">..</span>.
+ 
+资源：对象
+ workload: Pod, ReplicaSet, Deployment, StatefulSet, DaemonSet, Job, Cronjob, <span class="token punctuation">..</span>.
+ 服务发现及均衡： Service, Ingress, <span class="token punctuation">..</span>.
+ 配置与存储： Volume, CSI
+   ConfighMap, Secret
+   DownwardAPI
+ 集群级资源
+   Namespace, Node, Role, ClusterRole, RoleBinding, ClusterRoleBinding
+ 元数据型资源
+   HPA, PodTemplate, LimitRange
+ 
+ <span class="token comment">## 清单格式定义pod</span>
+ kubectl get pod pod-name -o yaml
+ 
+ kubectl api-version
+
+<span class="token comment">## 如何定义清单</span>
+kubectl explain  pods
+
+kubectl explain pods.metadata
+
+kubectl explain pods.spec.containers
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><h4 id="pod-demo"><a href="#pod-demo" class="header-anchor">#</a> pod-demo</h4> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token comment">## cat pod-demo.yml</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Pod
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> pod<span class="token punctuation">-</span>demo
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> default
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">app</span><span class="token punctuation">:</span> myapp
+    <span class="token key atrule">tier</span><span class="token punctuation">:</span> frontend
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> myapp
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> ikubernetes/myapp<span class="token punctuation">:</span>v1
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> busybox
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> busybox<span class="token punctuation">:</span>latest
+    <span class="token key atrule">command</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token string">&quot;/bin/sh&quot;</span>
+    <span class="token punctuation">-</span> <span class="token string">&quot;-c&quot;</span>
+    <span class="token punctuation">-</span> <span class="token string">&quot;sleep 3600&quot;</span>
+
+<span class="token comment">## kubectl </span>
+kubectl create <span class="token punctuation">-</span>f pod<span class="token punctuation">-</span>demo.yml
+
+kubectl get pods
+
+kubectl delete <span class="token punctuation">-</span>f pod<span class="token punctuation">-</span>demo.yml
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><h2 id="_06-k8s-pod控制器应用进阶"><a href="#_06-k8s-pod控制器应用进阶" class="header-anchor">#</a> 06-k8s Pod控制器应用进阶</h2> <h3 id="资源的清单格式"><a href="#资源的清单格式" class="header-anchor">#</a> 资源的清单格式</h3> <ul><li>一级字段： apiVersion(group/version),kind,metadata(name,namespace,labels,annotations,...),spec,status(只读，系统自定义)</li></ul> <h3 id="标签选择器"><a href="#标签选择器" class="header-anchor">#</a> 标签选择器</h3> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code>kubectl get pods -l app --show labels
+kubectl label pods pod-demo <span class="token assign-left variable">release</span><span class="token operator">=</span>stable
+
+kubectl label pods pod-demo <span class="token assign-left variable">release</span><span class="token operator">=</span>stable --overwrite
+
+kubectl get pods -l app --show-labels
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="nodeselector-节点标签选择器"><a href="#nodeselector-节点标签选择器" class="header-anchor">#</a> nodeSelector 节点标签选择器</h3> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code>kubectl get nodes --show-labels
+kubectl label nodes node01.magedu.com <span class="token assign-left variable">disktype</span><span class="token operator">=</span>ssd
+kubectl get nodes --show-labels
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="annotations"><a href="#annotations" class="header-anchor">#</a> annotations:</h3> <ul><li>与label不同的地方在于，它不能挑选资源对象，仅用于为对象提供“元数据”。</li></ul> <h3 id="pod的生命周期"><a href="#pod的生命周期" class="header-anchor">#</a> Pod的生命周期</h3> <blockquote><p>Pending, Running, Failed, Successed, Unknown</p></blockquote> <p>Pod生命周期中的重要行为：
+初始化容器
+容器探测： liveness, readiness</p> <p>restartPolicy:
+Always, OnFailure, Never. Default to Always</p> <h2 id="_07-k8s-pod控制器应用进阶2"><a href="#_07-k8s-pod控制器应用进阶2" class="header-anchor">#</a> 07-k8s Pod控制器应用进阶2</h2> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code>kubectl explain pods.spec.containers.livenessProbe
+ 
+kubectl explain pods.spec.containers.livenessProbe.httpGet
+ 
+ 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h4 id="状态检测liveness-httpget-container"><a href="#状态检测liveness-httpget-container" class="header-anchor">#</a> 状态检测liveness-httpget-container</h4> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code>cat  liveness<span class="token punctuation">-</span>httpget<span class="token punctuation">-</span>pod
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Pod
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> liveness<span class="token punctuation">-</span>httpget<span class="token punctuation">-</span>pod
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> default
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> liveness<span class="token punctuation">-</span>httpget<span class="token punctuation">-</span>container
+     <span class="token key atrule">image</span><span class="token punctuation">:</span> ikubernetes/myapp<span class="token punctuation">:</span>v1
+     <span class="token key atrule">imagePullPolicy</span><span class="token punctuation">:</span> IfNotPresent
+     <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+     <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> http
+       <span class="token key atrule">containerPort</span><span class="token punctuation">:</span> <span class="token number">80</span>
+     <span class="token key atrule">livenessProbe</span><span class="token punctuation">:</span>
+       <span class="token key atrule">httpGet</span><span class="token punctuation">:</span>
+         <span class="token key atrule">port</span><span class="token punctuation">:</span> http
+         <span class="token key atrule">path</span><span class="token punctuation">:</span> /index.html
+       <span class="token key atrule">initialDelaySeconds</span><span class="token punctuation">:</span> <span class="token number">1</span>
+       <span class="token key atrule">periodSeconds</span><span class="token punctuation">:</span> <span class="token number">3</span>
+ 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><h4 id="就绪检测"><a href="#就绪检测" class="header-anchor">#</a> 就绪检测</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>##
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="poststart-pod-yml"><a href="#poststart-pod-yml" class="header-anchor">#</a> postStart-pod.yml</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>##
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="_08-k8s-pod控制器1"><a href="#_08-k8s-pod控制器1" class="header-anchor">#</a> 08-k8s Pod控制器1</h2> <ul><li>ReplicationController:</li> <li>ReplicaSet</li> <li>Deployment</li> <li>DaemonSet</li> <li>Job</li> <li>Cronjob</li> <li></li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="_09-k8s-pod控制器2"><a href="#_09-k8s-pod控制器2" class="header-anchor">#</a> 09-k8s Pod控制器2</h2> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token comment">## 查看支持的更新策略</span>
+kubectl explain deploy.spec.strategy
+ 
+ cat deploy<span class="token punctuation">-</span>demo.yml
+ 
+ <span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> apps/v1
+ <span class="token key atrule">kind</span><span class="token punctuation">:</span> Deployment
+ <span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+   <span class="token key atrule">name</span><span class="token punctuation">:</span> myapp<span class="token punctuation">-</span>deploy
+   <span class="token key atrule">namespace</span><span class="token punctuation">:</span> default
+ <span class="token key atrule">spec</span><span class="token punctuation">:</span>
+   <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">2</span>
+   <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+     <span class="token key atrule">matchLabels</span><span class="token punctuation">:</span>
+       <span class="token key atrule">app</span><span class="token punctuation">:</span> myapp
+       <span class="token key atrule">release</span><span class="token punctuation">:</span> canary
+    <span class="token key atrule">template</span><span class="token punctuation">:</span>
+      <span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+        <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+          <span class="token key atrule">app</span><span class="token punctuation">:</span> myapp
+          <span class="token key atrule">release</span><span class="token punctuation">:</span> canary
+      <span class="token key atrule">spec</span><span class="token punctuation">:</span>
+        <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> myapp
+          <span class="token key atrule">image</span><span class="token punctuation">:</span> ikubernetes/myapp<span class="token punctuation">:</span>v1
+          <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+          <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> http
+            <span class="token key atrule">containerPort</span><span class="token punctuation">:</span> <span class="token number">80</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><h3 id="部署练习"><a href="#部署练习" class="header-anchor">#</a> 部署练习</h3> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token comment">############</span>
+ 
+ kubectl apply -f deploy-demo.yml
+ kubectl get deploy
+ kubectl get rs
+ 
+ <span class="token comment">## 显示更新过程</span>
+ kubectl get pods -l <span class="token assign-left variable">app</span><span class="token operator">=</span>myapp -w
+ 
+ kubectl get rs
+ kubectl get rs -o wide
+ 
+ <span class="token comment">## 查看滚动历史</span>
+ kubectl rollout <span class="token function">history</span> --help
+ 
+ <span class="token comment">## kubectl patch打补丁方式扩容</span>
+ kubectl patch --help
+ kubectl patch deployment myapp-deploy -p <span class="token string">'{&quot;spec&quot;:{&quot;replicas&quot;:5}}'</span>
+ 
+ 
+ kubectl patch deployment myapp-deploy -p <span class="token string">'{&quot;spec&quot;:{&quot;strategy&quot;:{&quot;rollingUpdate&quot;:{&quot;maxSurge&quot;:1,&quot;maxUnavailable&quot;:0}}}}'</span>
+ 
+ kubectl describe deployment myapp-deploy
+ 
+ 
+ <span class="token comment">## </span>
+ kubectl <span class="token builtin class-name">set</span> image deployment myapp-deploy <span class="token assign-left variable">myapp</span><span class="token operator">=</span>ikubernetes/myapp:v3 <span class="token operator">&amp;&amp;</span> kubectl rollout pause deployment myapp-deploy
+ 
+ kubectl rollout resume deployment myapp-deploy
+ 
+ <span class="token comment">## 查看更新详情的方法</span>
+ kubectl status deployment myapp-deploy
+ 
+ kubectl get pods -l <span class="token assign-left variable">app</span><span class="token operator">=</span>myapp -w
+ 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br></div></div><h4 id="daemonset"><a href="#daemonset" class="header-anchor">#</a> daemonSet</h4> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code>cat  ds<span class="token punctuation">-</span>demo.yml
+ 
+ <span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> apps/v1
+ <span class="token key atrule">kind</span><span class="token punctuation">:</span> DaemonSet
+ <span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+   <span class="token key atrule">name</span><span class="token punctuation">:</span> myapp<span class="token punctuation">-</span>ds
+   <span class="token key atrule">namespace</span><span class="token punctuation">:</span> default
+ <span class="token key atrule">spec</span><span class="token punctuation">:</span>
+   <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+     <span class="token key atrule">metchLabels</span><span class="token punctuation">:</span>
+       <span class="token key atrule">app</span><span class="token punctuation">:</span> filebeat
+       <span class="token key atrule">release</span><span class="token punctuation">:</span> stable
+   <span class="token key atrule">template</span><span class="token punctuation">:</span>
+     <span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+       <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+         <span class="token key atrule">app</span><span class="token punctuation">:</span> filebeat
+         <span class="token key atrule">release</span><span class="token punctuation">:</span> stable
+     <span class="token key atrule">spec</span><span class="token punctuation">:</span>
+       <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+       <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> filebeat
+         <span class="token key atrule">image</span><span class="token punctuation">:</span> ikubernetes/filebeat<span class="token punctuation">:</span>5.6.5<span class="token punctuation">-</span>alpine
+         <span class="token key atrule">env</span><span class="token punctuation">:</span>
+         <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> REDIS_HOST
+           <span class="token key atrule">value</span><span class="token punctuation">:</span> redis.default.svc.cluster.local
+         <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> REDIS_LOG_LEVEL
+           <span class="token key atrule">value</span><span class="token punctuation">:</span> info
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><h3 id="练习"><a href="#练习" class="header-anchor">#</a> 练习</h3> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token comment">####</span>
+kubectl apply -f ds-demo.yml
+kubectl get pods
+
+
+kubectl <span class="token builtin class-name">set</span> image daemonsets filebeat-ds <span class="token assign-left variable">filebeat</span><span class="token operator">=</span>ikubernetes/filebeat:5.6.6-alpine
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h2 id="_10-k8s-service资源"><a href="#_10-k8s-service资源" class="header-anchor">#</a> 10-k8s service资源</h2> <ul><li>模型： userspace, iptables, ipvs</li> <li>ClusterIP, NodePort
+<ul><li>NodePort: client -&gt; NodeIP:NodePort -&gt; ClusterIP:ServicePort -&gt; PodIP:containerPort</li> <li>LoadBalancer</li> <li>ExternelName
+<ul><li>FQDN
+<ul><li>CNAME -&gt;FQDN</li></ul></li></ul></li></ul></li> <li>No ClusterIP: Headless Service
+<ul><li>ServiceName -&gt; PodIP</li></ul></li></ul> <h4 id="clusterip方式"><a href="#clusterip方式" class="header-anchor">#</a> clusterIP方式</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>kubectl explain svc.spec.ports
+ 
+cat redis-svc.yml
+ 
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis
+  namespace: default
+spec:
+  selector:
+    app: redis
+    role: logstor
+  clusterIP: 10.97.97.97
+  type: ClusterIP
+  ports:
+  - port: 6379
+    targetPort: 6379
+
+###
+kubectl apply -f redis-svc.yml
+
+kubectl get svc
+kubectl describe svc redis
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><h4 id="nodeport方式"><a href="#nodeport方式" class="header-anchor">#</a> Nodeport方式</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>## cat myapp-svc.yml
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp
+  namespace: default
+spec:
+  selector:
+    app: myapp
+    release: canary
+  clusterIP: 10.99.99.99
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: 80
+    nodePort: 30080
+
+### 打补丁
+kubectl patch myapp -p '{&quot;spec&quot;:{&quot;sessionAffinity&quot;:&quot;ClientIP&quot;}}}'
+
+kubectl describe svc myapp
+kubectl patch myapp -p '{&quot;spec&quot;:{&quot;sessionAffinity&quot;:&quot;None&quot;}}'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><h4 id="dns"><a href="#dns" class="header-anchor">#</a> dns</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>## 查看系统svc，可以看到kube-dns的ip地址
+kubectl get svc -n kube-system
+
+## 
+dig -A myapp-svc.default.svc.cluster.local.  @10.96.0.10
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="_11-ingress-及ingress-controller"><a href="#_11-ingress-及ingress-controller" class="header-anchor">#</a> 11-ingress 及ingress Controller</h3> <blockquote><p>七层调度</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>kubectl explain ingress
+
+https://github.com/kubernetes/ingress-nginx/blob/master/docs/deploy/index.md#prerequisite-generic-deployment-command
+
+https://kubernetes.github.io/ingress-nginx/
+
+
+## openssl 生成证书
+openssl genrsa -out tls.key 2048
+openssl req -new -x509 -k tls.key -out tls.crt -subj /C=CN/ST=Beijing/L=Beijing/O=DevOps/CN=tomcat.magedu.com
+
+kubectl  create secret tls tomcat-ingress-secret --cert=tls.crt --key=tls.key
+
+kubectl get sceret
+
+kubectl decribe sceret tomcat-ingress-secret
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><h2 id="_12-k8s-存储卷"><a href="#_12-k8s-存储卷" class="header-anchor">#</a> 12-k8s 存储卷</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>kubectl explain pods.spec.volume
+
+kubectl explain pods.spec.containers.volumeMounts
+
+## cat myapp-vol-demo.yml
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-demo
+  namespace; default
+  labels:
+    app: myapp
+    tier: frontend
+  annotations:
+    magedu.com/created-by: &quot;cluster admin&quot;
+spec:
+  containers:
+  - name: httpd
+    image: busybox:lastest
+    imagePullPolicy: IfNotPresent
+    command: ['/bin/httpd', '-f', '-h /data/web/html']
+    ports:
+    - name: http
+      containerPort; 80
+    volumeMounts:
+    - name: html
+      mountPath: /data/web/html/
+  - name: busybox
+    image: busybox: latest
+    imagePullPolicy: IfNotPresent
+    volumeMounts:
+    - name: html
+      mountPath: /data/
+    command:
+    - &quot;/bin/sh&quot;
+    - &quot;-c&quot;
+    - &quot;whild true; do echo $(date) &gt;&gt; /data/index.html; sleep 2; done&quot;
+  volumes:
+  - name: html
+    emptyDir: {}
+
+kubectl get pods
+kubectl describe pods httpd
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br></div></div><h4 id="存储卷-gitrepo"><a href="#存储卷-gitrepo" class="header-anchor">#</a> 存储卷 gitRepo</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>##
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h4 id="存储卷-hostpath"><a href="#存储卷-hostpath" class="header-anchor">#</a> 存储卷 hostPath</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>##  cat myapp-hostPath-vol.yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-vol-hostpath
+  namespace: default
+spec:
+  containers:
+  - name: myapp
+    image: ikubernetes/myapp:v1
+    volumeMounts:
+    - name: html
+      mountPath: /usr/share/nginx/html
+  volumes:
+  - name: html
+    hostPath:
+      path: /data/pod/volume2
+      type: DirectoryOrCreate
+      
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h4 id="存储卷-nfs"><a href="#存储卷-nfs" class="header-anchor">#</a> 存储卷 nfs</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>yum install nfs-utils -y
+
+mkdir /data/volumes
+cat /etc/exports
+/data/volumes  172.20.0.0/16(rw, no_root_squash)
+
+systemctl start nfs
+
+netstat -anltp |grep 2049
+
+## 其他节点
+yum install nfs-utils -y
+
+mount -t nfs stor01:/data/volumes  /mnt
+
+## cat pod-nfs.yml
+apiVersioin: v1
+kind: Pod
+metadata:
+  name: pod-vol-nfs
+  namespace: default
+spec:
+  containers:
+  - name: myapp
+    image: ikubernetes/myapp:v1
+    volumeMounts:
+    - name: html
+      mountPath: /usr/share/nginx/html/
+  volumes:
+  - name: html
+    nfs:
+      path: /data/volumes
+      server: stor01.magedu.com
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br></div></div><h3 id="pv-pvc"><a href="#pv-pvc" class="header-anchor">#</a> pv pvc</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>kubectl explain pvc
+
+cd /data/volumes
+mkdir v00{1..5}
+ls
+
+vim  /etc/exports
+/data/volumes/v001  172.20.0.0/16(rw, no_root_squash)
+/data/volumes/v002  172.20.0.0/16(rw, no_root_squash)
+/data/volumes/v003  172.20.0.0/16(rw, no_root_squash)
+/data/volumes/v004  172.20.0.0/16(rw, no_root_squash)
+/data/volumes/v005  172.20.0.0/16(rw, no_root_squash)
+
+exportfs -arv
+showmount -e
+
+###
+kubectl explain pv
+
+kubectl explain pv.spec
+kubectl explain pv.spec.nfs
+
+## cat pv-demo.yml
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv001
+  labels:
+    name: pv001
+spec:
+  nfs:
+    path: /data/volumes/v001
+    server: stor01.magedu.com
+  accessMode: [&quot;ReadWriteMany&quot;,&quot;ReadWriteOnce&quot;]
+  capacity:
+    storage: 2Gi
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv002
+  labels:
+    name: pv002
+spec:
+  nfs:
+    path: /data/volumes/v002
+    server: stor01.magedu.com
+  accessMode: [&quot;ReadWriteMany&quot;,&quot;ReadWriteOnce&quot;]
+  capacity:
+    storage: 2Gi
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv003
+  labels:
+    name: pv003
+spec:
+  nfs:
+    path: /data/volumes/v003
+    server: stor01.magedu.com
+  accessMode: [&quot;ReadWriteMany&quot;,&quot;ReadWriteOnce&quot;]
+  capacity:
+    storage: 3Gi
+
+###
+kubectl apply -f  pv-demo.yml
+
+kubectl get pv
+
+
+### cat pod-pvc.yml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mypvc
+  namespace: default
+spec:
+  accessModes: [&quot;ReadWriteMany&quot;]
+  resources:
+    requests:
+      storage: 6Gi
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-vol-pvc
+  namespace: default
+spec:
+  containers:
+  - name: myapp
+    image: ikubernetes/myapp:v1
+    volumeMounts:
+    - name: html
+      mountPath: /usr/share/nginx/html/
+  volumes:
+  - name: html
+    persisentVolumClaim:
+      claimName: mypvc
+
+
+## 
+kubectl apply -f pod-pvc.yml
+
+kubectl get pv
+kubectl get pvc
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br></div></div><h2 id="_13-k8s-pv-pvc-configmap-secret"><a href="#_13-k8s-pv-pvc-configmap-secret" class="header-anchor">#</a> 13-k8s pv pvc configmap secret</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>## pod 资源容器变量的获取 configMap
+kubectl explain pods.spec.containers.env.valueFrom
+
+kubectl explain configmap
+
+kubectl create configmap --help
+
+kubectl create configmap nginx-config --from-literal=nginx_port=80 --from-literal=server_name=myapp.magedu.com
+
+kubectl describe cm nginx-config
+
+
+## configmap from file
+vim www.conf
+server {
+    server_name myapp.magedu.com;
+    listen 80;
+    root /data/www/html/;
+}
+
+
+kubectl create configmap nginx-www --from-file=./www.conf
+
+kubectl get cm
+
+kubectl get cm nginx-www -o yaml
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><h4 id="pod-引用configmap"><a href="#pod-引用configmap" class="header-anchor">#</a> pod 引用configmap</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>kubectl explain pods.spec.containers.env.valueFrom.configMapKeyRef
+
+kubectl describe cm nginx-config
+
+## cat pod-configmap.yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-cm-1
+  namespace: default
+  labels:
+    app: myapp
+    tier: frontend
+  annotations:
+    magedu.com/created-by: &quot;cluster admin&quot;
+    
+spec: 
+  containers:
+  - name: myapp
+    image: ikubernetes/myapp:v1
+    ports:
+    - name: http
+      containerPort: 80
+    env:
+    - name: NGINX_SERVER_PORT
+      valueFrom:
+        configMapKeyRef:
+          name: nginx-config
+          key: nginx_port
+    - name: NGINX_SERVER_NAME
+      valueFrom:
+        configMapKeyRef:
+          name: nginx-config
+          key: server_name
+###
+kubectl apply -f pod-configmap.yml
+
+kubectl get pods
+
+kubectl exec -it pod-cm-1 -- printenv
+##############
+
+## cat pod-configmap-2.yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-cm-2
+  namespace: default
+  labels:
+    app: myapp
+    tier: frontend
+  annotations:
+    magedu.com/created-by: &quot;cluster admin&quot;
+    
+spec: 
+  containers:
+  - name: myapp
+    image: ikubernetes/myapp:v1
+    ports:
+    - name: http
+      containerPort: 80
+    volumeMounts:
+    - name: nginxconf
+      mountPath: /etc/nginx/config.d/
+      readOnly: true
+  volumes:
+  - name: nginxconf
+    configMap:
+      name: nginx-config
+
+###
+kubectl apply -f pod-configmap-2.yml
+
+kubectl get pods
+
+kubectl exec -it pod-cm-2 -- /bin/sh
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br></div></div><h3 id="secret"><a href="#secret" class="header-anchor">#</a> secret</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>### kubectl create secret --help
+
+kubectl create secret generic mysql-root-password --from-literal=password=Mypass123!@#
+
+kubectl get secret
+
+kubectl secret mysql-root-password
+
+kubectl get secret mysql-root-password -o yaml
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h2 id="_14-k8s-stateful控制器"><a href="#_14-k8s-stateful控制器" class="header-anchor">#</a> 14-k8s stateful控制器</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>kubectl get sts
+
+kubectl explain sts.spec
+
+
+kubectl scale sts myapp --replicas=5
+kubectl get pods -w
+
+## patch缩容
+kubectl patch sts myapp -p '{&quot;spec&quot;:{&quot;replicas&quot;:2}}'
+
+## 
+
+kubectl explain sts.spec.updateStrategy.type
+
+## 金丝雀发布
+kubectl  patch sts myapp -p '{&quot;spec&quot;:{&quot;updateStrategy&quot;:{&quot;rollingUpdate&quot;:{&quot;partition&quot;:4}}}}'
+
+kubectl set image  sts/myapp  myapp=ikubernetes/myapp:v2
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><h2 id="_15-k8s认证和-serviceaccount"><a href="#_15-k8s认证和-serviceaccount" class="header-anchor">#</a> 15-k8s认证和 serviceAccount</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>kubectl proxy :8080
+
+netstat -ntlp
+
+curl http://localhost:8080/api/v1/namespaces
+
+kubectl get deploy -n kube-system
+
+curl http://localhost:8080/apis/apps/v1/namespaces/kube-system/deployments/
+
+## 集群内部。。。
+kubectl get  svc
+kubectl describe svc kubernetes
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><h2 id="_16-k8s-rbac"><a href="#_16-k8s-rbac" class="header-anchor">#</a> 16-k8s RBAC</h2> <h4 id="rolebinding"><a href="#rolebinding" class="header-anchor">#</a> rolebinding</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h4 id="clusterrolebinding"><a href="#clusterrolebinding" class="header-anchor">#</a> clusterrolebinding</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>kubectl create clusterrolebinding magedu-read-all-pods --clusterrole=cluster-reader --user=magedu --dry-run -o yaml
+
+kubectl get clusterrole
+
+kubectl get clusterrole admin -o yaml
+
+kubectl create rolebinding default-ns-admin --clusterrole=admin --user=magedu 
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h2 id="_17-k8s-dashboard-认证及分级授权"><a href="#_17-k8s-dashboard-认证及分级授权" class="header-anchor">#</a> 17-k8s dashboard 认证及分级授权</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>cd /etc/kubernetes/pki
+
+ls
+
+openssl req -new -key dashboard.key -out dashboard.csr -subj &quot;/O=mageud/CN=dashboard&quot;
+
+openssl x509 -req -in dashboard.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out dashboard.crt -days 365
+
+
+kubectl create secret generic dashboard-cert -n kube-system --from-file=dashboard.crt=./dashboard.crt  --from-file=dashboard.key=./dashboard.key
+
+kubectl get secret
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h2 id="_18-k8s"><a href="#_18-k8s" class="header-anchor">#</a> 18-k8s</h2></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">lastUpdate:</span> <span class="time">8/23/2020, 6:08:09 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.44e953ca.js" defer></script><script src="/assets/js/2.ca34a8c3.js" defer></script><script src="/assets/js/35.c018a354.js" defer></script>
+  </body>
+</html>

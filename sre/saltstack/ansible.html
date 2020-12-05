@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ansible 安装 | 运维工程师进阶之路</title>
+    <meta name="generator" content="VuePress 1.5.1">
+    <link rel="icon" href="/bookDog.png">
+    <meta name="description" content="SRE">
+    <link rel="preload" href="/assets/css/0.styles.4391c3e0.css" as="style"><link rel="preload" href="/assets/js/app.44e953ca.js" as="script"><link rel="preload" href="/assets/js/2.ca34a8c3.js" as="script"><link rel="preload" href="/assets/js/71.532a8351.js" as="script"><link rel="prefetch" href="/assets/js/10.26ab6c8b.js"><link rel="prefetch" href="/assets/js/11.66cf7fbe.js"><link rel="prefetch" href="/assets/js/12.053ab66a.js"><link rel="prefetch" href="/assets/js/13.7b69c762.js"><link rel="prefetch" href="/assets/js/14.b7d3725e.js"><link rel="prefetch" href="/assets/js/15.94dc50f9.js"><link rel="prefetch" href="/assets/js/16.7d068506.js"><link rel="prefetch" href="/assets/js/17.72fba0c1.js"><link rel="prefetch" href="/assets/js/18.0b63671e.js"><link rel="prefetch" href="/assets/js/19.fc87afd7.js"><link rel="prefetch" href="/assets/js/20.5e8598a5.js"><link rel="prefetch" href="/assets/js/21.29611eb5.js"><link rel="prefetch" href="/assets/js/22.c4fb6228.js"><link rel="prefetch" href="/assets/js/23.7815e38d.js"><link rel="prefetch" href="/assets/js/24.48bc7051.js"><link rel="prefetch" href="/assets/js/25.ca28f6c6.js"><link rel="prefetch" href="/assets/js/26.98c9036d.js"><link rel="prefetch" href="/assets/js/27.f7966843.js"><link rel="prefetch" href="/assets/js/28.4d1d3d14.js"><link rel="prefetch" href="/assets/js/29.bddf0f39.js"><link rel="prefetch" href="/assets/js/3.85186c36.js"><link rel="prefetch" href="/assets/js/30.f4d58864.js"><link rel="prefetch" href="/assets/js/31.4927c5cc.js"><link rel="prefetch" href="/assets/js/32.c4d98288.js"><link rel="prefetch" href="/assets/js/33.b7cd4cd5.js"><link rel="prefetch" href="/assets/js/34.e6f4b03f.js"><link rel="prefetch" href="/assets/js/35.c018a354.js"><link rel="prefetch" href="/assets/js/36.5b95d2bf.js"><link rel="prefetch" href="/assets/js/37.7bfe07d4.js"><link rel="prefetch" href="/assets/js/38.08c93d93.js"><link rel="prefetch" href="/assets/js/39.4114fd8e.js"><link rel="prefetch" href="/assets/js/4.2222cb25.js"><link rel="prefetch" href="/assets/js/40.880abd0a.js"><link rel="prefetch" href="/assets/js/41.7a84d064.js"><link rel="prefetch" href="/assets/js/42.c3ca3a2a.js"><link rel="prefetch" href="/assets/js/43.b79bec7b.js"><link rel="prefetch" href="/assets/js/44.9f528f2e.js"><link rel="prefetch" href="/assets/js/45.0f9b892c.js"><link rel="prefetch" href="/assets/js/46.007d8c15.js"><link rel="prefetch" href="/assets/js/47.b9d5f5bc.js"><link rel="prefetch" href="/assets/js/48.be1f0cf4.js"><link rel="prefetch" href="/assets/js/49.9284be50.js"><link rel="prefetch" href="/assets/js/5.64c7e03a.js"><link rel="prefetch" href="/assets/js/50.599d0e37.js"><link rel="prefetch" href="/assets/js/51.aa9fd431.js"><link rel="prefetch" href="/assets/js/52.2f9bc07d.js"><link rel="prefetch" href="/assets/js/53.0c9ef961.js"><link rel="prefetch" href="/assets/js/54.97aac4ec.js"><link rel="prefetch" href="/assets/js/55.76f07301.js"><link rel="prefetch" href="/assets/js/56.4d2c0998.js"><link rel="prefetch" href="/assets/js/57.b470773a.js"><link rel="prefetch" href="/assets/js/58.aaf739b3.js"><link rel="prefetch" href="/assets/js/59.69e3d1c3.js"><link rel="prefetch" href="/assets/js/6.9b93828e.js"><link rel="prefetch" href="/assets/js/60.7573cff3.js"><link rel="prefetch" href="/assets/js/61.42a80774.js"><link rel="prefetch" href="/assets/js/62.6808be18.js"><link rel="prefetch" href="/assets/js/63.90f6608a.js"><link rel="prefetch" href="/assets/js/64.e5344119.js"><link rel="prefetch" href="/assets/js/65.b5634369.js"><link rel="prefetch" href="/assets/js/66.21a43d2e.js"><link rel="prefetch" href="/assets/js/67.b72d9aa6.js"><link rel="prefetch" href="/assets/js/68.af2ab069.js"><link rel="prefetch" href="/assets/js/69.4adc43e6.js"><link rel="prefetch" href="/assets/js/7.6de19e8e.js"><link rel="prefetch" href="/assets/js/70.7b35fee5.js"><link rel="prefetch" href="/assets/js/72.46ca51b8.js"><link rel="prefetch" href="/assets/js/73.970101e7.js"><link rel="prefetch" href="/assets/js/74.1c4ec244.js"><link rel="prefetch" href="/assets/js/75.9a27bec1.js"><link rel="prefetch" href="/assets/js/76.d0fa2941.js"><link rel="prefetch" href="/assets/js/77.3fce2b20.js"><link rel="prefetch" href="/assets/js/78.c098f054.js"><link rel="prefetch" href="/assets/js/79.1841299d.js"><link rel="prefetch" href="/assets/js/8.682fa49e.js"><link rel="prefetch" href="/assets/js/80.55af12a4.js"><link rel="prefetch" href="/assets/js/81.901ddf76.js"><link rel="prefetch" href="/assets/js/82.8b9d069b.js"><link rel="prefetch" href="/assets/js/83.9bac6c98.js"><link rel="prefetch" href="/assets/js/84.f50a45a7.js"><link rel="prefetch" href="/assets/js/9.0d17f277.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4391c3e0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/bookDog.png" alt="运维工程师进阶之路" class="logo"> <span class="site-name can-hide">运维工程师进阶之路</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/sre/linux/cli.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="https://github.com/yes5144" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/sre/linux/cli.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="https://github.com/yes5144" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Linux开源基石</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/sre/linux/base_cli.html" class="sidebar-link">基础命令</a></li><li><a href="/sre/linux/system_security.html" class="sidebar-link">系统安全</a></li><li><a href="/sre/linux/iptables.html" class="sidebar-link">iptables防火墙</a></li><li><a href="/sre/linux/regex.html" class="sidebar-link">正则表达式</a></li><li><a href="/sre/linux/tcpdump.html" class="sidebar-link">tcpdump抓包</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Nginx高性能web服务</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>MySQL最好用的关系型数据库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>gitlab企业代码仓库管理</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Jenkins持续集成部署</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Redis多功能nosql数据库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Saltstack批量管理工具</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Zabbix开源监控系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Prometheus下一代监控系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ELK日志分析平台</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Python优雅的编程语言</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Docker轻量虚拟化技术</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>k8s容器编排利器</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>golang</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>小技巧</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="ansible-安装"><a href="#ansible-安装" class="header-anchor">#</a> ansible 安装</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code># http://blog.51cto.com/breezey/1555530
+
+# yum install ansible -y
+
+# 查看生成的文件
+rpm -ql ansible
+
+/etc/ansible
+/etc/ansible/ansible.cfg
+/etc/ansible/hosts
+/etc/ansible/roles
+/usr/bin/ansible
+
+ansible -h
+ansible --version
+
+vim /etc/ansible/hosts
+
+[test]
+192.168.204.12
+
+ansible -i /etc/ansible/hosts test -u root -m command -a 'ls /home/' -k
+
+可以简化为：ansible test -a 'ls /home/' -k
+
+# 当然也可以基于ssh 认证
+# 检测主机是否存活
+ansible all -m ping
+
+vim /etc/ansible/hosts
+
+# children
+[mfs:children]
+mfs_master
+mfs_client
+mfs_node
+
+[mfs_master]
+192.168.204.11
+
+[mfs_client]
+192.168.204.21
+
+[mfs_node]
+192.168.204.31
+
+#####################################
+#22222222222 ansible 常用模块
+# 假设已经 基于ssh 认证
+
+# 查看
+ansible-doc -l
+
+# 查看具体模块的用法
+ansible-doc -s user 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br></div></div><h3 id="ansible常用模块"><a href="#ansible常用模块" class="header-anchor">#</a> ansible常用模块</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code># 链接
+# http://blog.51cto.com/breezey/1555530
+1 # 收集客户机的信息
+ansible all -m setup
+
+2 # ping 检测是否存活
+ansible all -m ping
+
+3 # file 模块
+    ansible test -m file -a &quot;src=/etc/fstab dest=/tmp/fstab state=link&quot;
+    ansible test -m file -a &quot;path=/tmp/fstab state=absent&quot;
+    ansible test -m file -a &quot;path=/tmp/test state=touch&quot;
+
+    ansible test -m file -a 'path=/tmp/d2 state=directory owner=root group=root mode=700'
+    ansible test -m command -a 'ls /tmp -lh'
+
+4 # copy 模块
+ansible test -m copy -a &quot;src=/srv/myfiles/foo.conf dest=/etc/foo.conf owner=foo group=foo mode=0644&quot;
+    ansible test -m copy -a &quot;src=/mine/ntp.conf dest=/etc/ntp.conf owner=root group=root mode=644 backup=yes&quot;
+    ansible test -m copy -a &quot;src=/mine/sudoers dest=/etc/sudoers validate='visudo -cf %s'&quot;
+
+# 在管理机当前目录新建文件bbb
+echo &quot;this is a test from manager mechine&quot;&gt;bbb
+
+ansible test -m copy -a 'src=bbb dest=/tmp/file2 mode=744 user=root group=root'
+
+ansible test -a 'ls -lh /tmp'
+ansible test -a 'cat /tmp/file2'
+
+# 再次修改 bbb 文件，再次执行copy模块，添加参数backup=yes
+
+5 # command 模块
+
+6 # shell 模块，对于command模块，支持管道
+   ansible test -a 'ps -ef |grep http'
+  ansible test -m shell -a 'ps -ef |grep http'
+  ansible test -m raw -a 'ps -ef |grep http'
+
+7 # service 模块
+
+    asnible test -m service -a &quot;name=foo pattern=/usr/bin/foo state=started&quot;
+    ansible test -m service -a &quot;name=network state=restarted args=eth0&quot;
+
+    ansible test -m service -a 'name=nginx state=started enabled=yes'
+    ansible test -m  raw -a 'ps -ef |grep nginx'
+    ansible test -m service -a 'name=nginx state=stopped'
+
+ansible test -m service -a 'name=nginx state=restarted sleep=3'
+
+8 # cron 模块
+
+ansible test -m cron -a 'name=&quot;a job for reboot&quot; special_time=reboot job=&quot;/some/job.sh&quot;'
+    ansible test -m cron -a 'name=&quot;yum autoupdate&quot; weekday=&quot;2&quot; minute=0 hour=12 user=&quot;root
+    ansible test -m cron  -a 'backup=&quot;True&quot; name=&quot;test&quot; minute=&quot;0&quot; hour=&quot;5,2&quot; job=&quot;ls -alh &gt; /dev/null&quot;'
+    ansilbe test -m cron -a 'cron_file=ansible_yum-autoupdate state=absent'
+
+ansible test -m cron -a 'name=&quot;reboot system&quot; hour=2 user=root job=&quot;/sbin/reboot&quot;'
+
+ansible test -m command -a 'crontab -l'
+
+ansible test -m cron -a 'name=&quot;reboot system&quot; hour=2 user=root job=&quot;/sbin/reboot&quot; state=absent'
+
+# 再次查看，已经删除了计划任务
+
+9 # filesystem 模块
+
+10 # yum 模块
+
+ansible test -m yum -a 'name=httpd state=latest'
+    ansible test -m yum -a 'name=&quot;@Development tools&quot; state=present'
+    ansible test -m yum -a 'name=http://nginx.org/packages/centos/6/noarch/RPMS/nginx-release-centos-6-0.el6.ngx.noarch.rpm state=present'
+
+11 # user 管理用户
+
+12 # synchronize 同步模块
+
+    src=some/relative/path dest=/some/absolute/path rsync_path=&quot;sudo rsync&quot;
+    src=some/relative/path dest=/some/absolute/path archive=no links=yes
+    src=some/relative/path dest=/some/absolute/path checksum=yes times=no
+    src=/tmp/helloworld dest=/var/www/helloword rsync_opts=--no-motd,--exclude=.git mode=pull
+
+13 # mount
+
+    name=/mnt/dvd src=/dev/sr0 fstype=iso9660 opts=ro state=present
+    name=/srv/disk src='LABEL=SOME_LABEL' state=present
+    name=/home src='UUID=b3e48f45-f933-4c8e-a700-22a159ec9077' opts=noatime state=present
+
+    ansible test -a 'dd if=/dev/zero of=/disk.img bs=4k count=1024'
+    ansible test -a 'losetup /dev/loop0 /disk.img'
+    ansible test -m filesystem 'fstype=ext4 force=yes opts=-F dev=/dev/loop0'
+    ansible test -m mount 'name=/mnt src=/dev/loop0 fstype=ext4 state=mounted opts=rw'
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br></div></div><h3 id="ansible变量详解"><a href="#ansible变量详解" class="header-anchor">#</a> ansible变量详解</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>##variables Defined in Inventory
+
+##Variables Defined in a Playbook
+
+##Variables Defined in a Commandline
+
+- hosts: mfs_node
+  user: &quot;{{ uservar }}&quot;
+  tasks:
+    - shell: echo &quot;{{ echovar }}&quot;
+
+
+ansible-playbook command_vars.yml -e 'uservar=&quot;root&quot; echovar=&quot;helloworld&quot;
+
+ansible-playbook command_vars.yml -e '{&quot;uservar&quot;:&quot;root&quot;, &quot;echovar&quot;:&quot;hello world&quot;}'
+
+ansible-playbook command_vars.yml -e '@test.json'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>cat test.json # 文件内容如下：
+uservar: root
+echovar: helloworld
+
+## Registered Variables
+- hosts: mfs_node
+  tasks:
+    - shell: echo &quot;5&quot;
+      register: result
+      ignore_errors: True
+
+    - debug: msg=&quot;it failed&quot;
+      when: result|failed
+
+    - debug: msg=&quot;{{result.stdout}}&quot;
+
+    - shell: /usr/bin/var
+      when: result.rc == 5
+
+
+## roles
+
+## Using Variables: About Jinja2
+template: src=foo.cfg.j2 dest={{ remote_install_path }}/foo.cfg
+
+{{ some_variable | default(5) }}
+
+
+## Facts 系统的和本地的
+#### System Facts
+  ansible &lt;hostname&gt; -m setup
+
+#### local Facts
+
+
+# 补充
+Omitting Undefined Variables
+- name: touch files with an optional mode
+  file: dest={{item.path}} state=touch mode={{item.mode|default(omit)}}
+  with_items:
+    - path: /tmp/foo
+    - path: /tmp/bar
+    - path: /tmp/bazz
+      mode: &quot;0444&quot;  # 这个mode只对bazz 生效
+
+
+# A YAML Gotcha
+# this won't work:
+
+- host: app_servers
+  vars:
+    app_path: {{ base_path }}/22
+
+# Do it like this and you'll be fine:
+
+- hosts: app_servers
+  vars:
+    app_path: &quot;{{ base_path }}/22&quot;  # 加上双引号
+
+
+Playbook Conditionals
+# 内置变量
+hostvars
+groups
+group_names
+
+inventory_hostname
+inventory_hostname_short
+
+inventory_dir
+inventory_file
+
+
+## when 条件判断
+tasks:
+  - name: &quot;shutdown Debian flavored systems&quot;
+    command: /sbin/shutdown -t now
+    when: ansible_os_family == &quot;Debian&quot;
+
+  - name: &quot;shutdown Redlkjdlkfakjdkf&quot;
+    command: halt -p
+    when: ansible_os_family == &quot;RedHat&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br></div></div><p>http://blog.51cto.com/breezey/1555530</p> <p>http://docs.ansible.com/ansible/latest/index.html</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">lastUpdate:</span> <span class="time">7/2/2020, 9:00:01 AM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.44e953ca.js" defer></script><script src="/assets/js/2.ca34a8c3.js" defer></script><script src="/assets/js/71.532a8351.js" defer></script>
+  </body>
+</html>

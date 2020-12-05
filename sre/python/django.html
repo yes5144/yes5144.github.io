@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>django | 运维工程师进阶之路</title>
+    <meta name="generator" content="VuePress 1.5.1">
+    <link rel="icon" href="/bookDog.png">
+    <meta name="description" content="SRE">
+    <link rel="preload" href="/assets/css/0.styles.4391c3e0.css" as="style"><link rel="preload" href="/assets/js/app.44e953ca.js" as="script"><link rel="preload" href="/assets/js/2.ca34a8c3.js" as="script"><link rel="preload" href="/assets/js/64.e5344119.js" as="script"><link rel="prefetch" href="/assets/js/10.26ab6c8b.js"><link rel="prefetch" href="/assets/js/11.66cf7fbe.js"><link rel="prefetch" href="/assets/js/12.053ab66a.js"><link rel="prefetch" href="/assets/js/13.7b69c762.js"><link rel="prefetch" href="/assets/js/14.b7d3725e.js"><link rel="prefetch" href="/assets/js/15.94dc50f9.js"><link rel="prefetch" href="/assets/js/16.7d068506.js"><link rel="prefetch" href="/assets/js/17.72fba0c1.js"><link rel="prefetch" href="/assets/js/18.0b63671e.js"><link rel="prefetch" href="/assets/js/19.fc87afd7.js"><link rel="prefetch" href="/assets/js/20.5e8598a5.js"><link rel="prefetch" href="/assets/js/21.29611eb5.js"><link rel="prefetch" href="/assets/js/22.c4fb6228.js"><link rel="prefetch" href="/assets/js/23.7815e38d.js"><link rel="prefetch" href="/assets/js/24.48bc7051.js"><link rel="prefetch" href="/assets/js/25.ca28f6c6.js"><link rel="prefetch" href="/assets/js/26.98c9036d.js"><link rel="prefetch" href="/assets/js/27.f7966843.js"><link rel="prefetch" href="/assets/js/28.4d1d3d14.js"><link rel="prefetch" href="/assets/js/29.bddf0f39.js"><link rel="prefetch" href="/assets/js/3.85186c36.js"><link rel="prefetch" href="/assets/js/30.f4d58864.js"><link rel="prefetch" href="/assets/js/31.4927c5cc.js"><link rel="prefetch" href="/assets/js/32.c4d98288.js"><link rel="prefetch" href="/assets/js/33.b7cd4cd5.js"><link rel="prefetch" href="/assets/js/34.e6f4b03f.js"><link rel="prefetch" href="/assets/js/35.c018a354.js"><link rel="prefetch" href="/assets/js/36.5b95d2bf.js"><link rel="prefetch" href="/assets/js/37.7bfe07d4.js"><link rel="prefetch" href="/assets/js/38.08c93d93.js"><link rel="prefetch" href="/assets/js/39.4114fd8e.js"><link rel="prefetch" href="/assets/js/4.2222cb25.js"><link rel="prefetch" href="/assets/js/40.880abd0a.js"><link rel="prefetch" href="/assets/js/41.7a84d064.js"><link rel="prefetch" href="/assets/js/42.c3ca3a2a.js"><link rel="prefetch" href="/assets/js/43.b79bec7b.js"><link rel="prefetch" href="/assets/js/44.9f528f2e.js"><link rel="prefetch" href="/assets/js/45.0f9b892c.js"><link rel="prefetch" href="/assets/js/46.007d8c15.js"><link rel="prefetch" href="/assets/js/47.b9d5f5bc.js"><link rel="prefetch" href="/assets/js/48.be1f0cf4.js"><link rel="prefetch" href="/assets/js/49.9284be50.js"><link rel="prefetch" href="/assets/js/5.64c7e03a.js"><link rel="prefetch" href="/assets/js/50.599d0e37.js"><link rel="prefetch" href="/assets/js/51.aa9fd431.js"><link rel="prefetch" href="/assets/js/52.2f9bc07d.js"><link rel="prefetch" href="/assets/js/53.0c9ef961.js"><link rel="prefetch" href="/assets/js/54.97aac4ec.js"><link rel="prefetch" href="/assets/js/55.76f07301.js"><link rel="prefetch" href="/assets/js/56.4d2c0998.js"><link rel="prefetch" href="/assets/js/57.b470773a.js"><link rel="prefetch" href="/assets/js/58.aaf739b3.js"><link rel="prefetch" href="/assets/js/59.69e3d1c3.js"><link rel="prefetch" href="/assets/js/6.9b93828e.js"><link rel="prefetch" href="/assets/js/60.7573cff3.js"><link rel="prefetch" href="/assets/js/61.42a80774.js"><link rel="prefetch" href="/assets/js/62.6808be18.js"><link rel="prefetch" href="/assets/js/63.90f6608a.js"><link rel="prefetch" href="/assets/js/65.b5634369.js"><link rel="prefetch" href="/assets/js/66.21a43d2e.js"><link rel="prefetch" href="/assets/js/67.b72d9aa6.js"><link rel="prefetch" href="/assets/js/68.af2ab069.js"><link rel="prefetch" href="/assets/js/69.4adc43e6.js"><link rel="prefetch" href="/assets/js/7.6de19e8e.js"><link rel="prefetch" href="/assets/js/70.7b35fee5.js"><link rel="prefetch" href="/assets/js/71.532a8351.js"><link rel="prefetch" href="/assets/js/72.46ca51b8.js"><link rel="prefetch" href="/assets/js/73.970101e7.js"><link rel="prefetch" href="/assets/js/74.1c4ec244.js"><link rel="prefetch" href="/assets/js/75.9a27bec1.js"><link rel="prefetch" href="/assets/js/76.d0fa2941.js"><link rel="prefetch" href="/assets/js/77.3fce2b20.js"><link rel="prefetch" href="/assets/js/78.c098f054.js"><link rel="prefetch" href="/assets/js/79.1841299d.js"><link rel="prefetch" href="/assets/js/8.682fa49e.js"><link rel="prefetch" href="/assets/js/80.55af12a4.js"><link rel="prefetch" href="/assets/js/81.901ddf76.js"><link rel="prefetch" href="/assets/js/82.8b9d069b.js"><link rel="prefetch" href="/assets/js/83.9bac6c98.js"><link rel="prefetch" href="/assets/js/84.f50a45a7.js"><link rel="prefetch" href="/assets/js/9.0d17f277.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4391c3e0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/bookDog.png" alt="运维工程师进阶之路" class="logo"> <span class="site-name can-hide">运维工程师进阶之路</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/sre/linux/cli.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="https://github.com/yes5144" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/sre/linux/cli.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="https://github.com/yes5144" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Linux开源基石</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Nginx高性能web服务</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>MySQL最好用的关系型数据库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>gitlab企业代码仓库管理</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Jenkins持续集成部署</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Redis多功能nosql数据库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Saltstack批量管理工具</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Zabbix开源监控系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Prometheus下一代监控系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ELK日志分析平台</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Python优雅的编程语言</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/sre/python/base.html" class="sidebar-link">数据类型和操作</a></li><li><a href="/sre/python/django.html" aria-current="page" class="active sidebar-link">django入门</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/sre/python/django.html#django" class="sidebar-link">django</a></li></ul></li><li><a href="/sre/python/django_uwsgi_nginx.html" class="sidebar-link">django项目部署</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Docker轻量虚拟化技术</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>k8s容器编排利器</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>golang</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>小技巧</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="django"><a href="#django" class="header-anchor">#</a> django</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>Type 'django-admin help &lt;subcommand&gt;' for help on a specific subcommand.
+Available subcommands:
+
+[django]
+    check
+    compilemessages
+    createcachetable
+    dbshell
+    diffsettings
+    dumpdata
+    flush
+    inspectdb
+    loaddata
+    makemessages
+    makemigrations
+    migrate
+    runserver
+    sendtestemail
+    shell
+    showmigrations
+    sqlflush
+    sqlmigrate
+    sqlsequencereset
+    squashmigrations
+    startapp
+    startproject
+    test
+    testserver
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><h4 id="搭建多个互不干扰的开发环境（可选）"><a href="#搭建多个互不干扰的开发环境（可选）" class="header-anchor">#</a> 搭建多个互不干扰的开发环境（可选）</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>pip install virtualenv virtualenvwrapper
+
+cat &gt;&gt; ~/.bash_profile &lt;&lt;EOF
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/workspace
+source /usr/bin/virtualenvwrapper.sh
+EOF
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h4 id="_4-2-虚拟环境使用方法："><a href="#_4-2-虚拟环境使用方法：" class="header-anchor">#</a> 4.2 虚拟环境使用方法：</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>mkvirtualenv zqxt：创建运行环境zqxt
+
+workon zqxt: 工作在 zqxt 环境 或 从其它环境切换到 zqxt 环境
+
+deactivate: 退出终端环境
+
+其它的：
+
+rmvirtualenv ENV：删除运行环境ENV
+
+mkproject mic：创建mic项目和运行环境mic
+
+mktmpenv：创建临时运行环境
+
+lsvirtualenv: 列出可用的运行环境
+
+lssitepackages: 列出当前环境安装了的包
+
+创建的环境是独立的，互不干扰，无需sudo权限即可使用 pip 来进行包的管理
+
+source ~/.bash_profile
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><h3 id="django项目创建后，配置settings-py"><a href="#django项目创建后，配置settings-py" class="header-anchor">#</a> Django项目创建后，配置settings.py</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
+## static
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.11/howto/static-files/
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, &quot;static&quot;),)
+	
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><h3 id="创建项目"><a href="#创建项目" class="header-anchor">#</a> 创建项目</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>pip install -r requirement.txt
+
+django-admin startproject DjangoDevops
+python manage.py startapp test1
+
+python manage.py createsuperuser
+
+python manage.py makemigrations
+python manage.py migrate
+
+python manage.py runserver
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h3 id="model-数据库"><a href="#model-数据库" class="header-anchor">#</a> model(数据库)</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>from django.db import models
+from django.contrib.auth.model import User
+
+## 新user
+class WechatUser(models.Model)
+    user = models.OneToOneField(User, models.CASCADE)
+    motto = models.CharField(max_length=100,null=True,blank=True)
+    pic = models.CharField()
+    region = models.CharField()
+    
+    def __str__(self):
+        return self.user.username
+        
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h3 id="django-admin"><a href="#django-admin" class="header-anchor">#</a> django admin</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>admin.register.site(model名字)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="数据库操作"><a href="#数据库操作" class="header-anchor">#</a> 数据库操作</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code></code></pre> <div class="line-numbers-wrapper"></div></div><h3 id="hello-world"><a href="#hello-world" class="header-anchor">#</a> hello world</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code></code></pre> <div class="line-numbers-wrapper"></div></div><h3 id="django-其他笔记"><a href="#django-其他笔记" class="header-anchor">#</a> django 其他笔记</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>
+## django笔记
+
+pip install django==2.2.4
+
+python-admin startproject mysite
+cd mysite
+python manage.py startapp cmdb
+
+## 在mysite/settings.py末尾添加
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, &quot;static&quot;),)
+
+## urls
+from django.conf.urls import re_path, include
+from django.contrib import admin
+
+## views
+from django.shortcuts import render
+from django.shortcuts import HttpResponse
+from django.shortcuts import redirect
+
+
+一、路由系统，URL
+	1、url(r'^index/', views.index),    url(r'^home/', views.Home.as_view()),
+	2、url(r'^detail-(\d+).html', views.detail),
+	3、url(r'^detail-(?P&lt;nid&gt;\d+)-(?P&lt;uid&gt;\d+).html', views.detail),
+	
+二、视图
+	1、获取用户请求数据
+		request.GET
+		request.POST
+		request.FILES
+	
+	2、checkbox的多选的内容
+		request.POST.getlist()
+	
+	3、上传文件
+		（form特殊处理  method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;）
+		obj = request.FILES.get('fafafa')
+		obj.name
+		f = open(obj.name, mode='wb')
+		for item in obj.chunks():
+			f.write(item)
+		f.close()
+	
+	## cbv 和 fbv
+	def func(request, nid, uid):
+		pass
+	
+	def func(request, **kwargs):
+		kwargs = {'nid': 1, 'uid': 3}
+		
+	def func(request, *args, **kwargs):
+		args = (2,9)
+	
+	4、name
+		对URL路由关系进行命名，以后可以根据此名称生成自己想要的URL
+		
+		url(r'^asdfasdf/', views.index, name='i1'),
+		url(r'^sell/(\d+)/(\d+)/', views.index, name='i2'),
+		url(r'^buy/(?P(pid&gt;\d+)/(?P&lt;nid&gt;\d+)/', views.index, name='i3'),
+		
+		def func(request, *args, **kwargs):
+			from django.urls import reverse
+			url1 = reverse('i1')									# asdfasdf/
+			url1 = reverse('i2', args=(1,2,))						# sell/1/2/
+			url1 = reverse('i3', kwargs={'pid': 1, 'nid': 9})		# buy/1/9/
+		
+		xxx.html
+			{% url 'i1' %}											# asdfasdf/
+			{% url 'i2' 1 2%}										# sell/1/2/
+			{% url 'i3' pid=1 nid=9 %}								# buy/1/9/
+		
+		模板语言
+			{% url 'index' %}
+			{% url 'index' 3 8 %}
+		
+		def index(request, nid, uid):
+			#当前的URL
+			print(request.path_info)
+			
+			#/asddkjf/13/
+			from django.urls import reverse
+			# v = reverse('index', args=(90,33,))
+			v = reverse('index', kwargs={'nid':1,'uid':'')}
+			
+	5、路由分发
+		from django.conf.urls import re_path, include
+		from django.contrib import admin
+
+		urlpatterns = [
+			# re_path('', admin.site.urls),
+			re_path('admin/', admin.site.urls),
+			re_path('blog/', include(&quot;blog.urls&quot;, namespace='blog')),
+		]
+
+
+	6、默认值
+	https://www.cnblogs.com/wupeiqi/arcicles/5237704.html
+	7、命名空间
+	https://www.cnblogs.com/wupeiqi/arcicles/5237704.html
+	
+三、模板
+
+
+四、ORM操作
+
+	select * from tb where id&gt; 1;
+	# 对应关系
+	models.tb.objects.filter(id__gt=1)
+	models.tb.objects.filter(id=1)
+	models.tb.objects.filter(id__lt=1)
+	
+	## 1 创建类 （code first）
+	
+		from django.db import models
+		# app01_userinfo (默认命名app_类名)
+		class UserInfo(models.Model):
+			# id列，自增，主键
+			# 用户名列， 字符串类型， 指定长度
+			username = models.CharField(max_length=32)
+			password = models.CharField(max_length=64)
+	
+	## 2 注册APP
+		在mysite/settings添加APP
+	
+	## 3 执行命令
+		python manage.py  makemigrations
+		python manage.py  migrate
+	
+	## 4 *********注意**********
+		Django默认使用MySQLdb模块链接MySQL
+		python3中没有了，需要主动修改pymysql
+		修改mysite/__init__.py 添加如下代码
+		import pymysql
+		pymysql.install_as_MySQLdb()
+		
+	## orm增删改查
+	### 增 1
+	models.tb.objects.create(username='root',password='123')
+	### 增 2
+	dict_user = {'username':'alex','password'='234'}
+	models.tb.objects.create(**dict_user)
+	### 查 1
+	results = models.tb.objects.all()  ## 返回的是QuerySet，是一个列表[obj,obj,obj]
+	print(results.query ) # 转换为SQL语句
+	### 查 2
+	results = models.tb.objects.filter(username='root')
+	results = models.tb.objects.filter(username='root').first()
+	results = models.tb.objects.filter(username='root').count()
+	### 删 1
+	models.tb.objects.filter(username='root').delete()
+	
+	### 更新
+		models.tb.objects.filter(username='root').update(password='7899')
+
+
+	一对多：
+		1，外键
+		2，外键字段_id
+		3，models.tb.objects.create(name='root', user_group_id=1)
+		4，userlist = models.tb.objects.all()
+			for row in userlist:
+				print (row.id)
+				print (row.user_group.id)
+				print (row.user_group.caption)
+	
+	
+		v1 = models.Host.objects.filter(nid__gt=0)
+		v2 = models.Host.objects.filter(nid__gt=0).values('nid','hostname','b_id','b__caption')
+		v2 = models.Host.objects.filter(nid__gt=0).values_list('nid','hostname','b_id','b__caption')
+		
+		## __ 神奇的双下滑线
+		
+		##
+		&lt;tbody&gt;
+            {% for row in host_list %}
+                &lt;tr hostid=&quot;{{ row.id }}&quot; bid=&quot;{{ row.b_id }}&quot;&gt;
+                    &lt;td&gt;{{ forloop.counter }}&lt;/td&gt;
+                    &lt;td&gt;{{ row.hostname }}&lt;/td&gt;
+                    &lt;td&gt;{{ row.ip }}&lt;/td&gt;
+                    &lt;td&gt;{{ row.port }}&lt;/td&gt;
+                    &lt;td&gt;{{ row.b.caption }}&lt;/td&gt;
+                &lt;/tr&gt;
+            {% endfor %}
+        &lt;/tbody&gt;
+		
+		## 初始ajax，jQuery提供 ajax
+		$.ajax({
+			url: &quot;/test_ajax&quot;,
+			type: &quot;GET&quot;,
+			data: {'user':'root', 'pwd': '123123'},
+			success: function(data){
+				// data是服务器端返回的字符串
+				var obj = JSON.parse(data);
+				alert(data);
+				}
+			});
+		
+		绑定事件
+		
+		## 建议：永远让服务器端返回一个字典
+		
+		return HttpResponse（json.dumps(字典))
+
+多对多
+
+	创建多对多
+	
+		方式一、自定义关系表
+			class Host(models.Model):
+				nid = models.AutoField(primary_key=True, )
+				hostname = models.CharField(max_length=32,db_index=True)
+				ip = models.GenericIPAddressField(db_index=True)
+				port = models.IntegerField()
+				b = models.ForeignKey(&quot;Business&quot;, to_field='id', on_delete=True)
+
+			class Application(models.Model):
+				name = models.CharField(max_length=32)
+
+			class HostToApp(models.Model):
+				hobj = models.ForeignKey(to='Host',to_field='nid', on_delete=True)
+				aobj = models.ForeignKey(to='Application',to_field='id', on_delete=True)
+		
+		方式二、django自动创建关系表
+			
+			class Host(models.Model):
+				nid = models.AutoField(primary_key=True, )
+				hostname = models.CharField(max_length=32,db_index=True)
+				ip = models.GenericIPAddressField(db_index=True)
+				port = models.IntegerField()
+				b = models.ForeignKey(&quot;Business&quot;, to_field='id', on_delete=True)
+
+			class Application(models.Model):
+				name = models.CharField(max_length=32)
+				r = models.ManyToManyField('Host')
+		
+			自动创建的无法直接对第三张表进行操作
+			obj = Application.objects.get(id=1)
+			obj.name
+			
+			第三张表操作
+			obj.r.add(1)
+			obj.r.add(2)
+			obj.r.add(2,3,4)
+			obj.r.add(*[1,2,3,4])
+			
+			obj.r.remove(1)
+			obj.r.remove(2,4)
+			obj.r.remove(*[3,5,7])
+			
+			obj.r.clear()
+			obj.r.set([3,5,7])
+			
+			obj.r.all()
+			
+回忆总结：
+	/crm/  include('app01.urls', namespace='m1'),
+	
+	app01.urls
+	/index/  name='nl'
+	
+3、
+	def func(request):
+		request.POST
+		request.GET
+		request.FILES
+		request.getlist
+		request.method
+		request.path_info
+		
+		## print(request.environ)
+		print(type(request))
+		for k,v in request.environ.items():
+			print k, v
+		
+		return render,HttpResponse, redirect
+		
+4、模板
+	render(request, 'index.html')
+	
+5、models
+	class User(models.Model):
+		username = models.CharField(max_length=32)
+		email = models.EmailField()
+		
+	有验证功能
+		Django Admin后台
+	无验证功能
+		models.User.objects.create(username='root', email='addfd')
+		models.User.objects.filter(id=1).update(email='888')
+		
+	class UserType(models.Model):
+		name = models.CharField(max_length=32)
+	
+	class User(models.Model):
+		username = models.CharField(max_length=32)
+		email = models.EmailField()
+		user_type = models.ForeignKey('UserType')
+		
+	user_list = models.User.objects.all()
+	for obj in user_list:
+		obj.username, obj.email, obj.user_type_id, obj.user_type.name, obj.
+	
+	
+	
+## django信号
+
+obj = models.Assets(username= 'root')
+obj.save()
+
+## 一、一大波model操作
+	1，创建数据库表
+		# 单表
+		# app01_user ==&gt;tb1
+		# users
+		class User(models.Model):
+			name = models.CharField(max_length=32)
+			pwd = models.CharField(max_length=32)
+			
+			class Meta:
+				# 数据库中生成的表的名称，默认app名称 + 下划线 + 类名
+				db_table = &quot;tb1&quot;
+				
+				index_together = [
+					(&quot;name&quot;,&quot;pwd&quot;),
+					]
+				# 最左前缀模式：
+				
+				unique_together = ((&quot;driver&quot;, &quot;restaurant&quot;),)
+				
+				verbose_name = &quot;上课记录&quot;
+				verbose_name_plural = &quot;上课记录&quot;
+				
+		# ForeignKey 一对多  延伸出 一对一，多对多
+		## 一对多
+			class UserType(models.Model):
+				name = model.CharField(max_length=32)
+				
+			class User(models.Model):
+				name = models.CharField(max_length=32)
+				pwd = models.CharField(max_length=32)
+				ut = models.ForeignKey(to='UserType',to_field='id', on_delete=models.SET(3))
+				
+			# UserType.objects.filter(id=1).delete() 如果没有on_delete默认也会删除关联表User的对应记录
+			
+			# 正向操作1 
+			v = models.User.objects.all()
+			for item in v:
+				item.user
+				item.pwd
+				item.ut.name
+			
+			# 正向操作2 用一对多字段跨表
+			models.User.objects.all().values('user','ut__name')
+			
+			# 反向操作1 
+			v = models.UserType.objects.all()
+			for item in v:
+				item.name
+				item.id
+				item.user_set.all()
+			
+			## ForeignKey设置 related_name=aaa呢，如何操作？
+			# 反向操作2 用表名跨表
+			models.UserType.objects.all().values('name','user_pwd')
+		
+		# 多对多
+			a，django创建第三张表
+				m2m.remove
+				m2m.add
+				m2m.set
+				m2m.clear
+			
+			b，自定义第三张表（）
+			
+			c，自定义第三张表（有m2m字段）
+		
+		
+		
+	2，操作数据库表
+		a，基本操作
+		b，QuerySet中的方法：
+			- 返回的是QuerySet类型
+			
+			# 和性能相关的查询参数 select_related(), prefetch_related()
+				# select_related()
+					users = models.User.objects.all()
+					for row in users:
+						print (row.user)
+						print (row.ut.name) # 不加select_related()，默认会再发一次SQL请求
+					
+					users = models.User.objects.all().select_related('ut')
+			
+				# prefetch_related()
+					users = models.User.objects.filter(id__gt=30).prefetch_related(&quot;ut&quot;)
+					# 相当于如下，不跨表
+					# select * from user where id&gt;30
+					# 获取上一步骤中所有的ut_id=[1,2]
+					# select * from user_type where id in (1,2)
+					
+			
+			
+	
+	3，数据验证（弱）
+	obj = models.UserInfo.objects.create(username='root',email='root')
+	obj.full_clean()
+	obj.save()
+		full_clean进行验证的步骤
+			- 每个字段的正则表达
+			- clean钩子
+
+## 二、Form表单
+	1，数据验证（强大）
+		- 每一个字段（正则，字段钩子）
+		- clean
+		- _post_clean
+		对于错误信息：__all__
+	from django import forms
+	from django.forms import fields
+	from django.forms import widgets
+	
+	
+	
+## 三、ModelForm（Model和Form耦合太强）
+	1，数据库操作
+	2，数据验证
+	
+	Model +Form =&gt; 验证 + 数据库操作
+	- class LoginModelForm(xxx)
+		利用model.A中的字段
+		
+	1、生成HTML标签： class Meta:
+	2、mf = xxxModelForm(instance=ModelObj)
+	3、额外的标签： is_remeber = Ffields.CharField(widgets=Fwidgets.CheckboxInput())
+	4、各种验证 is_valid() -&gt;各种钩子
+	5、mf.save()  # 可以直接保存包括多对多
+		或
+		instance =mf.save(False)
+		instance.save()
+		mf.save_m2m()
+		
+	
+## 四、序列化操作
+
+	ErrorDict
+		自定义
+
+	QuerySet
+		- 自定义encoder
+		
+		- 第一种
+			from django.core import serializers
+			v = models.Tb.objects.all()
+			data = serializers.serialize(&quot;json&quot;,v)
+		 第二种
+			import json
+			from datetime import date
+			from datetime import datetime
+			
+			class JsonCustomEncoder(json.JSONEncoder):
+				def default(self, fields):
+					if isinstance(fields, datetime):
+						return fields.strftime('%Y-%m-%d %H:%M:%S')
+					elif isinstance(fields,date):
+						return fields.strftime('%Y-%m-%d')
+					else:
+						return json.JSONEncoder.default(self, fields)
+			
+			v = models.Tb.objects.values('id','name','ctime')
+			v = list(v)
+			v = json.dumps(v,cls=JsonCustomEncoder)
+		 
+	
+## 五、Ajax操作
+	- 原生ajax
+	- 跨域请求（jsonp, CORS）
+
+	如果发送【普通数据】 --&gt; jQuery, XMLHttpRequest, iframe
+	
+	# 文件上传（预览）
+	- Form提交
+	- Ajax上传文件
+	
+	时机：
+		如果发送的是【文件】-&gt; iframe, jQuery(FormData), XMLHttpRequest(FormData)
+		
+	# 图片验证
+	
+	
+## Day25
+
+	- 博客
+	
+	- CMDB
+		- 资产采集
+		- API(API认证)
+		- 可视化管理
+		
+	subprocess.getoutput('hostname')
+	
+	class Ba
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br><span class="line-number">216</span><br><span class="line-number">217</span><br><span class="line-number">218</span><br><span class="line-number">219</span><br><span class="line-number">220</span><br><span class="line-number">221</span><br><span class="line-number">222</span><br><span class="line-number">223</span><br><span class="line-number">224</span><br><span class="line-number">225</span><br><span class="line-number">226</span><br><span class="line-number">227</span><br><span class="line-number">228</span><br><span class="line-number">229</span><br><span class="line-number">230</span><br><span class="line-number">231</span><br><span class="line-number">232</span><br><span class="line-number">233</span><br><span class="line-number">234</span><br><span class="line-number">235</span><br><span class="line-number">236</span><br><span class="line-number">237</span><br><span class="line-number">238</span><br><span class="line-number">239</span><br><span class="line-number">240</span><br><span class="line-number">241</span><br><span class="line-number">242</span><br><span class="line-number">243</span><br><span class="line-number">244</span><br><span class="line-number">245</span><br><span class="line-number">246</span><br><span class="line-number">247</span><br><span class="line-number">248</span><br><span class="line-number">249</span><br><span class="line-number">250</span><br><span class="line-number">251</span><br><span class="line-number">252</span><br><span class="line-number">253</span><br><span class="line-number">254</span><br><span class="line-number">255</span><br><span class="line-number">256</span><br><span class="line-number">257</span><br><span class="line-number">258</span><br><span class="line-number">259</span><br><span class="line-number">260</span><br><span class="line-number">261</span><br><span class="line-number">262</span><br><span class="line-number">263</span><br><span class="line-number">264</span><br><span class="line-number">265</span><br><span class="line-number">266</span><br><span class="line-number">267</span><br><span class="line-number">268</span><br><span class="line-number">269</span><br><span class="line-number">270</span><br><span class="line-number">271</span><br><span class="line-number">272</span><br><span class="line-number">273</span><br><span class="line-number">274</span><br><span class="line-number">275</span><br><span class="line-number">276</span><br><span class="line-number">277</span><br><span class="line-number">278</span><br><span class="line-number">279</span><br><span class="line-number">280</span><br><span class="line-number">281</span><br><span class="line-number">282</span><br><span class="line-number">283</span><br><span class="line-number">284</span><br><span class="line-number">285</span><br><span class="line-number">286</span><br><span class="line-number">287</span><br><span class="line-number">288</span><br><span class="line-number">289</span><br><span class="line-number">290</span><br><span class="line-number">291</span><br><span class="line-number">292</span><br><span class="line-number">293</span><br><span class="line-number">294</span><br><span class="line-number">295</span><br><span class="line-number">296</span><br><span class="line-number">297</span><br><span class="line-number">298</span><br><span class="line-number">299</span><br><span class="line-number">300</span><br><span class="line-number">301</span><br><span class="line-number">302</span><br><span class="line-number">303</span><br><span class="line-number">304</span><br><span class="line-number">305</span><br><span class="line-number">306</span><br><span class="line-number">307</span><br><span class="line-number">308</span><br><span class="line-number">309</span><br><span class="line-number">310</span><br><span class="line-number">311</span><br><span class="line-number">312</span><br><span class="line-number">313</span><br><span class="line-number">314</span><br><span class="line-number">315</span><br><span class="line-number">316</span><br><span class="line-number">317</span><br><span class="line-number">318</span><br><span class="line-number">319</span><br><span class="line-number">320</span><br><span class="line-number">321</span><br><span class="line-number">322</span><br><span class="line-number">323</span><br><span class="line-number">324</span><br><span class="line-number">325</span><br><span class="line-number">326</span><br><span class="line-number">327</span><br><span class="line-number">328</span><br><span class="line-number">329</span><br><span class="line-number">330</span><br><span class="line-number">331</span><br><span class="line-number">332</span><br><span class="line-number">333</span><br><span class="line-number">334</span><br><span class="line-number">335</span><br><span class="line-number">336</span><br><span class="line-number">337</span><br><span class="line-number">338</span><br><span class="line-number">339</span><br><span class="line-number">340</span><br><span class="line-number">341</span><br><span class="line-number">342</span><br><span class="line-number">343</span><br><span class="line-number">344</span><br><span class="line-number">345</span><br><span class="line-number">346</span><br><span class="line-number">347</span><br><span class="line-number">348</span><br><span class="line-number">349</span><br><span class="line-number">350</span><br><span class="line-number">351</span><br><span class="line-number">352</span><br><span class="line-number">353</span><br><span class="line-number">354</span><br><span class="line-number">355</span><br><span class="line-number">356</span><br><span class="line-number">357</span><br><span class="line-number">358</span><br><span class="line-number">359</span><br><span class="line-number">360</span><br><span class="line-number">361</span><br><span class="line-number">362</span><br><span class="line-number">363</span><br><span class="line-number">364</span><br><span class="line-number">365</span><br><span class="line-number">366</span><br><span class="line-number">367</span><br><span class="line-number">368</span><br><span class="line-number">369</span><br><span class="line-number">370</span><br><span class="line-number">371</span><br><span class="line-number">372</span><br><span class="line-number">373</span><br><span class="line-number">374</span><br><span class="line-number">375</span><br><span class="line-number">376</span><br><span class="line-number">377</span><br><span class="line-number">378</span><br><span class="line-number">379</span><br><span class="line-number">380</span><br><span class="line-number">381</span><br><span class="line-number">382</span><br><span class="line-number">383</span><br><span class="line-number">384</span><br><span class="line-number">385</span><br><span class="line-number">386</span><br><span class="line-number">387</span><br><span class="line-number">388</span><br><span class="line-number">389</span><br><span class="line-number">390</span><br><span class="line-number">391</span><br><span class="line-number">392</span><br><span class="line-number">393</span><br><span class="line-number">394</span><br><span class="line-number">395</span><br><span class="line-number">396</span><br><span class="line-number">397</span><br><span class="line-number">398</span><br><span class="line-number">399</span><br><span class="line-number">400</span><br><span class="line-number">401</span><br><span class="line-number">402</span><br><span class="line-number">403</span><br><span class="line-number">404</span><br><span class="line-number">405</span><br><span class="line-number">406</span><br><span class="line-number">407</span><br><span class="line-number">408</span><br><span class="line-number">409</span><br><span class="line-number">410</span><br><span class="line-number">411</span><br><span class="line-number">412</span><br><span class="line-number">413</span><br><span class="line-number">414</span><br><span class="line-number">415</span><br><span class="line-number">416</span><br><span class="line-number">417</span><br><span class="line-number">418</span><br><span class="line-number">419</span><br><span class="line-number">420</span><br><span class="line-number">421</span><br><span class="line-number">422</span><br><span class="line-number">423</span><br><span class="line-number">424</span><br><span class="line-number">425</span><br><span class="line-number">426</span><br><span class="line-number">427</span><br><span class="line-number">428</span><br><span class="line-number">429</span><br><span class="line-number">430</span><br><span class="line-number">431</span><br><span class="line-number">432</span><br><span class="line-number">433</span><br><span class="line-number">434</span><br><span class="line-number">435</span><br><span class="line-number">436</span><br><span class="line-number">437</span><br><span class="line-number">438</span><br><span class="line-number">439</span><br><span class="line-number">440</span><br><span class="line-number">441</span><br><span class="line-number">442</span><br><span class="line-number">443</span><br><span class="line-number">444</span><br><span class="line-number">445</span><br><span class="line-number">446</span><br><span class="line-number">447</span><br><span class="line-number">448</span><br><span class="line-number">449</span><br><span class="line-number">450</span><br><span class="line-number">451</span><br><span class="line-number">452</span><br><span class="line-number">453</span><br><span class="line-number">454</span><br><span class="line-number">455</span><br><span class="line-number">456</span><br><span class="line-number">457</span><br><span class="line-number">458</span><br><span class="line-number">459</span><br><span class="line-number">460</span><br><span class="line-number">461</span><br><span class="line-number">462</span><br><span class="line-number">463</span><br><span class="line-number">464</span><br><span class="line-number">465</span><br><span class="line-number">466</span><br><span class="line-number">467</span><br><span class="line-number">468</span><br><span class="line-number">469</span><br><span class="line-number">470</span><br><span class="line-number">471</span><br><span class="line-number">472</span><br><span class="line-number">473</span><br><span class="line-number">474</span><br><span class="line-number">475</span><br><span class="line-number">476</span><br><span class="line-number">477</span><br><span class="line-number">478</span><br><span class="line-number">479</span><br><span class="line-number">480</span><br><span class="line-number">481</span><br><span class="line-number">482</span><br><span class="line-number">483</span><br><span class="line-number">484</span><br><span class="line-number">485</span><br><span class="line-number">486</span><br><span class="line-number">487</span><br><span class="line-number">488</span><br><span class="line-number">489</span><br><span class="line-number">490</span><br><span class="line-number">491</span><br><span class="line-number">492</span><br><span class="line-number">493</span><br><span class="line-number">494</span><br><span class="line-number">495</span><br><span class="line-number">496</span><br><span class="line-number">497</span><br><span class="line-number">498</span><br><span class="line-number">499</span><br><span class="line-number">500</span><br><span class="line-number">501</span><br><span class="line-number">502</span><br><span class="line-number">503</span><br><span class="line-number">504</span><br></div></div><h3 id="django的model序列化"><a href="#django的model序列化" class="header-anchor">#</a> django的model序列化</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>Django创建model后
+model.table.objects.all() model.table.objects.filter(id=1) QuerySet 可迭代
+
+model.table.objects.get(id=1) 不可迭代
+
+https://www.django.cn/course/show-31.html
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">lastUpdate:</span> <span class="time">7/2/2020, 9:00:01 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/sre/python/base.html" class="prev">
+        数据类型和操作
+      </a></span> <span class="next"><a href="/sre/python/django_uwsgi_nginx.html">
+        django项目部署
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.44e953ca.js" defer></script><script src="/assets/js/2.ca34a8c3.js" defer></script><script src="/assets/js/64.e5344119.js" defer></script>
+  </body>
+</html>

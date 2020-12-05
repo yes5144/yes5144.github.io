@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>2020-07-11 | 运维工程师进阶之路</title>
+    <meta name="generator" content="VuePress 1.5.1">
+    <link rel="icon" href="/bookDog.png">
+    <meta name="description" content="SRE">
+    <link rel="preload" href="/assets/css/0.styles.4391c3e0.css" as="style"><link rel="preload" href="/assets/js/app.44e953ca.js" as="script"><link rel="preload" href="/assets/js/2.ca34a8c3.js" as="script"><link rel="preload" href="/assets/js/32.c4d98288.js" as="script"><link rel="prefetch" href="/assets/js/10.26ab6c8b.js"><link rel="prefetch" href="/assets/js/11.66cf7fbe.js"><link rel="prefetch" href="/assets/js/12.053ab66a.js"><link rel="prefetch" href="/assets/js/13.7b69c762.js"><link rel="prefetch" href="/assets/js/14.b7d3725e.js"><link rel="prefetch" href="/assets/js/15.94dc50f9.js"><link rel="prefetch" href="/assets/js/16.7d068506.js"><link rel="prefetch" href="/assets/js/17.72fba0c1.js"><link rel="prefetch" href="/assets/js/18.0b63671e.js"><link rel="prefetch" href="/assets/js/19.fc87afd7.js"><link rel="prefetch" href="/assets/js/20.5e8598a5.js"><link rel="prefetch" href="/assets/js/21.29611eb5.js"><link rel="prefetch" href="/assets/js/22.c4fb6228.js"><link rel="prefetch" href="/assets/js/23.7815e38d.js"><link rel="prefetch" href="/assets/js/24.48bc7051.js"><link rel="prefetch" href="/assets/js/25.ca28f6c6.js"><link rel="prefetch" href="/assets/js/26.98c9036d.js"><link rel="prefetch" href="/assets/js/27.f7966843.js"><link rel="prefetch" href="/assets/js/28.4d1d3d14.js"><link rel="prefetch" href="/assets/js/29.bddf0f39.js"><link rel="prefetch" href="/assets/js/3.85186c36.js"><link rel="prefetch" href="/assets/js/30.f4d58864.js"><link rel="prefetch" href="/assets/js/31.4927c5cc.js"><link rel="prefetch" href="/assets/js/33.b7cd4cd5.js"><link rel="prefetch" href="/assets/js/34.e6f4b03f.js"><link rel="prefetch" href="/assets/js/35.c018a354.js"><link rel="prefetch" href="/assets/js/36.5b95d2bf.js"><link rel="prefetch" href="/assets/js/37.7bfe07d4.js"><link rel="prefetch" href="/assets/js/38.08c93d93.js"><link rel="prefetch" href="/assets/js/39.4114fd8e.js"><link rel="prefetch" href="/assets/js/4.2222cb25.js"><link rel="prefetch" href="/assets/js/40.880abd0a.js"><link rel="prefetch" href="/assets/js/41.7a84d064.js"><link rel="prefetch" href="/assets/js/42.c3ca3a2a.js"><link rel="prefetch" href="/assets/js/43.b79bec7b.js"><link rel="prefetch" href="/assets/js/44.9f528f2e.js"><link rel="prefetch" href="/assets/js/45.0f9b892c.js"><link rel="prefetch" href="/assets/js/46.007d8c15.js"><link rel="prefetch" href="/assets/js/47.b9d5f5bc.js"><link rel="prefetch" href="/assets/js/48.be1f0cf4.js"><link rel="prefetch" href="/assets/js/49.9284be50.js"><link rel="prefetch" href="/assets/js/5.64c7e03a.js"><link rel="prefetch" href="/assets/js/50.599d0e37.js"><link rel="prefetch" href="/assets/js/51.aa9fd431.js"><link rel="prefetch" href="/assets/js/52.2f9bc07d.js"><link rel="prefetch" href="/assets/js/53.0c9ef961.js"><link rel="prefetch" href="/assets/js/54.97aac4ec.js"><link rel="prefetch" href="/assets/js/55.76f07301.js"><link rel="prefetch" href="/assets/js/56.4d2c0998.js"><link rel="prefetch" href="/assets/js/57.b470773a.js"><link rel="prefetch" href="/assets/js/58.aaf739b3.js"><link rel="prefetch" href="/assets/js/59.69e3d1c3.js"><link rel="prefetch" href="/assets/js/6.9b93828e.js"><link rel="prefetch" href="/assets/js/60.7573cff3.js"><link rel="prefetch" href="/assets/js/61.42a80774.js"><link rel="prefetch" href="/assets/js/62.6808be18.js"><link rel="prefetch" href="/assets/js/63.90f6608a.js"><link rel="prefetch" href="/assets/js/64.e5344119.js"><link rel="prefetch" href="/assets/js/65.b5634369.js"><link rel="prefetch" href="/assets/js/66.21a43d2e.js"><link rel="prefetch" href="/assets/js/67.b72d9aa6.js"><link rel="prefetch" href="/assets/js/68.af2ab069.js"><link rel="prefetch" href="/assets/js/69.4adc43e6.js"><link rel="prefetch" href="/assets/js/7.6de19e8e.js"><link rel="prefetch" href="/assets/js/70.7b35fee5.js"><link rel="prefetch" href="/assets/js/71.532a8351.js"><link rel="prefetch" href="/assets/js/72.46ca51b8.js"><link rel="prefetch" href="/assets/js/73.970101e7.js"><link rel="prefetch" href="/assets/js/74.1c4ec244.js"><link rel="prefetch" href="/assets/js/75.9a27bec1.js"><link rel="prefetch" href="/assets/js/76.d0fa2941.js"><link rel="prefetch" href="/assets/js/77.3fce2b20.js"><link rel="prefetch" href="/assets/js/78.c098f054.js"><link rel="prefetch" href="/assets/js/79.1841299d.js"><link rel="prefetch" href="/assets/js/8.682fa49e.js"><link rel="prefetch" href="/assets/js/80.55af12a4.js"><link rel="prefetch" href="/assets/js/81.901ddf76.js"><link rel="prefetch" href="/assets/js/82.8b9d069b.js"><link rel="prefetch" href="/assets/js/83.9bac6c98.js"><link rel="prefetch" href="/assets/js/84.f50a45a7.js"><link rel="prefetch" href="/assets/js/9.0d17f277.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4391c3e0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/bookDog.png" alt="运维工程师进阶之路" class="logo"> <span class="site-name can-hide">运维工程师进阶之路</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/sre/linux/cli.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="https://github.com/yes5144" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/sre/linux/cli.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="https://github.com/yes5144" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Linux开源基石</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/sre/linux/base_cli.html" class="sidebar-link">基础命令</a></li><li><a href="/sre/linux/system_security.html" class="sidebar-link">系统安全</a></li><li><a href="/sre/linux/iptables.html" class="sidebar-link">iptables防火墙</a></li><li><a href="/sre/linux/regex.html" class="sidebar-link">正则表达式</a></li><li><a href="/sre/linux/tcpdump.html" class="sidebar-link">tcpdump抓包</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Nginx高性能web服务</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>MySQL最好用的关系型数据库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>gitlab企业代码仓库管理</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Jenkins持续集成部署</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Redis多功能nosql数据库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Saltstack批量管理工具</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Zabbix开源监控系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Prometheus下一代监控系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ELK日志分析平台</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Python优雅的编程语言</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Docker轻量虚拟化技术</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>k8s容器编排利器</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>golang</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>小技巧</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="_2020-07-11"><a href="#_2020-07-11" class="header-anchor">#</a> 2020-07-11</h2> <p>阿良 k8s--</p> <h2 id="第一章：k8s特性"><a href="#第一章：k8s特性" class="header-anchor">#</a> 第一章：k8s特性</h2> <p>自我修复
+弹性伸缩
+自动部署和回滚
+服务发现和负载均衡
+机密和配置管理
+存储编排
+批处理</p> <h3 id="k8s集群-master"><a href="#k8s集群-master" class="header-anchor">#</a> k8s集群 master</h3> <p>apiserver: 集群的统一入口，各组件协调者，以RESTful API提供接口服务，所有对象资源的增删改查和监听操作都交给APIServer处理后再提交给etcd存储
+controller-manager: 处理集群中常规后台任务，一个资源对应一个控制器，而controller-manager就是管理这些控制器的
+scheduler: 根据调度算法为新创建的Pod选择一个Node节点，可以任意部署，可以部署在同一个节点上，也可以部署在不同的节点上
+etcd: 分布式键值存储系统，用于保存集群状态数据，比如Pod，service等对象信息</p> <h3 id="k8s集群-node"><a href="#k8s集群-node" class="header-anchor">#</a> k8s集群 node</h3> <p>kubelet: kubelet是master在node节点上的Agent，管理本机运行容器的生命周期，比如创建容器、Pod挂载数据卷、下载secret、获取容器和节点状态等工作。kubelet将每个Pod转换为一组容器。
+kube-proxy: 在node节点上实现Pod网络代理，维护网络规则和四层负载均衡工作
+docker 或 rocket: 容器引擎，运行容器</p> <h3 id="k8s核心概念"><a href="#k8s核心概念" class="header-anchor">#</a> k8s核心概念</h3> <p>Pod: 最小部署单元，一组容器的集合，一个Pod中的容器共享网络命名空间，pod是短暂的
+Controller：
+ReplicaSet: 确保预期的Pod副本数量
+Deployment: 无状态应用部署
+StatefulSet: 有状态应用部署
+DaemonSet: 确保所有Node运行同一个Pod
+Job: 一次性任务
+Cronjob: 定时任务
+更高级层次对象，部署和管理Pod</p> <p>Service: 防止Pod失联，定义一组Pod的访问策略
+Label: 标签，附加到某个资源上，用于关联对象、查询和筛选
+Namespace: 命名空间，将对象逻辑上隔离</p> <h2 id="第二章：搭建一个完整的k8s集群（二进制方式）"><a href="#第二章：搭建一个完整的k8s集群（二进制方式）" class="header-anchor">#</a> 第二章：搭建一个完整的k8s集群（二进制方式）</h2> <h3 id="_2-1-服务器节点规划"><a href="#_2-1-服务器节点规划" class="header-anchor">#</a> 2.1 服务器节点规划</h3> <p>192.168.204.201 k8s-master01<br>
+192.168.204.101 k8s-node01<br>
+192.168.204.102 k8s-node02</p> <p>192.168.204.202 k8s-master02</p> <h3 id="_2-2-系统初始化"><a href="#_2-2-系统初始化" class="header-anchor">#</a> 2.2 系统初始化</h3> <h4 id="关闭防火墙"><a href="#关闭防火墙" class="header-anchor">#</a> 关闭防火墙</h4> <p>systemctl stop firewalld<br>
+systemctl disable firewalld</p> <h4 id="关闭selinux"><a href="#关闭selinux" class="header-anchor">#</a> 关闭SELinux</h4> <p>setenforce 0<br>
+vim /etc/sysconfig/selinux</p> <h4 id="关闭swap"><a href="#关闭swap" class="header-anchor">#</a> 关闭swap</h4> <p>swapoff -a
+vim /etc/fstab</p> <h4 id="添加hosts"><a href="#添加hosts" class="header-anchor">#</a> 添加hosts</h4> <p>192.168.204.201 k8s-master01<br>
+192.168.204.101 k8s-node01<br>
+192.168.204.102 k8s-node02</p> <p>192.168.204.202 k8s-master02</p> <h4 id="同步系统时间"><a href="#同步系统时间" class="header-anchor">#</a> 同步系统时间</h4> <p>ntpdate time.windows.com</p> <h3 id="_2-3-ssl证书"><a href="#_2-3-ssl证书" class="header-anchor">#</a> 2.3 ssl证书</h3> <p>包含：初始化自己的ca签证机构、生成ca机构自己的证书密钥对，生成对应公司域名(或host)的证书和密钥对</p> <h4 id="自签etcd-ssl证书"><a href="#自签etcd-ssl证书" class="header-anchor">#</a> 自签etcd ssl证书</h4> <p>1,etcd的ca签证机构<br>
+2,生成etcd需要的一套证书</p> <h4 id="自签apiserver-ssl证书"><a href="#自签apiserver-ssl证书" class="header-anchor">#</a> 自签apiserver ssl证书</h4> <p>1,apiserver的签证机构
+2,apiserver的一套证书</p> <h3 id="_2-4-etcd数据库集群部署"><a href="#_2-4-etcd数据库集群部署" class="header-anchor">#</a> 2.4 etcd数据库集群部署</h3> <p>etcd.conf</p> <p>/usr/lib/systemd/system/etcd.service</p> <p>systemctl daemon-reload
+systemctl start etcd
+systemctl enable etcd</p> <h4 id="查看etcd集群状态"><a href="#查看etcd集群状态" class="header-anchor">#</a> 查看etcd集群状态</h4> <p>/opt/apps/etcd/bin/etcdctl <br>
+--ca-file=/opt/apps/etcd/ssl/ca.pem <br>
+--key-file=/opt/apps/etcd/ssl/etcd-key.pem <br>
+--cert-file=/opt/apps/etcd/ssl/etcd.pem <br>
+--endpoints=&quot;https://192.168.204.201:2379,https://192.168.204.101:2379,https://192.168.204.102:2379&quot; <br>
+cluster-health</p> <h3 id="_2-5-单master集群：master节点部署"><a href="#_2-5-单master集群：master节点部署" class="header-anchor">#</a> 2.5 单master集群：master节点部署</h3> <h4 id="部署apiserver-controller-manager-scheduler"><a href="#部署apiserver-controller-manager-scheduler" class="header-anchor">#</a> 部署apiserver, controller-manager, scheduler</h4> <p>cat /opt/apps/k8s/cfg/token.csv  ## 格式：token,username,uid,usergroup</p> <h4 id="给kubelet-bootstrap授权"><a href="#给kubelet-bootstrap授权" class="header-anchor">#</a> 给kubelet-bootstrap授权</h4> <p>kubectl create clusterrolebindingkubelet-bootstrap <br>
+--clusterrole=system:node-bootstrapper <br>
+--user=kubelet-bootstrap</p> <h3 id="_2-6-单master集群：node节点部署"><a href="#_2-6-单master集群：node节点部署" class="header-anchor">#</a> 2.6 单master集群：node节点部署</h3> <h4 id="部署docker"><a href="#部署docker" class="header-anchor">#</a> 部署docker</h4> <h4 id="部署kubelet-kube-proxy"><a href="#部署kubelet-kube-proxy" class="header-anchor">#</a> 部署kubelet, kube-proxy</h4> <p>kubelet.conf 基本配置文件<br>
+kubeconfig 连接apiserver的配置文件<br>
+yml 主要配置文件，动态更新bate</p> <p>所需证书ca.pem kube-proxy-key.pem kube-proxy.pem</p> <h4 id="在master节点-给node颁发证书"><a href="#在master节点-给node颁发证书" class="header-anchor">#</a> 在master节点 给node颁发证书</h4> <p>kubectl get csr ## certificatesigningrequests (aka 'csr') http://docs.kubernetes.org.cn/626.html
+kubectl certificate approve node-csr-xxxxxxxxx</p> <p>kubectl get node ## not ready 你需要 cni</p> <h4 id="node部署cni网络-对接第三方网络接口，kubelet使用，只在node部署即可"><a href="#node部署cni网络-对接第三方网络接口，kubelet使用，只在node部署即可" class="header-anchor">#</a> node部署CNI网络(对接第三方网络接口，kubelet使用，只在node部署即可)</h4> <p>mkdir -p /opt/apps/cni/bin/  /etc/cni/net.d<br>
+tar xf cni-plugins-linux-xxx.tgz -C /opt/cni/bin</p> <h4 id="master部署flannel网络"><a href="#master部署flannel网络" class="header-anchor">#</a> master部署flannel网络</h4> <p>kubectl create -f flannel.xxx.yml<br>
+kubectl get pods -n kube-system</p> <p>kubectl describe pod kube-flannelxxx -n kube-system<br>
+kubectl logs kube-flannelxxx -n kube-system # 授权后才有权限，k8s有多少用户角色</p> <p>kubectl get node</p> <h4 id="授权apiserver访问kubelet"><a href="#授权apiserver访问kubelet" class="header-anchor">#</a> 授权apiserver访问kubelet</h4> <p>kubectl apply -f apiserver-to-kubelet-rbac.yml</p> <h4 id="创建nginx的web应用测试集群"><a href="#创建nginx的web应用测试集群" class="header-anchor">#</a> 创建nginx的web应用测试集群</h4> <p>kubectl create deployment web --image=nginx</p> <p>kubectl get pods<br>
+kubectl get pods -o wide</p> <p>kubectl expose deployment web --port=80 --type=NodePort<br>
+kubectl get pods,svc<br>
+http://node:ip</p> <h3 id="_2-7-部署web-ui-dashboard"><a href="#_2-7-部署web-ui-dashboard" class="header-anchor">#</a> 2.7 部署Web UI(Dashboard)</h3> <p>kubectl apply -f dashboard.yaml<br>
+kubectl get pods -n kubernetes-dashboard<br>
+kubectl get pods,svc -n kubernetes-dashboard</p> <h4 id="授权"><a href="#授权" class="header-anchor">#</a> 授权</h4> <p>kubectl apply -f dashboard-adminuser.yaml</p> <h4 id="获取token"><a href="#获取token" class="header-anchor">#</a> 获取token</h4> <p>kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubenetes-dashboard get  secret|grep admin-user|awk '{print $1}')</p> <h3 id="_2-8-部署k8s内部dns服务-coredns"><a href="#_2-8-部署k8s内部dns服务-coredns" class="header-anchor">#</a> 2.8 部署k8s内部DNS服务(coreDNS)</h3> <p>kubectl apply -f coreDNS.yaml  ## 其中的 ip地址与 /opt/apps/k8s/cfg/kubelet-config.yml 相对应</p> <h4 id="测试dns"><a href="#测试dns" class="header-anchor">#</a> 测试dns</h4> <p>kubectl apply -f busybox.yaml<br>
+kubectl get pods<br>
+kubectl exec -it busybox bash<br>
+nslookup kubenetes<br>
+ping kubenetes</p> <h3 id="_2-9-k8s高可用-多master"><a href="#_2-9-k8s高可用-多master" class="header-anchor">#</a> 2.9 k8s高可用(多master)</h3> <p>apiserver controller-manager scheduler<br>
+证书(etcd,k8s)</p> <h3 id="_2-10-k8s高可用-负载均衡nginx-keepalived"><a href="#_2-10-k8s高可用-负载均衡nginx-keepalived" class="header-anchor">#</a> 2.10 k8s高可用(负载均衡nginx + keepalived)</h3> <h4 id="nginx-keepalived"><a href="#nginx-keepalived" class="header-anchor">#</a> nginx + keepalived</h4> <p>yum install nginx keepalived</p> <p>chech_nginx.sh<br>
+ip addr</p> <h4 id="node替换kubelet-kube-proxy中的apiserver-ip-为新的的-vip"><a href="#node替换kubelet-kube-proxy中的apiserver-ip-为新的的-vip" class="header-anchor">#</a> node替换kubelet kube-proxy中的apiserver ip 为新的的 VIP</h4> <p>grep oldip /opt/apps/k8s/cfg/*<br>
+sed 's#oldip#vip#g'  *<br>
+systemctl restart kubelet<br>
+systemctl restart kube-proxy</p> <p>curl -k --header &quot;Authorization: Bearer <code>awk '{print $1}' /opt/apps/k8s/cfg/token.csv</code>&quot; https://vip:6443/version</p> <h2 id="第三章：kubectl命令行管理工具"><a href="#第三章：kubectl命令行管理工具" class="header-anchor">#</a> 第三章：kubectl命令行管理工具</h2> <h3 id="_3-1-kubectl-管理命令概要"><a href="#_3-1-kubectl-管理命令概要" class="header-anchor">#</a> 3.1 kubectl 管理命令概要</h3> <p>kubectl --help<br>
+kubectl set --help</p> <p>kubectl explain<br>
+kubectl describe<br>
+kubectl logs</p> <h3 id="_3-2-kubectl-管理应用程序生命周期"><a href="#_3-2-kubectl-管理应用程序生命周期" class="header-anchor">#</a> 3.2 kubectl 管理应用程序生命周期</h3> <h4 id="创建"><a href="#创建" class="header-anchor">#</a> 创建</h4> <p>kubectl run nginx --replicas=3 --image=nginx:1.14 --port=80<br>
+kubectl get deploy,pods</p> <h4 id="发布"><a href="#发布" class="header-anchor">#</a> 发布</h4> <p>kubectl expose deployment nginx --port=80 --type=NodePort --target-port --name=nginx-service<br>
+kubectl get service</p> <h4 id="更新"><a href="#更新" class="header-anchor">#</a> 更新</h4> <p>kubectl set image deployment/nginx nginx=nginx:1.15</p> <h4 id="回滚"><a href="#回滚" class="header-anchor">#</a> 回滚</h4> <p>kubectl rollout history deployment/nginx<br>
+kubectl rollout undo deployment/nginx</p> <h4 id="删除"><a href="#删除" class="header-anchor">#</a> 删除</h4> <p>kubectl delete deploy/nginx<br>
+kubectl delete svc/nginx-service</p> <h3 id="_3-3-kubectl-工具远程连接k8s集群"><a href="#_3-3-kubectl-工具远程连接k8s集群" class="header-anchor">#</a> 3.3 kubectl 工具远程连接k8s集群</h3> <p>apiserver默认监听127.0.0.1:8080<br>
+根据ca和admin证书生成对应的config，可以存在~/.kube/ 目录下</p> <h2 id="第四章：资源编排-yaml"><a href="#第四章：资源编排-yaml" class="header-anchor">#</a> 第四章：资源编排(yaml)</h2> <h3 id="_4-1-yaml文件格式说明"><a href="#_4-1-yaml文件格式说明" class="header-anchor">#</a> 4.1 yaml文件格式说明</h3> <p>缩进表示层级关系<br>
+使用空格缩进，不支持tab<br>
+通常开头缩进2个空格<br>
+字符后缩进1个空格，如冒号、逗号等<br>
+&quot;---&quot; 表示yaml格式，一个文件的开始<br>
+&quot;#&quot; 注释</p> <h3 id="_4-2-yaml文件创建资源对象"><a href="#_4-2-yaml文件创建资源对象" class="header-anchor">#</a> 4.2 yaml文件创建资源对象</h3> <h3 id="_4-3-yaml快速生成一个模板"><a href="#_4-3-yaml快速生成一个模板" class="header-anchor">#</a> 4.3 yaml快速生成一个模板</h3> <p>kubectl create deployment nginx --image=nginx:1.14 -o yaml --dry-run&gt; mynginx-deploy.yaml</p> <p>kubectl get my-deploy/nginx -o=yaml --export &gt; my-deploy.yaml</p> <p>kubectl explain pods.spec.containers</p> <h2 id="第五章：深入理解pod对象"><a href="#第五章：深入理解pod对象" class="header-anchor">#</a> 第五章：深入理解Pod对象</h2> <h3 id="_5-1-pod基本概念"><a href="#_5-1-pod基本概念" class="header-anchor">#</a> 5.1 pod基本概念</h3> <p>最小部署单元；<br>
+一组容器的集合；<br>
+一个Pod中的容器共享网络命名空间；<br>
+pod是短暂的</p> <h3 id="_5-2-pod存在的意义"><a href="#_5-2-pod存在的意义" class="header-anchor">#</a> 5.2 pod存在的意义</h3> <p>Pod为亲密性应用而存在<br>
+亲密性应用场景：<br>
+两个应用之间发生文件交互<br>
+两个应用需要通过127.0.0.1或者socket通信<br>
+两个应用需要发生频繁的调用</p> <h3 id="_5-3-pod实现机制与设计模式"><a href="#_5-3-pod实现机制与设计模式" class="header-anchor">#</a> 5.3 pod实现机制与设计模式</h3> <p>网络共享<br>
+文件共享</p> <h3 id="_5-4-镜像拉取策略"><a href="#_5-4-镜像拉取策略" class="header-anchor">#</a> 5.4 镜像拉取策略</h3> <p>IfNotPresent<br>
+Always<br>
+Never</p> <h3 id="_5-5-资源限制"><a href="#_5-5-资源限制" class="header-anchor">#</a> 5.5 资源限制</h3> <h3 id="_5-6-重启策略"><a href="#_5-6-重启策略" class="header-anchor">#</a> 5.6 重启策略</h3> <p>Always<br>
+OnFailure<br>
+Never</p> <h3 id="_5-7-健康检查"><a href="#_5-7-健康检查" class="header-anchor">#</a> 5.7 健康检查</h3> <p>1、容器层面<br>
+k8s只能看容器是否运行正常<br>
+例如：java堆内存溢出 running<br>
+2、应用层面<br>
+curl http://127.0.0.1/index.html<br>
+3、readiness pointiness ?</p> <h3 id="_5-8-调度策略"><a href="#_5-8-调度策略" class="header-anchor">#</a> 5.8 调度策略</h3> <p>nodeName用于将Pod调度到指定的node<br>
+nodeSelector用于将pod调度到匹配Label的Node上<br>
+kubectl label nodes 192.168.204.101 team=a<br>
+kubectl get nodes --show-labels</p> <h3 id="_5-9-故障排查"><a href="#_5-9-故障排查" class="header-anchor">#</a> 5.9 故障排查</h3> <p>Pending<br>
+Running<br> <strong>Succeeded</strong><br>
+Failed<br>
+Unknown</p> <p>kubectl describe pod xxx<br>
+kubectl logs podsname<br>
+kubectl exec podname bash</p> <h2 id="第六章：最常用的控制器deployment-无状态应用"><a href="#第六章：最常用的控制器deployment-无状态应用" class="header-anchor">#</a> 第六章：最常用的控制器Deployment(无状态应用)</h2> <h3 id="_6-1-deployment功能及应用场景"><a href="#_6-1-deployment功能及应用场景" class="header-anchor">#</a> 6.1 Deployment功能及应用场景</h3> <p>部署无状态应用<br>
+管理pod和replicaSet<br>
+具有上线部署、副本设定、滚动升级、回滚等功能<br>
+提供声明式更新，例如只更新一个新的image</p> <p>应用场景：Web服务，微服务</p> <h3 id="_6-2-使用deployment部署java应用"><a href="#_6-2-使用deployment部署java应用" class="header-anchor">#</a> 6.2 使用deployment部署java应用</h3> <h3 id="_6-3-应用升级、回滚、弹性伸缩"><a href="#_6-3-应用升级、回滚、弹性伸缩" class="header-anchor">#</a> 6.3 应用升级、回滚、弹性伸缩</h3> <h2 id="第七章：深入理解service（统一入口访问应用）"><a href="#第七章：深入理解service（统一入口访问应用）" class="header-anchor">#</a> 第七章：深入理解Service（统一入口访问应用）</h2> <h3 id="_7-1-service存在的意义"><a href="#_7-1-service存在的意义" class="header-anchor">#</a> 7.1 Service存在的意义</h3> <h3 id="_7-2-pod与service的关系"><a href="#_7-2-pod与service的关系" class="header-anchor">#</a> 7.2 Pod与service的关系</h3> <p>service 只支持四层负载均衡<br>
+四层：OSI中的传输层，TCP/UDP，四元组（源IP源端口，目标IP目标端口），只负责IP数据包转发<br>
+七层：OSI中的应用层，HTTP，ftp，snmp协议，可以拿到这些协议头部信息，那就可以实现基于协议层面的处理</p> <h3 id="_7-3-service三种常用类型"><a href="#_7-3-service三种常用类型" class="header-anchor">#</a> 7.3 Service三种常用类型</h3> <p>ClusterIP：集群内部使用<br>
+NodePort：对外暴露应用<br>
+LoadBalance：对外暴露应用，使用公有云</p> <h4 id="nodeport访问流程"><a href="#nodeport访问流程" class="header-anchor">#</a> NodePort访问流程</h4> <p>user -&gt; 域名（公网ip）-&gt; node ip:port -&gt; service(iptables)-&gt; pod<br>
+一般生产环境node都是部署在内网，那30008这个端口怎么让互联网用户访问呢？
+1、找一台有公网IP的服务器，装一个nginx，反向代理--&gt; node ip:port<br>
+2、只用你们外部负载均衡器（nginx、lvs、haproxy）--&gt; node ip:port<br>
+上面好像要手动配置</p> <h4 id="loadbalance访问流程"><a href="#loadbalance访问流程" class="header-anchor">#</a> LoadBalance访问流程</h4> <p>user -&gt; 域名（公网ip）-&gt; 公有云上的负载均衡器（自动配置，专门控制器去完成）-&gt; node ip:port</p> <h3 id="_7-4-代理模式值iptables工作原理-默认"><a href="#_7-4-代理模式值iptables工作原理-默认" class="header-anchor">#</a> 7.4 代理模式值iptables工作原理(默认)</h3> <p>iptables-save |grep kube-xxx<br>
+kube-proxy 监听所有的iptables规则，有变化则刷新</p> <h3 id="_7-5-代理模式ipvs工作原理-解决iptables不能在大规模中的应用"><a href="#_7-5-代理模式ipvs工作原理-解决iptables不能在大规模中的应用" class="header-anchor">#</a> 7.5 代理模式ipvs工作原理(解决iptables不能在大规模中的应用)</h3> <p>cat /opt/apps/k8s/cfg/kube-proxy</p> <p>--proxy-mode=ipvs<br>
+--masquerade-all=true</p> <p>当有很多项目，很多service的时候，就会创建更多的iptables规则（更新，非增量式更新）<br>
+并且iptables的匹配规则是从上到下逐条匹配（延时大）</p> <h4 id="救世主-ipvs"><a href="#救世主-ipvs" class="header-anchor">#</a> 救世主 ipvs</h4> <p>Lvs 就是基于 ipvs内核调度模块实现的负载均衡</p> <p>阿里的slb，基于lvs实现四层负载均衡（lvs只支持4层）</p> <p>ip addr |grep kube-ipvs</p> <h3 id="_7-6-iptables和ipvs小结"><a href="#_7-6-iptables和ipvs小结" class="header-anchor">#</a> 7.6 iptables和ipvs小结</h3> <p><strong>iptables</strong><br>
+灵活、功能强大（可以在数据包不同阶段对包进行操作）<br>
+规则遍历匹配和更新，呈线性时延</p> <p><strong>ipvs</strong><br>
+工作在内核态，有更好的性能<br>
+调度算法丰富：rr, wrr, lc, wlc, ip hash...</p> <h3 id="_7-7-集群内部dns服务（coredns）"><a href="#_7-7-集群内部dns服务（coredns）" class="header-anchor">#</a> 7.7 集群内部dns服务（coredns）</h3> <p>coredns.yaml 中两次与kubelet.config 中相对应</p> <p>cat /opt/apps/k8s/cfg/kubelet.config<br>
+clusterDNS</p> <p>clusterDomain: cluster.local.</p> <h2 id="第八章：ingress（对外暴露你的应用）"><a href="#第八章：ingress（对外暴露你的应用）" class="header-anchor">#</a> 第八章：Ingress（对外暴露你的应用）</h2> <h3 id="_8-1-ingress为弥补nodeport不足而生"><a href="#_8-1-ingress为弥补nodeport不足而生" class="header-anchor">#</a> 8.1 ingress为弥补Nodeport不足而生</h3> <p>ingress解决了什么问题？</p> <h3 id="_8-2-ingress-controller"><a href="#_8-2-ingress-controller" class="header-anchor">#</a> 8.2 ingress Controller</h3> <h3 id="_8-3-ingress-http"><a href="#_8-3-ingress-http" class="header-anchor">#</a> 8.3 ingress http</h3> <h3 id="_8-4-ingress-https"><a href="#_8-4-ingress-https" class="header-anchor">#</a> 8.4 ingress https</h3> <h3 id="_8-5-ingress工作原理和高可用方案"><a href="#_8-5-ingress工作原理和高可用方案" class="header-anchor">#</a> 8.5 ingress工作原理和高可用方案</h3> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code>kubectl <span class="token builtin class-name">exec</span> -it nginx-ingress-controller-xxxx <span class="token function">bash</span> -n ingress-nginx
+
+<span class="token function">cat</span> /etc/nginx/nginx.conf
+
+<span class="token comment">## 内部一堆 lua</span>
+upstream upstream_balancer<span class="token punctuation">{</span>
+	server <span class="token number">0.0</span>.0.1:1234<span class="token punctuation">;</span> <span class="token comment"># placeholder</span>
+	balancer_by_lua_block<span class="token punctuation">{</span>
+		tcp_udp_balancer.balance<span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>user -&gt; lb -&gt; ingress controller(pod) -&gt;[service] -&gt;pod</p> <p>lb -&gt; nodeport(30001,30002)</p> <p>lb -&gt; ingress controller(80,443)</p> <p>解决高可用：<br>
+1, 扩容副本数<br>
+提高并发能力<br>
+尽量让多个节点提供服务<br>
+2, 把控制器固定到几台节点<br>
+a, daemonSet(与nodeport一样)<br>
+b, nodeselector + 污点<br>
+污点，即使加污点容忍也不会完全分配到专门几个节点</p> <h2 id="第九章：volume（数据卷，持久数据卷）"><a href="#第九章：volume（数据卷，持久数据卷）" class="header-anchor">#</a> 第九章：Volume（数据卷，持久数据卷）</h2> <h3 id="_9-1-emptydir-容器数据共享"><a href="#_9-1-emptydir-容器数据共享" class="header-anchor">#</a> 9.1 emptyDir(容器数据共享)</h3> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code>  <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> data
+    <span class="token key atrule">emptyDir</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="_9-2-hostpath-访问宿主机数据"><a href="#_9-2-hostpath-访问宿主机数据" class="header-anchor">#</a> 9.2 hostPath(访问宿主机数据)</h3> <p>挂载Node文件系统上文件或者目录到pod中的容器。<br>
+应用场景：pod容器需要访问宿主机文件</p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code>  <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> data
+    <span class="token key atrule">hostPath</span><span class="token punctuation">:</span>
+	  <span class="token key atrule">path</span><span class="token punctuation">:</span> /tmp
+      <span class="token key atrule">type</span><span class="token punctuation">:</span> Directory
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="_9-3-nfs-网络存储"><a href="#_9-3-nfs-网络存储" class="header-anchor">#</a> 9.3 NFS(网络存储)</h3> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code>yum install <span class="token punctuation">-</span>y nfs<span class="token punctuation">-</span>utils <span class="token comment">## server</span>
+cat  /etc/exports
+/data/nfs <span class="token important">*(rw</span><span class="token punctuation">,</span>no_root_squash)
+
+systemctl start nfs
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code>    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+	<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> wwwroot
+	  <span class="token key atrule">nfs</span><span class="token punctuation">:</span>
+	    <span class="token key atrule">server</span><span class="token punctuation">:</span> 192.168.204.222
+		<span class="token key atrule">path</span><span class="token punctuation">:</span> /data/nfs
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>kubectl get ep</p> <h2 id="第十章：项目在k8s平台部署案例"><a href="#第十章：项目在k8s平台部署案例" class="header-anchor">#</a> 第十章：项目在k8s平台部署案例</h2> <h3 id="_10-1-部署前准备工作及注意事项"><a href="#_10-1-部署前准备工作及注意事项" class="header-anchor">#</a> 10.1 部署前准备工作及注意事项</h3> <p>一、部署的项目情况<br>
+1, 业务架构及服务（dubbo, spring cloud）<br>
+2, 第三方服务，例如mysql， redis， zookeeper, eruka, mq<br>
+3, 服务之间怎么通信？<br>
+4，资源消耗：硬件资源，带宽</p> <p>二、部署项目时用到的k8s资源<br>
+1,使用namespace进行不同项目隔离，或者隔离不同环境(test, prod, dev)<br>
+2,无状态应用(deployment)<br>
+3,有状态应用(statefulset, pv, pvc)<br>
+4,暴露外部访问(service, ingress)<br>
+5,secret, configmap</p> <p>三、项目基础镜像</p> <p>四、编排部署
+1, 项目构建（java），ci/cd环境这个阶段自动完成（代码拉取 - 代码编译构建 - 镜像打包 - 推送镜像仓库）</p> <p>五、工作流程
+kubectl - yaml - 镜像仓库拉取镜像 - Service(集群内部访问)/ ingress(暴露给外部用户)</p> <h3 id="_10-2-部署java项目-上"><a href="#_10-2-部署java项目-上" class="header-anchor">#</a> 10.2 部署java项目(上)</h3> <p>部署harbor<br>
+daemon.json添加自建仓库可信任</p> <p>创建java + maven环境<br>
+vim /etc/profile<br>
+cd $Project_dir &amp;&amp; /usr/local/maven/bin/mvn clean package</p> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token comment">## 创建命名空间</span>
+
+<span class="token comment">## 创建secret</span>
+kubectl create secret docker-registry registry-pull-secret --docker-username<span class="token operator">=</span>admin --docker-password<span class="token operator">=</span>Harbor12345 --docker-email<span class="token operator">=</span>admin@qq.com --docker-server<span class="token operator">=</span><span class="token number">192.168</span>.204.61 -n <span class="token builtin class-name">test</span>
+<span class="token comment">## get 镜像</span>
+
+<span class="token comment">## </span>
+kubectl get pods, svc, ing -n <span class="token builtin class-name">test</span>
+<span class="token comment">## 连接mysql</span>
+jdbc:mysql://podname.serviceName.namespace:3306/test?characterEncoding<span class="token operator">=</span>utf-8
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h3 id="_10-3-部署java项目-下"><a href="#_10-3-部署java项目-下" class="header-anchor">#</a> 10.3 部署java项目(下)</h3> <h3 id="_10-4-部署php项目"><a href="#_10-4-部署php项目" class="header-anchor">#</a> 10.4 部署php项目</h3> <h2 id="第十一章：k8s集群资源监控"><a href="#第十一章：k8s集群资源监控" class="header-anchor">#</a> 第十一章：k8s集群资源监控</h2> <h3 id="_11-1-k8s监控指标和监控方案"><a href="#_11-1-k8s监控指标和监控方案" class="header-anchor">#</a> 11.1 k8s监控指标和监控方案</h3> <h3 id="_11-2-监控系统部署-cadvisor-influxdb-grafana"><a href="#_11-2-监控系统部署-cadvisor-influxdb-grafana" class="header-anchor">#</a> 11.2 监控系统部署(cAdvisor + InfluxDB + Grafana)</h3> <h2 id="第十二章：使用elk-收集k8s平台日志"><a href="#第十二章：使用elk-收集k8s平台日志" class="header-anchor">#</a> 第十二章：使用ELK 收集k8s平台日志</h2> <h3 id="_12-1-容器本身特性给收集带来的问题"><a href="#_12-1-容器本身特性给收集带来的问题" class="header-anchor">#</a> 12.1 容器本身特性给收集带来的问题</h3> <h3 id="_12-2-收集哪些日志？主流日志方案有哪些？"><a href="#_12-2-收集哪些日志？主流日志方案有哪些？" class="header-anchor">#</a> 12.2 收集哪些日志？主流日志方案有哪些？</h3> <h3 id="_12-3-容器中日志怎么收集？"><a href="#_12-3-容器中日志怎么收集？" class="header-anchor">#</a> 12.3 容器中日志怎么收集？</h3> <h3 id="_12-4-部署elk-stack日志平台"><a href="#_12-4-部署elk-stack日志平台" class="header-anchor">#</a> 12.4 部署elk stack日志平台</h3> <h3 id="_12-5-收集所有容器标准输出的日志"><a href="#_12-5-收集所有容器标准输出的日志" class="header-anchor">#</a> 12.5 收集所有容器标准输出的日志</h3> <h3 id="_12-6-收集容器中落盘的日志文件"><a href="#_12-6-收集容器中落盘的日志文件" class="header-anchor">#</a> 12.6 收集容器中落盘的日志文件</h3></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">lastUpdate:</span> <span class="time">8/23/2020, 6:08:09 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.44e953ca.js" defer></script><script src="/assets/js/2.ca34a8c3.js" defer></script><script src="/assets/js/32.c4d98288.js" defer></script>
+  </body>
+</html>

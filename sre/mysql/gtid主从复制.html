@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>基于gtid 主从复制 | 运维工程师进阶之路</title>
+    <meta name="generator" content="VuePress 1.5.1">
+    <link rel="icon" href="/bookDog.png">
+    <meta name="description" content="SRE">
+    <link rel="preload" href="/assets/css/0.styles.4391c3e0.css" as="style"><link rel="preload" href="/assets/js/app.44e953ca.js" as="script"><link rel="preload" href="/assets/js/2.ca34a8c3.js" as="script"><link rel="preload" href="/assets/js/49.9284be50.js" as="script"><link rel="prefetch" href="/assets/js/10.26ab6c8b.js"><link rel="prefetch" href="/assets/js/11.66cf7fbe.js"><link rel="prefetch" href="/assets/js/12.053ab66a.js"><link rel="prefetch" href="/assets/js/13.7b69c762.js"><link rel="prefetch" href="/assets/js/14.b7d3725e.js"><link rel="prefetch" href="/assets/js/15.94dc50f9.js"><link rel="prefetch" href="/assets/js/16.7d068506.js"><link rel="prefetch" href="/assets/js/17.72fba0c1.js"><link rel="prefetch" href="/assets/js/18.0b63671e.js"><link rel="prefetch" href="/assets/js/19.fc87afd7.js"><link rel="prefetch" href="/assets/js/20.5e8598a5.js"><link rel="prefetch" href="/assets/js/21.29611eb5.js"><link rel="prefetch" href="/assets/js/22.c4fb6228.js"><link rel="prefetch" href="/assets/js/23.7815e38d.js"><link rel="prefetch" href="/assets/js/24.48bc7051.js"><link rel="prefetch" href="/assets/js/25.ca28f6c6.js"><link rel="prefetch" href="/assets/js/26.98c9036d.js"><link rel="prefetch" href="/assets/js/27.f7966843.js"><link rel="prefetch" href="/assets/js/28.4d1d3d14.js"><link rel="prefetch" href="/assets/js/29.bddf0f39.js"><link rel="prefetch" href="/assets/js/3.85186c36.js"><link rel="prefetch" href="/assets/js/30.f4d58864.js"><link rel="prefetch" href="/assets/js/31.4927c5cc.js"><link rel="prefetch" href="/assets/js/32.c4d98288.js"><link rel="prefetch" href="/assets/js/33.b7cd4cd5.js"><link rel="prefetch" href="/assets/js/34.e6f4b03f.js"><link rel="prefetch" href="/assets/js/35.c018a354.js"><link rel="prefetch" href="/assets/js/36.5b95d2bf.js"><link rel="prefetch" href="/assets/js/37.7bfe07d4.js"><link rel="prefetch" href="/assets/js/38.08c93d93.js"><link rel="prefetch" href="/assets/js/39.4114fd8e.js"><link rel="prefetch" href="/assets/js/4.2222cb25.js"><link rel="prefetch" href="/assets/js/40.880abd0a.js"><link rel="prefetch" href="/assets/js/41.7a84d064.js"><link rel="prefetch" href="/assets/js/42.c3ca3a2a.js"><link rel="prefetch" href="/assets/js/43.b79bec7b.js"><link rel="prefetch" href="/assets/js/44.9f528f2e.js"><link rel="prefetch" href="/assets/js/45.0f9b892c.js"><link rel="prefetch" href="/assets/js/46.007d8c15.js"><link rel="prefetch" href="/assets/js/47.b9d5f5bc.js"><link rel="prefetch" href="/assets/js/48.be1f0cf4.js"><link rel="prefetch" href="/assets/js/5.64c7e03a.js"><link rel="prefetch" href="/assets/js/50.599d0e37.js"><link rel="prefetch" href="/assets/js/51.aa9fd431.js"><link rel="prefetch" href="/assets/js/52.2f9bc07d.js"><link rel="prefetch" href="/assets/js/53.0c9ef961.js"><link rel="prefetch" href="/assets/js/54.97aac4ec.js"><link rel="prefetch" href="/assets/js/55.76f07301.js"><link rel="prefetch" href="/assets/js/56.4d2c0998.js"><link rel="prefetch" href="/assets/js/57.b470773a.js"><link rel="prefetch" href="/assets/js/58.aaf739b3.js"><link rel="prefetch" href="/assets/js/59.69e3d1c3.js"><link rel="prefetch" href="/assets/js/6.9b93828e.js"><link rel="prefetch" href="/assets/js/60.7573cff3.js"><link rel="prefetch" href="/assets/js/61.42a80774.js"><link rel="prefetch" href="/assets/js/62.6808be18.js"><link rel="prefetch" href="/assets/js/63.90f6608a.js"><link rel="prefetch" href="/assets/js/64.e5344119.js"><link rel="prefetch" href="/assets/js/65.b5634369.js"><link rel="prefetch" href="/assets/js/66.21a43d2e.js"><link rel="prefetch" href="/assets/js/67.b72d9aa6.js"><link rel="prefetch" href="/assets/js/68.af2ab069.js"><link rel="prefetch" href="/assets/js/69.4adc43e6.js"><link rel="prefetch" href="/assets/js/7.6de19e8e.js"><link rel="prefetch" href="/assets/js/70.7b35fee5.js"><link rel="prefetch" href="/assets/js/71.532a8351.js"><link rel="prefetch" href="/assets/js/72.46ca51b8.js"><link rel="prefetch" href="/assets/js/73.970101e7.js"><link rel="prefetch" href="/assets/js/74.1c4ec244.js"><link rel="prefetch" href="/assets/js/75.9a27bec1.js"><link rel="prefetch" href="/assets/js/76.d0fa2941.js"><link rel="prefetch" href="/assets/js/77.3fce2b20.js"><link rel="prefetch" href="/assets/js/78.c098f054.js"><link rel="prefetch" href="/assets/js/79.1841299d.js"><link rel="prefetch" href="/assets/js/8.682fa49e.js"><link rel="prefetch" href="/assets/js/80.55af12a4.js"><link rel="prefetch" href="/assets/js/81.901ddf76.js"><link rel="prefetch" href="/assets/js/82.8b9d069b.js"><link rel="prefetch" href="/assets/js/83.9bac6c98.js"><link rel="prefetch" href="/assets/js/84.f50a45a7.js"><link rel="prefetch" href="/assets/js/9.0d17f277.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4391c3e0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/bookDog.png" alt="运维工程师进阶之路" class="logo"> <span class="site-name can-hide">运维工程师进阶之路</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/sre/linux/cli.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="https://github.com/yes5144" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/sre/linux/cli.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="https://github.com/yes5144" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Linux开源基石</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Nginx高性能web服务</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>MySQL最好用的关系型数据库</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/sre/mysql/install.html" class="sidebar-link">MySQL安装</a></li><li><a href="/sre/mysql/params.html" class="sidebar-link">配置说明1</a></li><li><a href="/sre/mysql/params2.html" class="sidebar-link">配置说明2</a></li><li><a href="/sre/mysql/gtid主从复制.html" class="active sidebar-link">基于GTID主从</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/sre/mysql/gtid主从复制.html#基于gtid-主从复制" class="sidebar-link">基于gtid 主从复制</a></li></ul></li><li><a href="/sre/mysql/docker主从复制.html" class="sidebar-link">docker版主从</a></li><li><a href="/sre/mysql/percona-toolkit.html" class="sidebar-link">percona-toolkit</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>gitlab企业代码仓库管理</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Jenkins持续集成部署</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Redis多功能nosql数据库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Saltstack批量管理工具</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Zabbix开源监控系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Prometheus下一代监控系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ELK日志分析平台</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Python优雅的编程语言</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Docker轻量虚拟化技术</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>k8s容器编排利器</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>golang</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>小技巧</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="基于gtid-主从复制"><a href="#基于gtid-主从复制" class="header-anchor">#</a> 基于gtid 主从复制</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>参考链接：https://blog.csdn.net/weixin_43407305/article/details/87911235
+参考链接：https://blog.csdn.net/martingpf/article/details/81115187
+参考链接：https://blog.csdn.net/leshami/article/details/50630691
+参考链接：https://blog.csdn.net/qq_43094192/article/details/83994952
+
+MySQL 5.6引入的GTID(Global Transaction IDs)使得其复制功能的配置、监控及管理变得更加易于实现，且更加健壮.
+
+MySQL 5.6中使用复制功能，其服务配置段[mysqld]中于少应该定义如下选项：
+binlog-format：二进制日志的格式，有row、statement和mixed几种类型；需要注意的是：当设置隔离级别为READ-COMMITED必 须设置二进制日志格式为ROW，现在MySQL官方认为STATEMENT这个已经不再适合继续使用,但mixed类型在默认的事务隔离级别下，可能会导致主从数据不一致；
+log-slave-updates、gtid-mode、enforce-gtid-consistency、report-port和report-host：用于启动GTID及满足附属的其它需求；
+master-info-repository和relay-log-info-repository：启用此两项，可用于实现在崩溃时保证二进制及从服务器安全的功能；
+sync-master-info：启用之可确保无信息丢失；
+slave-paralles-workers：设定从服务器的SQL线程数；0表示关闭多线程复制功能；
+binlog-checksum、master-verify-checksum和slave-sql-verify-checksum：启用复制有关的所有校验功能；
+binlog-rows-query-log-events：启用之可用于在二进制日志记录事件相关的信息，可降低故障排除的复杂度；
+log-bin：启用二进制日志，这是保证复制功能的基本前提；
+server-id：同一个复制拓扑中的所有服务器的id号必须惟一；
+
+GTID的概念：
+1）全局事务标识：global transaction identifiers。
+2）GTID是一个事务一一对应，并且全局唯一ID。
+3）一个GTID在一个服务器上只执行一次，避免重复执行导致数据混乱或者主从不一致。
+4）GTID用来代替传统复制方法，不再使用MASTER_LOG_FILE+MASTER_LOG_POS开启复制。而是使用MASTER_AUTO_POSTION=1的方式开始复制。
+5）MySQL-5.6.5开始支持的，MySQL-5.6.10后开始完善。
+6）在传统的slave端，binlog是不用开启的，但是在GTID中slave端的binlog是必须开启的，目的是记录执行过的GTID（强制）。
+
+GTID组成：
+GTID = source_id:transaction_id
+source_id，用于鉴别原服务器，即mysql服务器唯一的的server_uuid，由于GTID会传递到slave，所以也可以理解为源ID。
+transaction_id，为当前服务器上已提交事务的一个序列号，通常从1开始自增长的序列，一个数值对应一个事务。        
+示例：          
+3E11FA47-71CA-11E1-9E33-C80AA9429562:23
+前面的一串为服务器的server_uuid，即3E11FA47-71CA-11E1-9E33-C80AA9429562，后面的23为transaction_id
+
+GTID原理：
+1、当一个事务在主库端执行并提交时，产生GTID，一同记录到binlog日志中。
+2、binlog传输到slave,并存储到slave的relaylog后，读取这个GTID的这个值设置gtid_next变量，即告诉Slave，下一个要执行的GTID值。
+3、sql线程从relay log中获取GTID，然后对比slave端的binlog是否有该GTID。
+4、如果有记录，说明该GTID的事务已经执行，slave会忽略。
+5、如果没有记录，slave就会执行该GTID事务，并记录该GTID到自身的binlog，
+   在读取执行事务前会先检查其他session持有该GTID，确保不被重复执行。
+6、在解析过程中会判断是否有主键，如果没有就用二级索引，如果没有就用全部扫描。
+
+一、简单主从模式配置步骤
+1、配置主从节点的服务配置文件
+1.1、配置master节点：
+[mysqld]
+binlog-format=ROW
+log-bin=master-bin
+log-slave-updates=true  ###从服务器更新同步二进制日志信息，适用于高可用中，从服务器升级主服务器用
+gtid-mode=on 
+enforce-gtid-consistency=true
+master-info-repository=TABLE
+relay-log-info-repository=TABLE
+sync-master-info=1
+slave-parallel-workers=2
+binlog-checksum=CRC32
+master-verify-checksum=1
+slave-sql-verify-checksum=1
+binlog-rows-query-log_events=1
+server-id=1
+report-port=3306
+port=3306
+datadir=/mydata/
+socket=/tmp/mysql.sock
+report-host=edong1
+
+1.2、配置slave节点：
+[mysqld]
+binlog-format=ROW
+log-slave-updates=true
+gtid-mode=on 
+enforce-gtid-consistency=true
+master-info-repository=TABLE
+relay-log-info-repository=TABLE
+sync-master-info=1
+slave-parallel-workers=2
+binlog-checksum=CRC32
+master-verify-checksum=1
+slave-sql-verify-checksum=1
+binlog-rows-query-log_events=1
+server-id=11
+report-port=3306
+port=3306
+log-bin=mysql-bin.log
+datadir=/mydata/
+socket=/tmp/mysql.sock
+report-host=edong2
+slave节点配置和master节点配置一样的目的：主服务器挂了，从服务器可以快速升级为主服务器
+2、创建复制用户
+mysql&gt;grant replication slave on *.* to 'repluser'@'192.168.0.%' identified by 'replpassword';
+3、为备节点提供初始数据集
+锁定主表，备份主节点上的数据，将其还原至从节点；如果没有启用GTID，在备份时需要在master上使用show master status命令查看二进制日志文件名称及事件位置，以便后面启动slave节点时使用。
+4、启动从节点的复制线程
+如果启用了GTID功能，则使用如下命令：
+mysql&gt;change master to master_host='192.168.0.202',master_user='repluser',master_password='replpassword',master_auto_position=1;
+
+半同步复制
+
+1、分别在主从节点上安装相关的插件
+master&gt; INSTALL PLUGIN rpl_semi_sync_master SONAME 'semisync_master.so';
+slave&gt; INSTALL PLUGIN rpl_semi_sync_slave SONAME 'semisync_slave.so';
+
+2、启用半同步复制
+在master上的配置文件中，添加
+rpl_semi_sync_master_enabled=ON
+在至少一个slave节点的配置文件中添加
+rpl_semi_sync_slave_enabled=ON
+而后重新启动mysql服务即可生效。
+
+或者，也可以mysql服务上动态启动其相关功能：
+master&gt; SET GLOBAL rpl_semi_sync_master_enabled = ON;
+slave&gt; SET GLOBAL rpl_semi_sync_slave_enabled = ON;
+slave&gt; STOP SLAVE IO_THREAD; START SLAVE IO_THREAD;
+
+3、确认半同步功能已经启用
+master&gt; CREATE DATABASE magedudb;
+master&gt; SHOW STATUS LIKE 'Rpl_semi_sync_master_yes_tx';
+
+slave&gt; SHOW DATABASES;
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br></div></div><h3 id="主从复制"><a href="#主从复制" class="header-anchor">#</a> 主从复制</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>主从复制过程存在三个线程，Master端的I/O线程，Slave的I/O线程与SQL线程。Master端需要开启binlog日志，Slave端需要开启relaylog。
+1、Slave端的I/O读取master.info文件，获取binlog文件名和位置点，然后向Master端的I/O线程请求，该binlog文件名和位置点的binlog信息。
+（master.info文件在配置主从复制时使用change master命令来指定生成）
+2、Master端的I/O线程会根据Slave端的I/O线程请求的信息来读取Master的binlog日志信息与及读取到最新的binlog文件名和位置点一同返回给Slave的I/O线程。
+3、Slave端的I/O线程会把获取到的binlog日志写入relaylog（中继日志）文件中，并且更新master.info文件信息。（把读取到Master最新的binlog日志文件名和位置点更新到master.info文件中，下一次当前位置去读取Master的binlog日志）
+4、Slave端的SQL线程会定期读取relaylog，把二进制的日志解析成SQL语句，并执行这些SQL语句，同步数据到从库中
+
+原文链接：https://blog.csdn.net/weixin_43407305/article/details/87911235
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">lastUpdate:</span> <span class="time">7/2/2020, 9:00:01 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/sre/mysql/params2.html" class="prev">
+        配置说明2
+      </a></span> <span class="next"><a href="/sre/mysql/docker主从复制.html">
+        docker版主从
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.44e953ca.js" defer></script><script src="/assets/js/2.ca34a8c3.js" defer></script><script src="/assets/js/49.9284be50.js" defer></script>
+  </body>
+</html>
